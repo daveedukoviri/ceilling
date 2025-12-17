@@ -1,0 +1,196 @@
+/* Gallery.css - Back to your original elegant style */
+:root {
+  --pastel-cream: #F9F5F0;
+  --pastel-clay: #D4C4B8;
+  --classic-gold: #C5A572;
+  --classic-charcoal: #3A3A38;
+  --classic-walnut: #8B7355;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--pastel-cream);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  padding-top: 135px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.gallery-hero {
+  background: linear-gradient(rgba(58, 58, 56, 0.7), rgba(58, 58, 56, 0.8)),
+              url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+
+.gallery-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.gallery-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.gallery-wrapper {
+  background-color: var(--pastel-cream);
+  min-height: 100vh;
+}
+
+.pinterest-gallery {
+  padding: 0 15px;
+  column-count: 6;
+  column-gap: 15px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1800px) { .pinterest-gallery { column-count: 5; } }
+@media (max-width: 1500px) { .pinterest-gallery { column-count: 4; } }
+@media (max-width: 1200px) { .pinterest-gallery { column-count: 3; } }
+@media (max-width: 900px)  { .pinterest-gallery { column-count: 2; } }
+@media (max-width: 600px)  { .pinterest-gallery { column-gap: 10px; padding: 0 10px; } }
+@media (max-width: 400px)  { .pinterest-gallery { column-count: 2; } }
+
+.pin {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.pin:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.pin-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.pin:hover .pin-image {
+  transform: scale(1.03);
+}
+
+.gallery-header {
+  text-align: center;
+  margin: 40px 0 30px;
+  padding: 0 20px;
+}
+
+.gallery-header h1 {
+  color: var(--classic-charcoal);
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.gallery-header p {
+  color: var(--classic-walnut);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 15px auto 0;
+}
+
+.gallery-footer {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--classic-charcoal);
+  font-size: 14px;
+  border-top: 1px solid var(--pastel-clay);
+}
+
+/* Lightbox - Clean & Minimal */
+.lightbox-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  cursor: default;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 50px;
+  width: 60px;
+  height: 90px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.lightbox-prev { left: -100px; }
+.lightbox-next { right: -100px; }
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+  .lightbox-close { top: 20px; right: 20px; }
+}

@@ -1,0 +1,13 @@
+ :root {
+            --pastel-cream: #F9F5F0;
+            --pastel-sand: #F0E6D6;
+            --pastel-taupe: #E8DED2;
+            --pastel-clay: #D4C4B8;
+            --pastel-rose: #E8CDC8;
+            --pastel-moss: #D8D4C5;
+            --pastel-sage: #CBD2C0;
+            --classic-gold: #C5A572;
+            --classic-charcoal: #3A3A38;
+            --classic-walnut: #8B7355;
+            --transition: all 0.3s ease;
+        }
