@@ -46,7 +46,7 @@ function Header() {
 
               <div className="MenuSecWrp d-flex flex-row flex-lg-column pt-3 pb-3  pt-lg-4 pb-lg-0">
                 {/* Top Menu - Visible on all devices */}
-                <div className="HeaderRight ">
+                <div className="HeaderRight d-none">
                   <div className="TopMenu">
                     <div className="desktop-only">
                       <p>
@@ -126,54 +126,7 @@ function Header() {
                     </li>
                     <li><a href="/offers/">OFFERS</a></li>
                     <li><a href="/gallery/">GALLERY</a></li>
-                    <li className="has-submenu">
-                      <a href="#" onClick={(e) => { e.preventDefault(); }}>LOCATIONS <i className="fas fa-chevron-down"></i></a>
-                      <div className="submenu mega-menu">
-                        <div className="mega-menu-columns">
-                          <div className="mega-menu-column">
-                            <h4>Karnataka</h4>
-                            <ul>
-                              <li><a href="/location/bangalore/">Bangalore</a></li>
-                              <li><a href="/location/mangalore/">Mangalore</a></li>
-                              <li><a href="/location/mysore/">Mysore</a></li>
-                            </ul>
-                          </div>
-                          <div className="mega-menu-column">
-                            <h4>Kerala</h4>
-                            <ul>
-                              <li><a href="/location/ernakulam/">Ernakulam</a></li>
-                              <li><a href="/location/calicut/">Calicut</a></li>
-                              <li><a href="/location/thrissur/">Thrissur</a></li>
-                              <li><a href="/location/kollam/">Kollam</a></li>
-                              <li><a href="/location/trivandrum/">Trivandrum</a></li>
-                              <li><a href="/location/kannur/">Kannur</a></li>
-                              <li><a href="/location/kottayam/">Kottayam</a></li>
-                            </ul>
-                          </div>
-                          <div className="mega-menu-column">
-                            <h4>TamilNadu</h4>
-                            <ul>
-                              <li><a href="/location/chennai/">Chennai</a></li>
-                              <li><a href="/location/coimbatore/">Coimbatore</a></li>
-                              <li><a href="/location/nagercoil/">Nagercoil</a></li>
-                              <li><a href="/location/madurai/">Madurai</a></li>
-                            </ul>
-                          </div>
-                          <div className="mega-menu-column">
-                            <h4>Telangana</h4>
-                            <ul>
-                              <li><a href="/location/hyderabad/">Hyderabad</a></li>
-                            </ul>
-                            <h4>Maharashtra</h4>
-                            <ul>
-                              <li><a href="/pune/">Pune</a></li>
-                              <li><a href="/mumbai/navi-mumbai/">Navi Mumbai</a></li>
-                              <li><a href="/mumbai/">Mumbai</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                   
                     <li><a href="/blog/">BLOGS</a></li>
                     <li><a href="/contacts/">CONTACT</a></li>
                   </ul>
@@ -239,57 +192,7 @@ function Header() {
               <li><a href="/offers/" onClick={toggleMobileMenu}>OFFERS</a></li>
               <li><a href="/gallery/" onClick={toggleMobileMenu}>GALLERY</a></li>
 
-              <li className="mobile-submenu-item">
-                <div className="submenu-header" onClick={() => toggleSubmenu('locations')}>
-                  <span>LOCATIONS</span>
-                  <i className={`fas fa-chevron-${isSubmenuOpen.locations ? 'up' : 'down'}`}></i>
-                </div>
-                <div className={`mobile-submenu ${isSubmenuOpen.locations ? 'active' : ''}`}>
-                  <div className="mobile-mega-menu">
-                    <div className="mobile-mega-column">
-                      <h5>Karnataka</h5>
-                      <ul>
-                        <li><a href="/location/bangalore/" onClick={toggleMobileMenu}>Bangalore</a></li>
-                        <li><a href="/location/mangalore/" onClick={toggleMobileMenu}>Mangalore</a></li>
-                        <li><a href="/location/mysore/" onClick={toggleMobileMenu}>Mysore</a></li>
-                      </ul>
-                    </div>
-                    <div className="mobile-mega-column">
-                      <h5>Kerala</h5>
-                      <ul>
-                        <li><a href="/location/ernakulam/" onClick={toggleMobileMenu}>Ernakulam</a></li>
-                        <li><a href="/location/calicut/" onClick={toggleMobileMenu}>Calicut</a></li>
-                        <li><a href="/location/thrissur/" onClick={toggleMobileMenu}>Thrissur</a></li>
-                        <li><a href="/location/kollam/" onClick={toggleMobileMenu}>Kollam</a></li>
-                        <li><a href="/location/trivandrum/" onClick={toggleMobileMenu}>Trivandrum</a></li>
-                        <li><a href="/location/kannur/" onClick={toggleMobileMenu}>Kannur</a></li>
-                        <li><a href="/location/kottayam/" onClick={toggleMobileMenu}>Kottayam</a></li>
-                      </ul>
-                    </div>
-                    <div className="mobile-mega-column">
-                      <h5>TamilNadu</h5>
-                      <ul>
-                        <li><a href="/location/chennai/" onClick={toggleMobileMenu}>Chennai</a></li>
-                        <li><a href="/location/coimbatore/" onClick={toggleMobileMenu}>Coimbatore</a></li>
-                        <li><a href="/location/nagercoil/" onClick={toggleMobileMenu}>Nagercoil</a></li>
-                        <li><a href="/location/madurai/" onClick={toggleMobileMenu}>Madurai</a></li>
-                      </ul>
-                    </div>
-                    <div className="mobile-mega-column">
-                      <h5>Telangana</h5>
-                      <ul>
-                        <li><a href="/location/hyderabad/" onClick={toggleMobileMenu}>Hyderabad</a></li>
-                      </ul>
-                      <h5>Maharashtra</h5>
-                      <ul>
-                        <li><a href="/pune/" onClick={toggleMobileMenu}>Pune</a></li>
-                        <li><a href="/mumbai/navi-mumbai/" onClick={toggleMobileMenu}>Navi Mumbai</a></li>
-                        <li><a href="/mumbai/" onClick={toggleMobileMenu}>Mumbai</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
+             
 
               <li><a href="/blog/" onClick={toggleMobileMenu}>BLOGS</a></li>
               <li><a href="/contacts/" onClick={toggleMobileMenu}>CONTACT</a></li>
