@@ -1,4 +1,4 @@
-import './Footter.css';
+import './Footer.css';
 import logo from '../../assets/img/banner_logo.png';
 
 function Footter(){
