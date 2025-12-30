@@ -75,7 +75,7 @@ const Body = () => {
   const galleryProjects = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Modern Luxury Living Room',
       description: 'Contemporary design with premium materials',
       category: 'residential luxury',
@@ -91,7 +91,7 @@ const Body = () => {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://plus.unsplash.com/premium_photo-1681487178876-a1156952ec60?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Minimalist Kitchen Design',
       description: 'Clean lines with functional elegance',
       category: 'residential modern',
@@ -107,7 +107,7 @@ const Body = () => {
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://plus.unsplash.com/premium_photo-1680296669146-b6c258cbc62d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Master Bedroom Suite',
       description: 'Tranquil sanctuary with custom joinery',
       category: 'residential luxury',
@@ -172,19 +172,19 @@ const Body = () => {
   // Dealers Data
   const dealers = [
 
-    { logo: dealer1, icon: 'fa-medal', width: '150px' },
-    { logo: dealer2, icon: 'fa-award', width: '150px' },
-    { logo: dealer3, icon: 'fa-trophy', width: '150px' },
-    { logo: dealer4, icon: 'fa-gem', width: '150px' },
-    { logo: dealer5, icon: 'fa-heart', width: '120px' },
-    { logo: dealer6, icon: 'fa-hammer', width: '150px' },
-    { logo: dealer7, icon: 'fa-trophy', width: '120px' },
-    { logo: dealer8, icon: 'fa-heart', width: '130px' },
-    { logo: dealer9, icon: 'fa-star', width: '130px' },
-    { logo: dealer10, icon: 'fa-hammer', width: '110px' },
-    { logo: dealer11, icon: 'fa-trophy', width: '110px' },
-    { logo: dealer12, icon: 'fa-leaf', width: '110px' },
-    { logo: dealer13, icon: 'fa-medal', width: '110px' }
+    { logo: dealer1, icon: 'fa-medal', width: '100%' },
+    { logo: dealer2, icon: 'fa-award', width: '100%' },
+    { logo: dealer3, icon: 'fa-trophy', width: '100%' },
+    { logo: dealer4, icon: 'fa-gem', width: '100%' },
+    { logo: dealer5, icon: 'fa-heart',width: '90%' },
+    { logo: dealer6, icon: 'fa-hammer', width: '100%' },
+    { logo: dealer7, icon: 'fa-trophy',width: '90%' },
+    { logo: dealer8, icon: 'fa-heart',width: '100%' },
+    { logo: dealer9, icon: 'fa-star',width: '100%' },
+    { logo: dealer10, icon: 'fa-hammer', width: '90%' },
+    { logo: dealer11, icon: 'fa-trophy', width: '75%' },
+    { logo: dealer12, icon: 'fa-leaf', width: '85%' },
+    { logo: dealer13, icon: 'fa-medal', width: '100%' }
 
   ];
   // FAQ Data
@@ -224,24 +224,6 @@ const Body = () => {
     setCurrentSlide(index);
   };
 
-  // Testimonial Functions
-  const nextTestimonial = () => {
-    const maxIndex = Math.ceil(testimonials.length / cardsPerView) - 1;
-    if (currentTestimonialIndex < maxIndex) {
-      setCurrentTestimonialIndex(prev => prev + 1);
-    } else {
-      setCurrentTestimonialIndex(0);
-    }
-  };
-
-  const prevTestimonial = () => {
-    if (currentTestimonialIndex > 0) {
-      setCurrentTestimonialIndex(prev => prev - 1);
-    } else {
-      const maxIndex = Math.ceil(testimonials.length / cardsPerView) - 1;
-      setCurrentTestimonialIndex(maxIndex);
-    }
-  };
 
   // FAQ Functions
   const toggleFaq = (index) => {
@@ -546,75 +528,42 @@ const Body = () => {
         </div>
       </section>
 
-      {/* 4. TESTIMONIALS SECTION */}
-      <section className="section testimonials-section"
-        id="testimonials"
-        onMouseEnter={() => setIsTestimonialPaused(true)}
-        onMouseLeave={() => setIsTestimonialPaused(false)}
-      >
-        <div className="container">
-          <h2 className="section-title">Client Testimonials</h2>
-          <p className="section-subtitle">
-            Hear from our clients about their experiences working with our design team.
-          </p>
+     {/* TESTIMONIALS SECTION - MARQUEE */}
+<section className="section testimonials-section" id="testimonials">
+  <div className="container">
+    <h2 className="section-title">Client Testimonials</h2>
+    <p className="section-subtitle">
+      Hear from our clients about their experiences working with our design team.
+    </p>
 
-          <div className="testimonial-container">
-            <div
-              className="testimonial-track"
-              style={{
-                transform: `translateX(-${currentTestimonialIndex * (100 / cardsPerView)}%)`
-              }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="testimonial-card">
-                  <div className="testimonial-rating">
-                    {renderRating(testimonial.rating)}
-                  </div>
-                  <p className="testimonial-text">{testimonial.text}</p>
-                  <div className="testimonial-client">
-                    <div className="client-avatar">
-                      <img src={testimonial.avatar} alt={testimonial.name} />
-                    </div>
-                    <div className="client-info">
-                      <h3>{testimonial.name}</h3>
-                      <p>{testimonial.role}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+    <div className="testimonial-container">
+      <div className="testimonial-track">
+        {/* Original testimonials + duplicated for seamless loop */}
+        {[...testimonials, ...testimonials].map((testimonial, index) => (
+          <div key={`${testimonial.name}-${index}`} className="testimonial-card">
+            <div className="testimonial-rating">
+              {renderRating(testimonial.rating)}
             </div>
-
-            <div className="testimonial-controls">
-              <button
-                className={`testimonial-arrow prev-testimonial ${currentTestimonialIndex === 0 ? 'disabled' : ''}`}
-                onClick={prevTestimonial}
-                disabled={currentTestimonialIndex === 0}
-              >
-                <i className="fas fa-chevron-left"></i>
-              </button>
-
-              <div className="testimonial-nav">
-                {[...Array(Math.ceil(testimonials.length / cardsPerView))].map((_, index) => (
-                  <div
-                    key={index}
-                    className={`testimonial-dot ${index === currentTestimonialIndex ? 'active' : ''}`}
-                    onClick={() => setCurrentTestimonialIndex(index)}
-                    data-index={index}
-                  ></div>
-                ))}
+            <p className="testimonial-text">{testimonial.text}</p>
+            <div className="testimonial-client">
+              <div className="client-avatar">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.name}
+                  loading="lazy"
+                />
               </div>
-
-              <button
-                className={`testimonial-arrow next-testimonial ${currentTestimonialIndex >= Math.ceil(testimonials.length / cardsPerView) - 1 ? 'disabled' : ''}`}
-                onClick={nextTestimonial}
-                disabled={currentTestimonialIndex >= Math.ceil(testimonials.length / cardsPerView) - 1}
-              >
-                <i className="fas fa-chevron-right"></i>
-              </button>
+              <div className="client-info">
+                <h3>{testimonial.name}</h3>
+                <p>{testimonial.role}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* 5. DEALERS SECTION */}
       <section className="section dealers-section">

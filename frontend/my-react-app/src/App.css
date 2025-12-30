@@ -40,3 +40,55 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Custom Cursor Classes */
+.custom-cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #c5a572;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background 0.3s;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor.active {
+  width: 40px;
+  height: 40px;
+  background: rgba(197, 165, 114, 0.2);
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c5a572;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s, width 0.3s, height 0.3s;
+}
+
+/* Remove cursor effects on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none;
+  }
+  
+  body {
+    cursor: default;
+  }
+}
+
+/* For users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
