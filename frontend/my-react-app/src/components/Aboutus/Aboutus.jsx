@@ -118,38 +118,38 @@ function Aboutus() {
             {/* Custom Cursor - Hidden on mobile */}
             <div className="A-custom-cursor" ref={cursorRef}></div>
 
-            {/* HERO SECTION */}
+            {/* HERO SECTION - Content updated, structure same */}
             <section className="A-hero-section" ref={heroRef}>
                 <div className="A-hero-gradient"></div>
                 
                 <div className="A-container A-pb-5 A-mb-4 mb-4 pb-5">
                     <div className="A-hero-content">
                         <div className="A-hero-subtitle" data-reveal>
-                            <span className="A-gold-accent">Excellence in Design Since 2008</span>
+                            <span className="A-gold-accent">Excellence in Construction Materials Since 2008</span>
                         </div>
 
                         <h1 className="A-hero-title" data-reveal data-delay="200">
-                            <span className="A-title-line">Where Architecture</span>
-                            <span className="A-title-line A-gold-accent">Becomes Art</span>
+                            <span className="A-title-line">Sree Sai Shambhavi Enterprises</span>
+                            <span className="A-title-line A-gold-accent">(GNG Group)</span>
                         </h1>
 
                         <p className="A-hero-desc" data-reveal data-delay="400">
-                            DLIFE Interiors transforms living spaces into curated experiences. For over a decade, we've been crafting environments that resonate with emotion, purpose, and timeless beauty.
+                            We are a leading supplier and manufacturer of ceiling systems, GI roofing sheets and GI channels, and a trusted dealer for premium ceiling and paint brands. We provide end-to-end solutions for residential and commercial interiors — from gypsum & POP ceilings to waterproofing, paints and roof sheets — backed by trained installers and reputed brand partnerships.
                         </p>
 
-                      
+                       
                     </div>
                 </div>
 
-                {/* Performance Stats */}
+                {/* Performance Stats - Same structure, updated numbers */}
                 <div className="A-hero-stats">
                     <div className="A-container">
                         <div className="A-stats-grid">
                             {[
-                                { label: 'Projects Completed', target: 500, suffix: '+' },
-                                { label: 'Years of Excellence', target: 15 },
-                                { label: 'Awards Won', target: 50, suffix: '+' },
-                                { label: 'Cities Served', target: 8 }
+                                { label: 'Years Experience', target: 15, suffix: '+' },
+                                { label: 'Premium Brands', target: 10, suffix: '+' },
+                                { label: 'Projects Completed', target: 1000, suffix: '+' },
+                                { label: 'Products Range', target: 50, suffix: '+' }
                             ].map((stat, index) => (
                                 <div key={index} className="A-stat-card" data-reveal data-delay={index * 100}>
                                     <div className="A-stat-value">
@@ -170,13 +170,13 @@ function Aboutus() {
                 </div>
             </section>
 
-            {/* STORY SECTION */}
+            {/* STORY SECTION - Repurposed as BRANDS SECTION */}
             <section id="A-story" className="A-section A-story-section">
                 <div className="A-container">
                     <div className="A-section-header">
-                        <span className="A-section-label" data-reveal>Our Legacy</span>
+                        <span className="A-section-label" data-reveal>Our Partnerships</span>
                         <h2 className="A-section-title" data-reveal data-delay="100">
-                            The Art of<br />Creating Spaces
+                            Authorized Dealer for<br />Premium Brands
                         </h2>
                     </div>
 
@@ -184,8 +184,8 @@ function Aboutus() {
                         <div className="A-story-visual" data-reveal>
                             <div className="A-image-frame">
                                 <img 
-                                    src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="Our Design Studio"
+                                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    alt="GNG Group Premium Materials"
                                     loading="lazy"
                                     className="A-story-image"
                                 />
@@ -200,16 +200,16 @@ function Aboutus() {
                         <div className="A-story-content">
                             {[
                                 {
-                                    title: 'Visionary Beginnings',
-                                    desc: 'Founded in Kochi with a singular vision to redefine luxury living, DLIFE Interiors began as a passion project that has evolved into a design powerhouse.'
+                                    title: 'Premium Brand Partnerships',
+                                    desc: 'Authorized dealer for leading brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, Armstrong, Jindal, Everest, and other premium manufacturers.'
                                 },
                                 {
-                                    title: 'Design Philosophy',
-                                    desc: 'We believe great design is an alchemy of aesthetics, functionality, and emotion—each project a narrative woven with attention to detail and timeless elegance.'
+                                    title: 'Quality Assurance',
+                                    desc: 'Every product we supply comes with proper certifications and quality checks, ensuring you get the best materials for your construction and interior projects.'
                                 },
                                 {
-                                    title: 'Craftsmanship & Innovation',
-                                    desc: 'Blending traditional artisanship with cutting-edge technology, we create spaces that are both authentic and forward-thinking, meticulously crafted to perfection.'
+                                    title: 'Complete Solutions',
+                                    desc: 'From ceiling systems and paints to wall solutions and roofing materials, we provide comprehensive interior solutions under one roof.'
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="A-story-block" data-reveal data-delay={(index + 2) * 100}>
@@ -219,8 +219,8 @@ function Aboutus() {
                             ))}
 
                             <div className="A-story-cta" data-reveal data-delay="500">
-                                <a href="/process" className="A-btn A-btn-ghost">
-                                    <span>Explore Our Process</span>
+                                <a href="/products" className="A-btn A-btn-ghost">
+                                    <span>View Our Products</span>
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2"/>
                                     </svg>
@@ -231,16 +231,16 @@ function Aboutus() {
                 </div>
             </section>
 
-            {/* PHILOSOPHY SECTION */}
+            {/* PHILOSOPHY SECTION - Repurposed as PRODUCTS SECTION */}
             <section className="A-section A-philosophy-section">
                 <div className="A-container">
                     <div className="A-section-header A-center">
-                        <span className="A-section-label" data-reveal>Design Principles</span>
+                        <span className="A-section-label" data-reveal>Our Products</span>
                         <h2 className="A-section-title" data-reveal data-delay="100">
-                            Our Guiding Philosophy
+                            Complete Interior Solutions
                         </h2>
                         <p className="A-section-desc" data-reveal data-delay="200">
-                            Three pillars that define our approach to creating extraordinary spaces
+                            Everything you need for construction and interior projects
                         </p>
                     </div>
 
@@ -248,30 +248,31 @@ function Aboutus() {
                         {[
                             {
                                 icon: (
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 19.93C7.05 19.44 4 16.08 4 12C4 11.38 4.08 10.78 4.21 10.21L9 15V16C9 17.1 9.9 18 11 18V19.93ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.2 15.97 17.9 17.39Z" fill="currentColor"/>
-                                    </svg>
+                                    <i className="fas fa-grip-vertical"></i>
                                 ),
-                                title: 'Innovation',
-                                desc: 'Pushing boundaries with avant-garde concepts and pioneering techniques that redefine interior design standards.'
+                                title: 'Ceiling Systems',
+                                desc: 'Gypsum ceilings, POP ceilings, 2x2 mineral acoustic tiles, PVC ceilings, fiber cement ceilings, and complete installation services.'
                             },
                             {
                                 icon: (
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" fill="currentColor"/>
-                                    </svg>
+                                    <i className="fas fa-paint-roller"></i>
                                 ),
-                                title: 'Craftsmanship',
-                                desc: 'Masterful execution with attention to every minute detail, ensuring exceptional quality in every project.'
+                                title: 'Paints & Coatings',
+                                desc: 'Interior & exterior paints, texture work, enamel finishes, waterproofing solutions, primers, and sealants from premium brands.'
                             },
                             {
                                 icon: (
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M13 2.05V5H11V2.05C5.94 2.55 2 6.81 2 12C2 17.52 6.48 22 12 22C17.19 22 21.45 18.06 21.95 13H18.92C18.44 16.91 15.53 20 12 20C7.58 20 4 16.42 4 12C4 8.47 7.05 5.56 11 5.08V2.05ZM20.5 11H22.5C22.5 6.5 18.5 2.5 14 2.5V4.5C17.26 4.5 19.97 7.21 20.5 11ZM16 14.5L22 12L16 9.5V14.5Z" fill="currentColor"/>
-                                    </svg>
+                                    <i className="fas fa-th-large"></i>
                                 ),
-                                title: 'Sustainability',
-                                desc: 'Eco-conscious designs that respect our planet while creating beautiful, lasting spaces for future generations.'
+                                title: 'Wall Solutions',
+                                desc: 'Wall coverings, laminates, false wall systems, tiles, marble/granite stone cladding, and partition systems.'
+                            },
+                            {
+                                icon: (
+                                    <i className="fas fa-home"></i>
+                                ),
+                                title: 'Roofing & Structural',
+                                desc: 'GI roofing sheets, colored roofing, GI channels, ceiling channels, suspension systems, and structural solutions.'
                             }
                         ].map((principle, index) => (
                             <div 
@@ -290,7 +291,7 @@ function Aboutus() {
                 </div>
             </section>
 
-            {/* WHO WE ARE SECTION - FIXED IMAGE ALIGNMENT */}
+            {/* WHO WE ARE SECTION - Content updated, structure same */}
             <section className="A-section A-who-section">
                 <div className="A-container">
                     <div className="A-who-wrapper">
@@ -298,56 +299,36 @@ function Aboutus() {
                         <div className="A-who-content">
                             <span className="A-who-label" data-reveal>WHO WE ARE</span>
                             <h2 className="A-who-title" data-reveal data-delay="100">
-                                Turning Your Vision<br />Into Reality
+                                Gypsum 'N' Gypsum Group<br />Your Trusted Partner
                             </h2>
                             
                             <p className="A-who-desc" data-reveal data-delay="200">
-                                At DLIFE Interiors, we specialize in transforming ordinary spaces into extraordinary environments. 
-                                As your trusted partner in premium interior solutions, we bring decades of expertise and an 
-                                unwavering commitment to excellence in every project.
+                                Operating as GNG Paints, Gypsum 'N' Gypsum, and Sree Sai Shambhavi Enterprises, we have established ourselves as premier suppliers and manufacturers in the construction materials industry. Our commitment to quality, timely delivery, and customer satisfaction drives everything we do.
                             </p>
 
                             <div className="A-who-features">
                                 <div className="A-feature-item" data-reveal data-delay="300">
                                     <div className="A-feature-icon">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM9.29 16.29L5.7 12.7C5.31 12.31 5.31 11.68 5.7 11.29C6.09 10.9 6.72 10.9 7.11 11.29L10 14.17L16.88 7.29C17.27 6.9 17.9 6.9 18.29 7.29C18.68 7.68 18.68 8.31 18.29 8.7L10.7 16.29C10.31 16.68 9.68 16.68 9.29 16.29Z" fill="currentColor"/>
-                                        </svg>
+                                        <i className="fas fa-industry"></i>
                                     </div>
                                     <div className="A-feature-content">
-                                        <h4>Proudly Awarded & Honored</h4>
-                                        <p>Recognized with numerous industry awards for delivering outstanding results and setting new standards in interior excellence.</p>
+                                        <h4>Manufacturing & Supply</h4>
+                                        <p>Direct manufacturers of GI roofing sheets and channels, and authorized suppliers of premium ceiling systems, paints, and building materials.</p>
                                     </div>
                                 </div>
 
                                 <div className="A-feature-item" data-reveal data-delay="400">
                                     <div className="A-feature-icon">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                            <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
-                                        </svg>
+                                        <i className="fas fa-tools"></i>
                                     </div>
                                     <div className="A-feature-content">
-                                        <h4>Work We've Delivered</h4>
-                                        <p>From residential sanctuaries to commercial masterpieces, we bring precision and artistry to every space we touch.</p>
+                                        <h4>Professional Installation</h4>
+                                        <p>Expert installation services for gypsum/POP/PVC ceilings, painting works, wall coverings, and complete interior solutions.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="A-contact-info" data-reveal data-delay="500">
-                                <div className="A-contact-bubble">
-                                    <div className="A-phone-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.24 8.69 6.45 9.06 7.57C9.18 7.92 9.09 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
-                                        </svg>
-                                    </div>
-                                    <div className="A-contact-details">
-                                        <p className="A-contact-label">Call For Consultation</p>
-                                        <a href="tel:+919876543210" className="A-contact-number">
-                                            +91 987 654 3210
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                           
                         </div>
 
                         {/* Gallery Column with Fixed Alignment */}
@@ -357,8 +338,8 @@ function Aboutus() {
                                 <div className="A-main-image-container" data-reveal>
                                     <div className="A-main-image-frame">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                            alt="Professional interior design work"
+                                            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                            alt="GNG Group Ceiling Installation"
                                             loading="lazy"
                                             className="A-main-image"
                                         />
@@ -370,8 +351,8 @@ function Aboutus() {
                                 <div className="A-small-images-grid">
                                     <div className="A-small-image A-small-image-1" data-reveal data-delay="100">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                            alt="Color palette and materials"
+                                            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                            alt="Paint Color Samples"
                                             loading="lazy"
                                         />
                                         <div className="A-image-overlay-shape"></div>
@@ -379,8 +360,8 @@ function Aboutus() {
                                     
                                     <div className="A-small-image A-small-image-2" data-reveal data-delay="150">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                            alt="Design tools and equipment"
+                                            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                            alt="Construction Materials"
                                             loading="lazy"
                                         />
                                         <div className="A-image-overlay-shape"></div>
@@ -388,8 +369,8 @@ function Aboutus() {
                                     
                                     <div className="A-small-image A-small-image-3" data-reveal data-delay="200">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                            alt="Finished wall painting"
+                                            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                            alt="Roofing Materials"
                                             loading="lazy"
                                         />
                                         <div className="A-image-overlay-shape"></div>
@@ -402,28 +383,30 @@ function Aboutus() {
                                     <div className="A-deco-circle A-deco-2"></div>
                                     <div className="A-deco-line"></div>
                                 </div>
+
+                               
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* PROCESS SECTION */}
+            {/* PROCESS SECTION - Repurposed as SERVICES SECTION */}
             <section className="A-section A-process-section">
                 <div className="A-container">
                     <div className="A-section-header A-center">
-                        <span className="A-section-label" data-reveal>Our Process</span>
+                        <span className="A-section-label" data-reveal>Our Services</span>
                         <h2 className="A-section-title" data-reveal data-delay="100">
-                            Seamless Journey to<br />Perfection
+                            Complete Solution<br />From Supply to Installation
                         </h2>
                     </div>
 
                     <div className="A-process-timeline">
                         {[
-                            { number: '01', title: 'Consultation', desc: 'Understanding your vision and requirements' },
-                            { number: '02', title: 'Design Development', desc: 'Creating tailored design solutions' },
-                            { number: '03', title: 'Execution', desc: 'Precision implementation with quality assurance' },
-                            { number: '04', title: 'Reveal', desc: 'Final walkthrough and project handover' }
+                            { number: '01', title: 'Consultation & Quotation', desc: 'Understanding your requirements and providing detailed quotations' },
+                            { number: '02', title: 'Material Supply', desc: 'Timely delivery of premium quality construction materials' },
+                            { number: '03', title: 'Professional Installation', desc: 'Expert installation by trained technicians and installers' },
+                            { number: '04', title: 'Quality Assurance', desc: 'Final inspection and handover with quality guarantee' }
                         ].map((step, index) => (
                             <div 
                                 key={index} 
@@ -443,29 +426,47 @@ function Aboutus() {
                 </div>
             </section>
 
-            {/* CTA SECTION */}
+            {/* CTA SECTION - Content updated, structure same */}
             <section className="A-section A-cta-section">
                 <div className="A-container">
                     <div className="A-cta-content" data-reveal>
-                        <h2 className="A-cta-title">
-                            Ready to Transform<br />Your Space?
-                        </h2>
+                        <h1 className="text-white mb-4 pb-4 w-100">
+                            Ready to Start Your<br />Construction Project?
+                        </h1>
                         <p className="A-cta-desc" data-reveal data-delay="100">
-                            Let's collaborate to create something extraordinary together. Your vision, our expertise—perfect harmony.
+                            Contact us for free consultation, quotations, or to visit our showroom. Get premium materials and professional installation services.
                         </p>
                         <div className="A-cta-actions" data-reveal data-delay="200">
                             <a href="/contact" className="A-btn A-btn-primary A-btn-large">
-                                <span>Start Your Project</span>
+                                <span>Request Quotation</span>
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2"/>
                                 </svg>
                             </a>
-                            <a href="tel:+919876543210" className="A-btn A-btn-secondary">
+                            <a href="tel:+91924660909" className="A-btn A-btn-secondary">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                     <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.24 8.69 6.45 9.06 7.57C9.18 7.92 9.09 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
                                 </svg>
                                 <span>Call Now</span>
                             </a>
+                        </div>
+                        
+                        {/* Contact Info in same layout */}
+                        <div className="A-cta-contact-info" data-reveal data-delay="300">
+                            <div className="A-cta-contact-item">
+                                <i className="fas fa-envelope"></i>
+                                <div>
+                                    <h4 className='text-black fs-2 mt-3 pt-3'>Email Us</h4>
+                                    <div className='text-white'>gypsumngypsum4u@gmail.com</div>
+                                </div>
+                            </div>
+                            <div className="A-cta-contact-item">
+                                <i className="fas fa-map-marker-alt"></i>
+                                <div >
+                                    <h4 className='text-black fs-2 mt-3 pt-3'>Visit Our Showroom</h4>
+                                    <span className='text-white'>RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

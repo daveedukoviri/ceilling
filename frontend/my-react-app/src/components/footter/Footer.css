@@ -94,3 +94,7 @@
      background: var(--classic-gold);
      transform: translateY(-3px);
  }
+
+ .gold{
+     color: var(--classic-gold);
+ }

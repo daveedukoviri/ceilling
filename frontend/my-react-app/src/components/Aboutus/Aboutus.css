@@ -103,7 +103,7 @@
 .A-hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 1000px;
   padding: clamp(60px, 8vw, 120px) 0;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .A-hero-title {
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(2.8rem, 6vw, 4rem);
   color: var(--A-white);
   margin-bottom: 32px;
   line-height: 1.1;
@@ -433,7 +433,7 @@
 
 .A-principles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 32px;
   margin-top: 60px;
 }
@@ -1218,3 +1218,11 @@
     display: none;
   }
 }
+
+
+
+
+
+
+
+

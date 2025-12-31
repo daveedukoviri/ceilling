@@ -1114,6 +1114,7 @@
 @media (max-width:768px) {
     .banner_logo{
         height: 50px;
+        margin: 7px;
     }
 }
 

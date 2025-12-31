@@ -1,4 +1,5 @@
 import './login.css';
+import logo_banner from '../../assets/img/logo_banner.webp';
 
 function Login() {
     return (
@@ -9,7 +10,7 @@ function Login() {
                     <div className="login-container m-auto">
                         {/* Image Section */}
                         <div className="image-section">
-                            <img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?auto=format&fit=crop&w=2940&q=90"
+                            <img src={logo_banner}
                                 alt="Luxury Furniture Interior" />
 
                             <div className="image-overlay">

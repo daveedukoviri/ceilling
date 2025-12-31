@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Body.css'; // We'll extract the CSS separately
 
-import dealer1 from '../../assets/img/dealers/1.png';
-import dealer2 from '../../assets/img/dealers/2.jpg';
-import dealer3 from '../../assets/img/dealers/3.jpg';
-import dealer4 from '../../assets/img/dealers/4.png';
-import dealer5 from '../../assets/img/dealers/5.jpg';
-import dealer6 from '../../assets/img/dealers/6.jpg';
-import dealer7 from '../../assets/img/dealers/7.jpg';
-import dealer8 from '../../assets/img/dealers/8.png';
+import dealer1 from '../../assets/img/dealers/1.webp';
+import dealer2 from '../../assets/img/dealers/2.webp';
+import dealer3 from '../../assets/img/dealers/3.webp';
+import dealer4 from '../../assets/img/dealers/4.webp';
+import dealer5 from '../../assets/img/dealers/5.webp';
+import dealer6 from '../../assets/img/dealers/6.webp';
+import dealer7 from '../../assets/img/dealers/7.webp';
+import dealer8 from '../../assets/img/dealers/8.webp';
 import dealer9 from '../../assets/img/dealers/9.webp';
-import dealer10 from '../../assets/img/dealers/10.jpg';
-import dealer11 from '../../assets/img/dealers/11.png';
-import dealer12 from '../../assets/img/dealers/12.jpg';
-import dealer13 from '../../assets/img/dealers/13.jpg';
+import dealer10 from '../../assets/img/dealers/10.webp';
+import dealer11 from '../../assets/img/dealers/11.webp';
+import dealer12 from '../../assets/img/dealers/12.webp';
+import dealer13 from '../../assets/img/dealers/13.webp';
 
 
 const Body = () => {
@@ -38,178 +38,179 @@ const Body = () => {
   const slideIntervalRef = useRef(null);
   const testimonialIntervalRef = useRef(null);
 
-  // Hero Carousel Data
+  // Hero Carousel Data - Updated with company info
   const slides = [
     {
       backgroundImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Timeless Elegance, Modern Craftsmanship',
-      description: 'Discover the art of sophisticated living with our premium collection of curated designs that blend tradition with contemporary aesthetics.',
-      buttonText: 'Explore Our Collections',
+      title: 'Premium Ceiling & Roofing Solutions',
+      description: 'Leading supplier and manufacturer of gypsum ceilings, GI roofing sheets, and premium paints for residential and commercial spaces.',
+      buttonText: 'Explore Products',
       buttonLink: '#about'
     },
     {
       backgroundImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Artisan Quality, Unmatched Expertise',
-      description: 'Where traditional craftsmanship meets contemporary design excellence, creating spaces that inspire and endure for generations.',
-      buttonText: 'View Our Work',
-      buttonLink: '#testimonials'
+      title: 'Authorized Dealer for Top Brands',
+      description: 'Trusted partner for Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, and other premium ceiling and paint brands.',
+      buttonText: 'View Brands',
+      buttonLink: '#dealers'
     },
     {
       backgroundImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Elevating Spaces Since 1985',
-      description: 'Three decades of creating extraordinary interiors that tell your story and reflect your unique personality and lifestyle.',
-      buttonText: 'Our Heritage',
+      title: 'End-to-End Interior Solutions',
+      description: 'From gypsum ceilings to waterproofing, paints, and roof sheets - complete solutions backed by trained professional installers.',
+      buttonText: 'Our Services',
       buttonLink: '#contact'
     }
   ];
 
-  // About Features Data
+  // About Features Data - Updated with company info
   const aboutFeatures = [
-    { icon: 'fas fa-award', title: 'Award-Winning', description: '15+ international design awards' },
-    { icon: 'fas fa-users', title: 'Expert Team', description: '25+ professional designers & craftsmen' },
-    { icon: 'fas fa-building', title: 'Global Projects', description: '300+ completed projects worldwide' },
-    { icon: 'fas fa-handshake', title: 'Trusted Partners', description: '50+ premium brand collaborations' }
+    { icon: 'fas fa-building', title: 'Manufacturing & Supply', description: 'Quality gypsum ceilings & GI roofing sheets' },
+    { icon: 'fas fa-paint-roller', title: 'Authorized Dealer', description: 'Premium ceiling and paint brands' },
+    { icon: 'fas fa-tools', title: 'Professional Installation', description: 'Trained installers for all ceiling types' },
+    { icon: 'fas fa-handshake', title: 'End-to-End Solutions', description: 'Complete interior solutions from concept to completion' }
   ];
 
-  // Gallery Data
+  // Gallery Data - Updated with company projects
   const galleryProjects = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Modern Luxury Living Room',
-      description: 'Contemporary design with premium materials',
-      category: 'residential luxury',
-      tags: ['Residential']
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1158&auto=format&fit=crop',
+      title: 'Gypsum Ceiling Installation',
+      description: 'Modern waterproof gypsum ceiling for residential project',
+      category: 'ceiling',
+      tags: ['Gypsum']
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Corporate Office Space',
-      description: 'Productivity-focused design with natural elements',
-      category: 'commercial modern',
-      tags: ['Commercial']
+      image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1127&auto=format&fit=crop',
+      title: 'POP Decorative Work',
+      description: 'Elegant POP ceiling with decorative cornices',
+      category: 'ceiling',
+      tags: ['POP']
     },
     {
       id: 3,
-      image: 'https://plus.unsplash.com/premium_photo-1681487178876-a1156952ec60?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Minimalist Kitchen Design',
-      description: 'Clean lines with functional elegance',
-      category: 'residential modern',
-      tags: ['Residential']
+      image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=1074&auto=format&fit=crop',
+      title: 'Acoustic Mineral Ceiling',
+      description: '2x2 mineral ceiling tiles for commercial space',
+      category: 'ceiling',
+      tags: ['Acoustic']
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Luxury Hotel Lobby',
-      description: 'Grand entrance with bespoke furnishings',
-      category: 'commercial luxury',
-      tags: ['Commercial']
+      image: 'https://images.unsplash.com/photo-1600585154340-043cd787c4b8?q=80&w=1155&auto=format&fit=crop',
+      title: 'GI Roofing Sheet Installation',
+      description: 'Colored GI roofing sheets for industrial project',
+      category: 'roofing',
+      tags: ['Roofing']
     },
     {
       id: 5,
-      image: 'https://plus.unsplash.com/premium_photo-1680296669146-b6c258cbc62d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'Master Bedroom Suite',
-      description: 'Tranquil sanctuary with custom joinery',
-      category: 'residential luxury',
-      tags: ['Residential']
+      image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1170&auto=format&fit=crop',
+      title: 'Interior Painting Project',
+      description: 'Complete interior painting with texture work',
+      category: 'painting',
+      tags: ['Painting']
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      title: 'Creative Studio Space',
-      description: 'Innovative design inspiring creativity',
-      category: 'commercial modern',
+      image: 'https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?q=80&w=1032&auto=format&fit=crop',
+      title: 'Commercial Ceiling System',
+      description: 'Suspended ceiling with integrated lighting',
+      category: 'ceiling',
       tags: ['Commercial']
     }
   ];
 
-  // Testimonials Data
+  // Testimonials Data - Updated with relevant testimonials
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, Heritage Design Co.',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"Working with Elegant Living transformed our vision into reality. Their attention to detail and commitment to quality is unmatched. The final result exceeded our expectations in every way possible."',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Director, Urban Architects',
+      name: 'Rajesh Kumar',
+      role: 'Building Contractor, Rajahmundry',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"The level of professionalism and creativity brought to our project was exceptional. They listened to our needs and delivered beyond what we imagined. Our new office space has completely transformed our company culture."',
+      text: '"GNG Group provided excellent gypsum ceiling materials and professional installation for our residential project. Their attention to detail and quality products exceeded our expectations."',
       rating: 5
     },
     {
-      name: 'Elena Rodriguez',
-      role: 'Founder, Modern Living Spaces',
+      name: 'Priya Sharma',
+      role: 'Commercial Space Owner',
       avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"From the initial consultation to the final delivery, the process was smooth and transparent. Their expertise in balancing aesthetics with functionality is remarkable."',
+      text: '"The acoustic ceiling tiles from Sree Sai Shambhavi Enterprises transformed our office space. Great soundproofing and the installation team was very professional."',
+      rating: 5
+    },
+    {
+      name: 'Mohan Reddy',
+      role: 'Architect, Godavari Designs',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      text: '"As an authorized dealer for top brands, they provide quality materials. Their GI roofing sheets and channels are durable and perfect for our projects in East Godavari."',
       rating: 4.5
     },
     {
-      name: 'David Miller',
-      role: 'Managing Director, TechCorp Inc.',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"Their team transformed our outdated office into a modern, inspiring workspace. Productivity has increased by 30% since the redesign. Worth every penny!"',
-      rating: 5
-    },
-    {
-      name: 'Sophia Williams',
-      role: 'Interior Design Enthusiast',
+      name: 'Anjali Patel',
+      role: 'Homeowner',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"We\'ve worked with many designers over the years, but none have shown the level of dedication and creativity as this team. Our home is now our sanctuary."',
+      text: '"Complete painting and waterproofing solution for our home. Used Asian Paints sealants and their team did excellent texture work on walls. Highly recommended!"',
       rating: 5
     },
     {
-      name: 'Robert Kim',
-      role: 'Creative Director, Innovation Labs',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"The attention to lighting and acoustics has made a significant difference in our daily work experience. Truly a transformative design approach."',
+      name: 'Suresh Babu',
+      role: 'Construction Company Director',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      text: '"We\'ve been sourcing GI channels and suspension systems from them for years. Consistent quality and reliable supply for all our ceiling projects."',
+      rating: 5
+    },
+    {
+      name: 'Geetha Nair',
+      role: 'Hotel Manager',
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      text: '"The fire-retardant gypsum ceilings installed in our hotel have been excellent. The team completed installation on schedule with minimal disruption."',
       rating: 5
     }
   ];
 
-  // Dealers Data
+  // Dealers Data - Updated with brand logos
   const dealers = [
-
     { logo: dealer1, icon: 'fa-medal', width: '100%' },
     { logo: dealer2, icon: 'fa-award', width: '100%' },
     { logo: dealer3, icon: 'fa-trophy', width: '100%' },
     { logo: dealer4, icon: 'fa-gem', width: '100%' },
-    { logo: dealer5, icon: 'fa-heart',width: '90%' },
+    { logo: dealer5, icon: 'fa-heart', width: '90%' },
     { logo: dealer6, icon: 'fa-hammer', width: '100%' },
-    { logo: dealer7, icon: 'fa-trophy',width: '90%' },
-    { logo: dealer8, icon: 'fa-heart',width: '100%' },
-    { logo: dealer9, icon: 'fa-star',width: '100%' },
-    { logo: dealer10, icon: 'fa-hammer', width: '90%' },
-    { logo: dealer11, icon: 'fa-trophy', width: '75%' },
+    { logo: dealer7, icon: 'fa-trophy', width: '80%' },
+    { logo: dealer8, icon: 'fa-heart', width: '100%' },
+    { logo: dealer9, icon: 'fa-star', width: '100%' },
+    { logo: dealer10, icon: 'fa-hammer', width: '85%' },
+    { logo: dealer11, icon: 'fa-trophy', width: '72%' },
     { logo: dealer12, icon: 'fa-leaf', width: '85%' },
     { logo: dealer13, icon: 'fa-medal', width: '100%' }
-
   ];
-  // FAQ Data
+
+  // FAQ Data - Updated with company-specific questions
   const faqItems = [
     {
-      question: 'What is the typical timeline for a complete interior design project?',
-      answer: 'The timeline varies based on the scope and complexity of the project. A standard residential project typically takes 3-6 months from initial consultation to final installation. Commercial projects may range from 6 months to 1 year. We provide a detailed project timeline during our initial consultation phase.'
+      question: 'What types of ceiling systems do you offer?',
+      answer: 'We offer a complete range of ceiling systems including gypsum ceilings (plain/waterproof/fire-retardant), POP ceilings, 2x2 mineral acoustic ceiling tiles, PVC ceilings, and fiber-cement board ceilings. We also provide all necessary GI channels and suspension systems.'
     },
     {
-      question: 'How do you approach sustainability in your designs?',
-      answer: 'Sustainability is at the core of our design philosophy. We prioritize locally-sourced materials, energy-efficient solutions, and non-toxic finishes. We work with certified sustainable vendors and incorporate elements like natural lighting, proper insulation, and timeless design to ensure longevity and reduce environmental impact.'
+      question: 'Are you authorized dealers for the brands you represent?',
+      answer: 'Yes, we are authorized dealers for premium brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, Everest boards, Hilux, VOX, Diamond Ceilings, and other leading brands in the ceiling and paint industry.'
     },
     {
-      question: 'What is your fee structure for design services?',
-      answer: 'We offer flexible pricing models tailored to your project needs: flat fee for complete projects, hourly rates for consultations, and percentage-based for large-scale projects. During our initial consultation, we\'ll discuss your budget and recommend the most appropriate pricing structure. All fee structures are transparent with no hidden costs.'
+      question: 'Do you provide installation services along with materials?',
+      answer: 'Yes, we offer complete end-to-end solutions. We supply all materials and provide professional installation by our trained team for gypsum/POP/PVC ceilings, painting works, waterproofing, and other interior solutions.'
     },
     {
-      question: 'Do you work with clients outside your local area?',
-      answer: 'Yes, we regularly work with clients nationally and internationally. Our remote design process includes virtual consultations, detailed digital presentations, and coordination with local contractors. We\'ve successfully completed projects across North America, Europe, and Asia, maintaining the same quality and attention to detail regardless of location.'
+      question: 'What areas do you serve in Andhra Pradesh?',
+      answer: 'We are based in Rajahmundry, East Godavari district and serve the entire Andhra Pradesh region. Our head office is at RTC Complex Road, V L Puram, Rajahmundry with a branch at Ramachandrarao Peta.'
     },
     {
-      question: 'What sets your design studio apart from others?',
-      answer: 'Our unique approach combines three decades of heritage craftsmanship with innovative design thinking. We offer: 1) Full-service design from concept to installation, 2) Access to exclusive trade-only resources, 3) A collaborative process that values client input, and 4) Post-project support and maintenance guidance. Our award-winning team ensures every detail reflects your vision while enhancing functionality.'
+      question: 'Can you provide customized solutions for commercial projects?',
+      answer: 'Absolutely! We specialize in both residential and commercial projects. We can provide customized ceiling designs, acoustic solutions for offices, fire-retardant systems for commercial spaces, and complete interior packages including wall paneling and partitions.'
     }
   ];
+
+
 
   // Hero Carousel Functions
   const nextSlide = () => {
@@ -358,6 +359,16 @@ const Body = () => {
       '_blank'
     );
   };
+
+  // Testimonial navigation
+  const nextTestimonial = () => {
+    setCurrentTestimonialIndex((prev) => (prev + 1) % (testimonials.length - cardsPerView + 1));
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonialIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   return (
     <div className="body-content">
       {/* 1. HERO CAROUSEL SECTION */}
@@ -402,34 +413,35 @@ const Body = () => {
         </div>
       </section>
 
-      {/* 2. ABOUT SECTION */}
+      {/* 2. ABOUT SECTION - Updated with company info */}
       <section className="section about-section" id="about">
         <div className="container">
-          <h2 className="section-title">About Our Studio</h2>
+          <h2 className="section-title">About GNG Group</h2>
           <p className="section-subtitle">
-            For over three decades, we've been transforming spaces into experiences, blending artistry with functionality.
+            Sree Sai Shambhavi Enterprises (GNG Group) - Leading supplier and manufacturer of premium ceiling systems, roofing solutions, and paint products
           </p>
 
           <div className="about-container">
             <div className="about-image-container">
               <img
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                alt="Our Design Studio"
+                src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?q=80&w=1174&auto=format&fit=crop"
+                alt="GNG Group Ceiling Solutions"
                 className="about-image"
               />
-              <div className="about-badge">Since 1985</div>
+              <div className="about-badge">Trusted Since Years</div>
             </div>
 
             <div className="about-content">
-              <h2>Crafting Stories Through Design</h2>
+              <h2>Your Complete Interior Solution Partner</h2>
               <p>
-                At Elegant Living, we believe interiors should be more than just beautiful spaces—they should be
-                reflections of the people who inhabit them. Our philosophy combines timeless elegance with
-                modern functionality, creating environments that inspire, comfort, and endure.
+                Sree Sai Shambhavi Enterprises (GNG Group) is a leading manufacturer and supplier of ceiling systems,
+                GI roofing sheets and channels, and an authorized dealer for premium ceiling and paint brands.
+                We provide end-to-end solutions for residential and commercial interiors.
               </p>
               <p>
-                With a team of award-winning designers and craftsmen, we approach each project as a unique
-                narrative, weaving together materials, textures, and light to create spaces that tell your story.
+                From gypsum & POP ceilings to waterproofing, paints, and roof sheets - our services are backed by
+                trained professional installers and partnerships with reputed brands like Saint-Gobain, USG Boral,
+                JSW, and Armstrong.
               </p>
 
               <div className="about-features">
@@ -450,24 +462,28 @@ const Body = () => {
         </div>
       </section>
 
-      {/* 3. GALLERY SECTION */}
+
+
+      {/* 4. GALLERY SECTION - Updated */}
       <section className="section gallery-section" id="gallery">
         <div className="container">
-          <h2 className="section-title">Our Portfolio</h2>
+          <h2 className="section-title">Our Project Gallery</h2>
           <p className="section-subtitle">
-            Explore our curated collection of exquisite interior designs that transform spaces into experiences
+            Explore our completed projects featuring premium ceiling installations, roofing solutions, and interior finishes
           </p>
 
           {/* Gallery Filter */}
           <div className="gallery-filter">
-            {['all', 'residential', 'commercial', 'luxury', 'modern'].map((filter) => (
+            {['all', 'ceiling', 'roofing', 'painting'].map((filter) => (
               <button
                 key={filter}
                 className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
                 onClick={() => filterGallery(filter)}
                 data-filter={filter}
               >
-                {filter.charAt(0).toUpperCase() + filter.slice(1)} {filter === 'all' ? 'Projects' : ''}
+                {filter === 'all' ? 'All Projects' :
+                  filter === 'ceiling' ? 'Ceiling Work' :
+                    filter === 'roofing' ? 'Roofing Solutions' : 'Painting Projects'}
               </button>
             ))}
           </div>
@@ -523,54 +539,54 @@ const Body = () => {
           )}
 
           <div className="view-more-container">
-            <a href="#contact" className="cta-button">View Full Portfolio</a>
+            <a href="#contact" className="cta-button">View More Projects</a>
           </div>
         </div>
       </section>
 
-     {/* TESTIMONIALS SECTION - MARQUEE */}
-<section className="section testimonials-section" id="testimonials">
-  <div className="container">
-    <h2 className="section-title">Client Testimonials</h2>
-    <p className="section-subtitle">
-      Hear from our clients about their experiences working with our design team.
-    </p>
+      {/* 5. TESTIMONIALS SECTION - MARQUEE */}
+      <section className="section testimonials-section" id="testimonials">
+        <div className="container">
+          <h2 className="section-title">Client Testimonials</h2>
+          <p className="section-subtitle">
+            Hear from our satisfied customers about their experience with our products and services
+          </p>
 
-    <div className="testimonial-container">
-      <div className="testimonial-track">
-        {/* Original testimonials + duplicated for seamless loop */}
-        {[...testimonials, ...testimonials].map((testimonial, index) => (
-          <div key={`${testimonial.name}-${index}`} className="testimonial-card">
-            <div className="testimonial-rating">
-              {renderRating(testimonial.rating)}
-            </div>
-            <p className="testimonial-text">{testimonial.text}</p>
-            <div className="testimonial-client">
-              <div className="client-avatar">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name}
-                  loading="lazy"
-                />
-              </div>
-              <div className="client-info">
-                <h3>{testimonial.name}</h3>
-                <p>{testimonial.role}</p>
-              </div>
+          <div className="testimonial-container">
+            <div className="testimonial-track">
+              {/* Original testimonials + duplicated for seamless loop */}
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <div key={`${testimonial.name}-${index}`} className="testimonial-card">
+                  <div className="testimonial-rating">
+                    {renderRating(testimonial.rating)}
+                  </div>
+                  <p className="testimonial-text">{testimonial.text}</p>
+                  <div className="testimonial-client">
+                    <div className="client-avatar">
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="client-info">
+                      <h3>{testimonial.name}</h3>
+                      <p>{testimonial.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
-      {/* 5. DEALERS SECTION */}
-      <section className="section dealers-section">
+      {/* 6. DEALERS SECTION - Updated */}
+      <section className="section dealers-section" id="dealers">
         <div className="container">
-          <h2 className="section-title">Our Authorized Partners</h2>
+          <h2 className="section-title">Our Authorized Brands</h2>
           <p className="section-subtitle">
-            Partnering with premium brands and showrooms worldwide to bring exceptional design to your doorstep
+            Authorized dealer and partner for premium ceiling, paint, and building material brands
           </p>
 
           <div className="dealers-showcase">
@@ -584,7 +600,7 @@ const Body = () => {
                     color: index === 7 ? "var(--classic-gold)" : "inherit"
                   }}
                 >
-                  <img src={dealer.logo} alt={dealer.name} style={{ width: dealer.width }} />
+                  <img src={dealer.logo} alt={`Brand ${index + 1}`} style={{ width: dealer.width }} />
                 </div>
                 <div className="dealer-badge">
                   <i className={`fas ${dealer.icon}`}></i>
@@ -592,15 +608,17 @@ const Body = () => {
               </div>
             ))}
           </div>
+
+
         </div>
       </section>
 
-      {/* 6. FAQ SECTION */}
+      {/* 7. FAQ SECTION - Updated */}
       <section className="section faq-section" id="faq">
         <div className="container">
           <h2 className="section-title">Frequently Asked Questions</h2>
           <p className="section-subtitle">
-            Find answers to common questions about our design process, services, and collaborations.
+            Find answers to common questions about our products, services, and installation process
           </p>
 
           <div className="faq-container">
@@ -624,8 +642,8 @@ const Body = () => {
         </div>
       </section>
 
-
-      <section className="contact-container">
+      {/* 8. CONTACT SECTION - Updated with company info */}
+      <section className="contact-container" id="contact">
         <div className="container">
           <div className="row text-center mb-5">
             <div className="col-12">
@@ -641,11 +659,12 @@ const Body = () => {
                 </div>
                 <div className="contact-info">
                   <h4>Call Us</h4>
-                  <p>Speak directly with our design consultants</p>
-                  <a href="tel:+911234567890" className="contact-link">
+                  <p className='small'>Speak directly with our product consultants</p>
+                  <a href="tel:+91924660909" className="contact-link">
                     <i className="fas fa-phone me-2"></i>
-                    +91 123 456 7890
+                    +91 92466 0909
                   </a>
+                  
                 </div>
               </div>
             </div>
@@ -656,26 +675,28 @@ const Body = () => {
                 </div>
                 <div className="contact-info">
                   <h4>Email Us</h4>
-                  <p>Send us your queries and ideas</p>
-                  <a href="mailto:info@dlifeinteriors.com" className="contact-link">
+                  <p className='small'>Send us your queries and project requirements</p>
+                  <a href="mailto:gypsumngypsum4u@gmail.com" className="contact-link">
                     <i className="fas fa-envelope me-2"></i>
-                    info@dlifeinteriors.com
+                    gypsumngypsum4u@gmail.com
                   </a>
+                  
                 </div>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 mb-4">
               <div className="contact-card">
                 <div className="contact-icon">
-                  <i className="fas fa-comments"></i>
+                  <i className="fas fa-map-marker-alt"></i>
                 </div>
                 <div className="contact-info">
-                  <h4>Live Chat</h4>
-                  <p>Chat instantly with our team</p>
-                  <a href="#live-chat" className="contact-link" onclick="openLiveChat()">
-                    <i className="fas fa-comment-dots me-2"></i>
-                    Start Live Chat
+                  <h4>Visit Us</h4>
+                  <p className='small'>Visit our office or branch for consultation</p>
+                  <a href="#map" className="contact-link">
+                    <i className="fas fa-location-dot me-2"></i>
+                    Rajahmundry, AP
                   </a>
+                
                 </div>
               </div>
             </div>
@@ -683,22 +704,22 @@ const Body = () => {
         </div>
       </section>
 
-
+      {/* 9. CONTACT FORM SECTION */}
       <section className="contact-form-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
               <div className="form-card">
                 <div className="form-header">
-                  <h2>Send Us a Message</h2>
+                  <h2>Request a Quote</h2>
                   <p>Fill out the form below and we'll get back to you within 24 hours</p>
                 </div>
 
-                <form id="contactForm" novalidate>
+                <form id="contactForm" noValidate>
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
-                        <label for="firstName" className="form-label">First Name *</label>
+                        <label htmlFor="firstName" className="form-label">First Name *</label>
                         <input type="text" className="form-control" id="firstName" required />
                         <div className="invalid-feedback">
                           Please enter your first name.
@@ -707,7 +728,7 @@ const Body = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
-                        <label for="lastName" className="form-label">Last Name *</label>
+                        <label htmlFor="lastName" className="form-label">Last Name *</label>
                         <input type="text" className="form-control" id="lastName" required />
                         <div className="invalid-feedback">
                           Please enter your last name.
@@ -719,7 +740,7 @@ const Body = () => {
                   <div className="row">
                     <div className="col-md-6">
                       <div className="form-group">
-                        <label for="email" className="form-label">Email Address *</label>
+                        <label htmlFor="email" className="form-label">Email Address *</label>
                         <input type="email" className="form-control" id="email" required />
                         <div className="invalid-feedback">
                           Please enter a valid email address.
@@ -728,7 +749,7 @@ const Body = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-group">
-                        <label for="phone" className="form-label">Phone Number *</label>
+                        <label htmlFor="phone" className="form-label">Phone Number *</label>
                         <input type="tel" className="form-control" id="phone" required />
                         <div className="invalid-feedback">
                           Please enter your phone number.
@@ -738,15 +759,32 @@ const Body = () => {
                   </div>
 
                   <div className="form-group">
-                    <label for="projectType" className="form-label">Project Type *</label>
+                    <label htmlFor="serviceType" className="form-label">Service Required *</label>
+                    <div className="select-wrapper">
+                      <select className="form-control" id="serviceType" required>
+                        <option value="" disabled defaultValue>Select service type</option>
+                        <option value="ceiling">Ceiling Installation</option>
+                        <option value="roofing">Roofing Solutions</option>
+                        <option value="painting">Painting Work</option>
+                        <option value="waterproofing">Waterproofing</option>
+                        <option value="material">Material Supply Only</option>
+                        <option value="consultation">Design Consultation</option>
+                      </select>
+                    </div>
+                    <div className="invalid-feedback">
+                      Please select a service type.
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="projectType" className="form-label">Project Type *</label>
                     <div className="select-wrapper">
                       <select className="form-control" id="projectType" required>
-                        <option value="" selected disabled>Select project type</option>
-                        <option value="residential">Residential Interior</option>
-                        <option value="commercial">Commercial Space</option>
-                        <option value="renovation">Home Renovation</option>
-                        <option value="consultation">Design Consultation</option>
-                        <option value="other">Other</option>
+                        <option value="" disabled defaultValue>Select project type</option>
+                        <option value="residential">Residential</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="renovation">Renovation</option>
                       </select>
                     </div>
                     <div className="invalid-feedback">
@@ -755,54 +793,28 @@ const Body = () => {
                   </div>
 
                   <div className="form-group">
-                    <label for="propertyType" className="form-label">Property Type</label>
-                    <div className="select-wrapper">
-                      <select className="form-control" id="propertyType">
-                        <option value="" selected disabled>Select property type</option>
-                        <option value="apartment">Apartment</option>
-                        <option value="villa">Villa</option>
-                        <option value="office">Office</option>
-                        <option value="restaurant">Restaurant</option>
-                        <option value="retail">Retail Store</option>
-                      </select>
-                    </div>
+                    <label htmlFor="area" className="form-label">Approximate Area (sq.ft)</label>
+                    <input type="text" className="form-control" id="area" placeholder="Enter area in square feet" />
                   </div>
 
                   <div className="form-group">
-                    <label for="budget" className="form-label">Estimated Budget *</label>
-                    <div className="select-wrapper">
-                      <select className="form-control" id="budget" required>
-                        <option value="" selected disabled>Select budget range</option>
-                        <option value="5-10">₹5-10 Lakhs</option>
-                        <option value="10-20">₹10-20 Lakhs</option>
-                        <option value="20-30">₹20-30 Lakhs</option>
-                        <option value="30-50">₹30-50 Lakhs</option>
-                        <option value="50+">₹50 Lakhs +</option>
-                      </select>
-                    </div>
+                    <label htmlFor="message" className="form-label">Project Details *</label>
+                    <textarea className="form-control" id="message" rows="5" placeholder="Tell us about your project requirements, location, and any specific materials or brands you prefer..." required></textarea>
                     <div className="invalid-feedback">
-                      Please select your budget range.
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label for="message" className="form-label">Your Message *</label>
-                    <textarea className="form-control" id="message" rows="5" placeholder="Tell us about your project, requirements, and vision..." required></textarea>
-                    <div className="invalid-feedback">
-                      Please enter your message.
+                      Please enter project details.
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label className="checkbox-label">
                       <input type="checkbox" className="form-check-input" id="newsletter" />
-                      <span>Subscribe to our newsletter for design tips and inspirations</span>
+                      <span>Subscribe to our newsletter for updates on new products and offers</span>
                     </label>
                   </div>
 
                   <button type="submit" className="submit-btn">
                     <i className="fas fa-paper-plane me-2"></i>
-                    Send Message
+                    Send Request
                   </button>
                 </form>
               </div>
@@ -811,106 +823,98 @@ const Body = () => {
         </div>
       </section>
 
-
+      {/* 10. MAP & LOCATIONS SECTION - Updated with company addresses */}
       <section className="map-section">
         <div className="container">
           <div className="row mb-5">
             <div className="col-12 text-center">
-              <h2 className="mb-3">Our Offices</h2>
-              <p className="lead">Visit us at any of our studio locations</p>
+              <h2 className="mb-3">Our Locations</h2>
+              <p className="lead">Visit us at our offices in Rajahmundry</p>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-6">
-              <div id="map"></div>
+              <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3815.358644180359!2d81.7751528!3d17.006069399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDAwJzIxLjkiTiA4McKwNDYnMzAuNiJF!5e0!3m2!1sen!2sin!4v1767140172484!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+
+              </div>
             </div>
             <div className="col-lg-6">
               <div className="location-card">
                 <div className="location-header">
                   <div className="location-icon">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-building"></i>
                   </div>
                   <div className="location-info">
-                    <h4>Head Office - Kochi</h4>
-                    <span className="location-badge">Main Studio</span>
+                    <h4>Head Office - V L Puram</h4>
+                    <span className="location-badge">Main Office</span>
                   </div>
                 </div>
-                <p><i className="fas fa-map-pin me-2 text-gold"></i> DLIFE Design Studio, MG Road, Kochi, Kerala - 682016</p>
-                <p><i className="fas fa-phone me-2 text-gold"></i> +91 484 123 4567</p>
+                <p><i className="fas fa-map-pin me-2 text-gold"></i> 79-3-3/1, RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry, East Godavari, Andhra Pradesh - 533103</p>
+                <p><i className="fas fa-phone me-2 text-gold"></i> +91 92466 0909</p>
                 <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:00 AM - 7:00 PM</p>
-                <button className="btn btn-outline-gold mt-3" onclick="navigateToLocation(9.9312, 76.2673)">Get Directions</button>
+                <button className="btn btn-outline-gold mt-3" onClick={() => navigateToLocation(16.9848, 81.7872)}>
+                  <i className="fas fa-directions me-2"></i>
+                  Get Directions
+                </button>
               </div>
 
               <div className="location-card">
                 <div className="location-header">
                   <div className="location-icon">
-                    <i className="fas fa-city"></i>
+                    <i className="fas fa-store"></i>
                   </div>
                   <div className="location-info">
-                    <h4>Bangalore Studio</h4>
-                    <span className="location-badge">Premium Design Center</span>
+                    <h4>Branch Office - Ramachandrarao Peta</h4>
+                    <span className="location-badge">Shop & Display</span>
                   </div>
                 </div>
-                <p><i className="fas fa-map-pin me-2 text-gold"></i> DLIFE Interiors, Koramangala, Bangalore, Karnataka - 560034</p>
-                <p><i className="fas fa-phone me-2 text-gold"></i> +91 80 4567 8901</p>
-                <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 10:00 AM - 8:00 PM</p>
-                <button className="btn btn-outline-gold mt-3" onclick="navigateToLocation(12.9716, 77.5946)">Get Directions</button>
+                <p><i className="fas fa-map-pin me-2 text-gold"></i> D. No. 20-3-7, G+1 Building, Ground Floor Shop, Ramachandrarao Peta, Rajahmundry - 533105</p>
+                <p><i className="fas fa-phone me-2 text-gold"></i> +91 92060 29497</p>
+                <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:30 AM - 7:30 PM</p>
+                <button className="btn btn-outline-gold mt-3" onClick={() => navigateToLocation(16.9890, 81.7830)}>
+                  <i className="fas fa-directions me-2"></i>
+                  Get Directions
+                </button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* 11. BUSINESS HOURS SECTION */}
       <section className="hours-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <div className="hours-card">
-                <h3 className="mb-4">Studio Hours</h3>
+                <h3 className="mb-4">Business Hours</h3>
                 <ul className="hours-list">
                   <li className="hours-item">
-                    <span className="day">Monday - Friday</span>
+                    <span className="day">Monday - Saturday</span>
                     <span className="time">9:00 AM - 7:00 PM</span>
-                  </li>
-                  <li className="hours-item">
-                    <span className="day">Saturday</span>
-                    <span className="time">10:00 AM - 6:00 PM</span>
                   </li>
                   <li className="hours-item">
                     <span className="day">Sunday</span>
                     <span className="time">By Appointment Only</span>
                   </li>
                   <li className="hours-item">
-                    <span className="day">Public Holidays</span>
+                    <span className="day">Festival Holidays</span>
                     <span className="time">Closed</span>
                   </li>
                 </ul>
-                <p className="mt-4 text-muted"><i className="fas fa-info-circle me-2 text-gold"></i>Emergency appointments available outside business hours</p>
+                <p className="mt-4 text-muted">
+                  <i className="fas fa-info-circle me-2 text-gold"></i>
+                  Emergency service calls available for urgent requirements
+                </p>
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="hours-card">
-                <h3 className="mb-4">Consultation Details</h3>
-                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Initial Consultation:</strong> Free 45-minute session</p>
-                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Site Visit:</strong> Scheduled within 48 hours</p>
-                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Design Proposal:</strong> Delivered within 5-7 working days</p>
-                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Response Time:</strong> Within 24 hours for all inquiries</p>
-
-                <div className="mt-4">
-                  <h5>What to Bring to Consultation:</h5>
-                  <ul className="list-unstyled">
-                    <li><i className="fas fa-caret-right me-2 text-gold"></i> Property floor plans</li>
-                    <li><i className="fas fa-caret-right me-2 text-gold"></i> Inspiration images</li>
-                    <li><i className="fas fa-caret-right me-2 text-gold"></i> Budget estimates</li>
-                    <li><i className="fas fa-caret-right me-2 text-gold"></i> Timeline requirements</li>
-                  </ul>
-                </div>
-              </div>
+              <div class="hours-card"><h3 class="mb-4">Our Services</h3><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Material Supply:</strong> Premium construction materials</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Professional Installation:</strong> Expert installation services</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Technical Consultation:</strong> Free site assessment</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Delivery:</strong> Timely delivery across Rajahmundry</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Response Time:</strong> Quotations within 2 hours</p></div>
             </div>
           </div>
         </div>
       </section>
-
 
     </div>
   );

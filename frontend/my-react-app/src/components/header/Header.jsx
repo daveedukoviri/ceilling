@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
-import logo from '../../assets/img/banner_logo.png';
+import logo from '../../assets/img/banner_logo.webp';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function Header() {
@@ -71,16 +71,14 @@ function Header() {
 
                     <li className="has-submenu">
                       <a href="#" onClick={(e) => e.preventDefault()}>
-                        PRODUCTS <i className="fas fa-chevron-down"></i>
+                        Services <i className="fas fa-chevron-down"></i>
                       </a>
                       <div className="submenu">
                         <ul>
-                          <li><Link to="/custom-made/products/kitchen">Kitchen</Link></li>
-                          <li><Link to="/custom-made/products/bedroom">Bedroom</Link></li>
-                          <li><Link to="/custom-made/products/dining-room">Dining Room</Link></li>
-                          <li><Link to="/custom-made/products/living-room">Living Room</Link></li>
-                          <li><Link to="/custom-made/products/decorative-units">Decorative Units</Link></li>
-                          <li><Link to="/custom-made/products/kids-room">Kids Room</Link></li>
+                          <li><Link to="/ceilings">Ceiling Systems</Link></li>
+                          <li><Link to="/paints">Paints & Coatings</Link></li>
+                          <li><Link to="/walls">Wall Solutions</Link></li>
+                          
                         </ul>
                       </div>
                     </li>
