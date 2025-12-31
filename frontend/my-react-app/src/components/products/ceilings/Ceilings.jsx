@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import './Ceilings.css';
 
+
+
+
 const Ceilings = () => {
     useEffect(() => {
         // Hero load animations
@@ -126,80 +129,78 @@ const Ceilings = () => {
     return (
         <>
 
-           {/* Fast, Light & Sentimental Hero Section */}
-<section className="hero-section-new">
-  <div className="container hero-container-new">
-    {/* Left Content */}
-    <div className="hero-content-new">
-      <div className="hero-badge-new fast-fade">
-        <i className="fas fa-crown"></i> GNG Group Premium Ceilings
-      </div>
+            {/* Fast, Light & Sentimental Hero Section */}
+            <section className="hero-section-new">
+                <div className="container hero-container-new">
+                    {/* Left Content */}
+                    <div className="hero-content-new">
+                        <div className="hero-badge-new fast-fade">
+                            <i className="fas fa-crown"></i> GNG Group Premium Ceilings
+                        </div>
 
-      <h1 className="hero-title-new fast-fade">
-        Transform Your Space. <span>Elevate Your Style.</span>
-      </h1>
+                        <h1 className="hero-title-new fast-fade">
+                            Transform Your Space. <span>Elevate Your Style.</span>
+                        </h1>
 
-      <p className="hero-subtitle-new fast-fade">
-        Premium Ceiling Solutions for Modern Living
-      </p>
+                        <p className="hero-subtitle-new fast-fade">
+                            Premium Ceiling Solutions for Modern Living
+                        </p>
 
-      <p className="hero-description-new fast-fade">
-        For years, Sree Sai Shambhavi Enterprises (GNG Group) has been redefining interiors with premium ceiling systems that combine beauty, functionality, and durability. From elegant gypsum designs to practical POP ceilings and advanced acoustic solutions, we create overhead spaces that inspire.
-      </p>
-      <p className="hero-description-new fast-fade">
-        As authorized dealers for leading brands like Gyproc, USG Boral, JSW, and Armstrong, we bring you certified quality, professional installation, and designs that reflect your vision. Because the ceiling isn't just overhead — it's a statement.
-      </p>
+                        <p className="hero-description-new fast-fade">
+                            For years, Sree Sai Shambhavi Enterprises (GNG Group) has been redefining interiors with premium ceiling systems that combine beauty, functionality, and durability. From elegant gypsum designs to practical POP ceilings and advanced acoustic solutions, we create overhead spaces that inspire.
+                        </p>
+                        <p className="hero-description-new fast-fade">
+                            As authorized dealers for leading brands like Gyproc, USG Boral, JSW, and Armstrong, we bring you certified quality, professional installation, and designs that reflect your vision. Because the ceiling isn't just overhead — it's a statement.
+                        </p>
 
-      {/* Stats Section */}
-      <div className="hero-stats-new fast-fade">
-        <div className="stat-item-new">
-          <i className="fas fa-building"></i>
-          <div>
-            <h3>15+ Years</h3>
-            <p>Industry Experience</p>
-          </div>
-        </div>
-        <div className="stat-item-new">
-          <i className="fas fa-medal"></i>
-          <div>
-            <h3>10+ Brands</h3>
-            <p>Authorized Partner</p>
-          </div>
-        </div>
-        <div className="stat-item-new">
-          <i className="fas fa-home"></i>
-          <div>
-            <h3>1000+ Projects</h3>
-            <p>Completed</p>
-          </div>
-        </div>
-      </div>
+                        {/* Stats Section */}
+                        <div className="hero-stats-new fast-fade">
+                            <div className="stat-item-new">
+                                <i className="fas fa-building"></i>
+                                <div>
+                                    <h3>15+ Years</h3>
+                                    <p>Industry Experience</p>
+                                </div>
+                            </div>
+                            <div className="stat-item-new">
+                                <i className="fas fa-medal"></i>
+                                <div>
+                                    <h3>10+ Brands</h3>
+                                    <p>Authorized Partner</p>
+                                </div>
+                            </div>
+                            <div className="stat-item-new">
+                                <i className="fas fa-home"></i>
+                                <div>
+                                    <h3>1000+ Projects</h3>
+                                    <p>Completed</p>
+                                </div>
+                            </div>
+                        </div>
 
-      <button className="hero-cta-new fast-fade" onClick={handleCTAClick}>
-        <i className="fas fa-phone-alt"></i> Get Free Consultation
-      </button>
-    </div>
+                        <button className="hero-cta-new fast-fade" onClick={handleCTAClick}>
+                            <i className="fas fa-phone-alt"></i> Get Free Consultation
+                        </button>
+                    </div>
 
-    {/* Right Image – Quick float in */}
-    <div className="hero-image-wrapper fast-float">
-      <div className="hero-image-container-new">
-        <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-          alt="Elegant modern ceiling design with lighting"
-          className="hero-image-new"
-        />
-        <div className="image-overlay-gradient"></div>
-      </div>
+                    {/* Right Image – Quick float in */}
+                    <div className="hero-image-wrapper fast-float">
+                        <div className="hero-image-container-new">
+                            <img
+                                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
+                                alt="Elegant modern ceiling design with lighting"
+                                className="hero-image-new"
+                            />
+                            <div className="image-overlay-gradient"></div>
+                        </div>
 
-      <div className="floating-badge quick-pulse">
-        <i className="fas fa-award"></i>
-        <span>Authorized Dealer for Premium Brands</span>
-      </div>
-    </div>
-  </div>
-
-  <div className="hero-bg-pattern"></div>
-</section>
+                        <div className="floating-badge quick-pulse">
+                            <i className="fas fa-award"></i>
+                            <span>Authorized Dealer for Premium Brands</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
             {/* Showcase Section */}
@@ -208,18 +209,18 @@ const Ceilings = () => {
                     <div className="showcase-header">
                         <h2>Premium Ceiling Types</h2>
                         {/* Beautiful Simple Underline */}
-  <div className="elegant-underline"></div>
+                        {/* <div className="elegant-underline"></div> */}
                     </div>
 
-                    <div className="kitchen-showcase">
+                    <div className="kitchen-showcase ">
                         {/* 1. Gypsum Ceiling */}
                         <div className="kitchen-type island-kitchen" id="gypsum">
                             <div className="kitchen-content">
                                 <span className="kitchen-badge">Most Popular</span>
                                 <h2 className="kitchen-title">Gypsum Ceiling</h2>
                                 <p className="kitchen-description">
-                                    The ultimate choice for modern interiors, our Gypsum Ceilings offer seamless finishes, 
-                                    flexibility in design, and excellent fire-resistant properties. Perfect for creating 
+                                    The ultimate choice for modern interiors, our Gypsum Ceilings offer seamless finishes,
+                                    flexibility in design, and excellent fire-resistant properties. Perfect for creating
                                     smooth surfaces, intricate designs, and contemporary looks that elevate any space.
                                 </p>
                                 <div className="kitchen-features">
@@ -258,7 +259,7 @@ const Ceilings = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Gypsum Ceiling Design" />
+                                    <img src="services/ceilings/f1.webp" alt="Gypsum Ceiling Design" />
                                     <div className="gallery-overlay">
                                         <h4>Modern Gypsum Design</h4>
                                         <p>Multi-level gypsum ceiling with integrated LED lighting</p>
@@ -292,8 +293,8 @@ const Ceilings = () => {
                                 <span className="kitchen-badge">Custom Designs</span>
                                 <h2 className="kitchen-title">POP Ceiling</h2>
                                 <p className="kitchen-description">
-                                    Plaster of Paris ceilings offer unparalleled flexibility for creating custom shapes, 
-                                    curves, and intricate decorative elements. Perfect for adding artistic flair and 
+                                    Plaster of Paris ceilings offer unparalleled flexibility for creating custom shapes,
+                                    curves, and intricate decorative elements. Perfect for adding artistic flair and
                                     architectural interest to residential and commercial spaces.
                                 </p>
                                 <div className="kitchen-features">
@@ -338,8 +339,8 @@ const Ceilings = () => {
                                 <span className="kitchen-badge">Noise Control</span>
                                 <h2 className="kitchen-title">Mineral Acoustic Ceiling</h2>
                                 <p className="kitchen-description">
-                                    Our 2'×2' Mineral Acoustic Tiles provide superior sound absorption and thermal insulation. 
-                                    Perfect for offices, conference rooms, theaters, and any space where noise control and 
+                                    Our 2'×2' Mineral Acoustic Tiles provide superior sound absorption and thermal insulation.
+                                    Perfect for offices, conference rooms, theaters, and any space where noise control and
                                     comfort are priorities.
                                 </p>
                                 <div className="kitchen-features">
@@ -393,7 +394,7 @@ const Ceilings = () => {
                         </div>
 
                         {/* 4. PVC Ceiling */}
-                        <div className="kitchen-type parallel-kitchen" id="pvc">
+                        <div className="kitchen-type parallel-kitchen " id="pvc">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
                                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="PVC Ceiling" />
@@ -412,8 +413,8 @@ const Ceilings = () => {
                                 <span className="kitchen-badge">Moisture Resistant</span>
                                 <h2 className="kitchen-title">PVC Ceiling</h2>
                                 <p className="kitchen-description">
-                                    Ideal for high-moisture areas, our PVC ceilings offer complete waterproof protection, 
-                                    easy maintenance, and modern aesthetics. Perfect for bathrooms, kitchens, balconies, 
+                                    Ideal for high-moisture areas, our PVC ceilings offer complete waterproof protection,
+                                    easy maintenance, and modern aesthetics. Perfect for bathrooms, kitchens, balconies,
                                     and commercial wet areas.
                                 </p>
                                 <div className="kitchen-features">
@@ -458,8 +459,8 @@ const Ceilings = () => {
                                 <span className="kitchen-badge">High Strength</span>
                                 <h2 className="kitchen-title">Fiber Cement Ceiling</h2>
                                 <p className="kitchen-description">
-                                    For areas requiring exceptional durability and moisture resistance, our Fiber Cement 
-                                    Boards provide robust, long-lasting solutions. Perfect for exterior applications, 
+                                    For areas requiring exceptional durability and moisture resistance, our Fiber Cement
+                                    Boards provide robust, long-lasting solutions. Perfect for exterior applications,
                                     high-humidity areas, and commercial installations.
                                 </p>
                                 <div className="kitchen-features">
@@ -532,8 +533,8 @@ const Ceilings = () => {
                                 <span className="kitchen-badge">Exterior Solution</span>
                                 <h2 className="kitchen-title">GI Roofing Sheets</h2>
                                 <p className="kitchen-description">
-                                    Our Galvanized Iron Roofing Sheets offer superior protection against weather elements 
-                                    with excellent durability and corrosion resistance. Available in various colors and 
+                                    Our Galvanized Iron Roofing Sheets offer superior protection against weather elements
+                                    with excellent durability and corrosion resistance. Available in various colors and
                                     profiles for both residential and industrial applications.
                                 </p>
                                 <div className="kitchen-features">

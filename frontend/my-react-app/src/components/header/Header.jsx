@@ -145,12 +145,9 @@ function Header() {
                 </div>
                 <div className={`mobile-submenu ${isSubmenuOpen.products ? 'active' : ''}`}>
                   <ul>
-                    <li><Link to="/custom-made/products/kitchen" onClick={handleMobileLinkClick}>Kitchen</Link></li>
-                    <li><Link to="/custom-made/products/bedroom" onClick={handleMobileLinkClick}>Bedroom</Link></li>
-                    <li><Link to="/custom-made/products/dining-room" onClick={handleMobileLinkClick}>Dining Room</Link></li>
-                    <li><Link to="/custom-made/products/living-room" onClick={handleMobileLinkClick}>Living Room</Link></li>
-                    <li><Link to="/custom-made/products/decorative-units" onClick={handleMobileLinkClick}>Decorative Units</Link></li>
-                    <li><Link to="/custom-made/products/kids-room" onClick={handleMobileLinkClick}>Kids Room</Link></li>
+                    <li><Link to="/ceilings">Ceiling Systems</Link></li>
+                          <li><Link to="/paints">Paints & Coatings</Link></li>
+                          <li><Link to="/walls">Wall Solutions</Link></li>
                   </ul>
                 </div>
               </li>

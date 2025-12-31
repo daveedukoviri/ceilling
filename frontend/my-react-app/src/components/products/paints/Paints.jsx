@@ -126,80 +126,80 @@ const Paints = () => {
     return (
         <>
 
-           {/* Fast, Light & Sentimental Hero Section */}
-<section className="hero-section-new">
-  <div className="container hero-container-new">
-    {/* Left Content */}
-    <div className="hero-content-new">
-      <div className="hero-badge-new fast-fade">
-        <i className="fas fa-palette"></i> GNG Group Premium Paints
-      </div>
+            {/* Fast, Light & Sentimental Hero Section */}
+            <section className="hero-section-new">
+                <div className="container hero-container-new">
+                    {/* Left Content */}
+                    <div className="hero-content-new">
+                        <div className="hero-badge-new fast-fade">
+                            <i className="fas fa-palette"></i> GNG Group Premium Paints
+                        </div>
 
-      <h1 className="hero-title-new fast-fade">
-        Color Your World. <span>Protect Your Space.</span>
-      </h1>
+                        <h1 className="hero-title-new fast-fade">
+                            Color Your World. <span>Protect Your Space.</span>
+                        </h1>
 
-      <p className="hero-subtitle-new fast-fade">
-        Premium Paint Solutions for Every Surface
-      </p>
+                        <p className="hero-subtitle-new fast-fade">
+                            Premium Paint Solutions for Every Surface
+                        </p>
 
-      <p className="hero-description-new fast-fade">
-        Sree Sai Shambhavi Enterprises (GNG Group) brings you the finest paint solutions that combine beauty, durability, and protection. As authorized dealers for leading brands like Asian Paints, JSW, and other premium manufacturers, we offer a complete range of interior, exterior, and specialty paints for every need.
-      </p>
-      <p className="hero-description-new fast-fade">
-        From weather-resistant exterior emulsions to elegant interior finishes, from waterproofing solutions to decorative textures — we provide expert consultation, quality products, and professional application services to transform your spaces.
-      </p>
+                        <p className="hero-description-new fast-fade">
+                            Sree Sai Shambhavi Enterprises (GNG Group) brings you the finest paint solutions that combine beauty, durability, and protection. As authorized dealers for leading brands like Asian Paints, JSW, and other premium manufacturers, we offer a complete range of interior, exterior, and specialty paints for every need.
+                        </p>
+                        <p className="hero-description-new fast-fade">
+                            From weather-resistant exterior emulsions to elegant interior finishes, from waterproofing solutions to decorative textures — we provide expert consultation, quality products, and professional application services to transform your spaces.
+                        </p>
 
-      {/* Stats Section */}
-      <div className="hero-stats-new fast-fade">
-        <div className="stat-item-new">
-          <i className="fas fa-building"></i>
-          <div>
-            <h3>15+ Years</h3>
-            <p>Paint Expertise</p>
-          </div>
-        </div>
-        <div className="stat-item-new">
-          <i className="fas fa-medal"></i>
-          <div>
-            <h3>Premium Brands</h3>
-            <p>Authorized Dealer</p>
-          </div>
-        </div>
-        <div className="stat-item-new">
-          <i className="fas fa-home"></i>
-          <div>
-            <h3>5000+ Projects</h3>
-            <p>Completed</p>
-          </div>
-        </div>
-      </div>
+                        {/* Stats Section */}
+                        <div className="hero-stats-new fast-fade">
+                            <div className="stat-item-new">
+                                <i className="fas fa-building"></i>
+                                <div>
+                                    <h3>15+ Years</h3>
+                                    <p>Paint Expertise</p>
+                                </div>
+                            </div>
+                            <div className="stat-item-new">
+                                <i className="fas fa-medal"></i>
+                                <div>
+                                    <h3>Premium Brands</h3>
+                                    <p>Authorized Dealer</p>
+                                </div>
+                            </div>
+                            <div className="stat-item-new">
+                                <i className="fas fa-home"></i>
+                                <div>
+                                    <h3>5000+ Projects</h3>
+                                    <p>Completed</p>
+                                </div>
+                            </div>
+                        </div>
 
-      <button className="hero-cta-new fast-fade" onClick={handleCTAClick}>
-        <i className="fas fa-phone-alt"></i> Get Color Consultation
-      </button>
-    </div>
+                        <button className="hero-cta-new fast-fade" onClick={handleCTAClick}>
+                            <i className="fas fa-phone-alt"></i> Get Color Consultation
+                        </button>
+                    </div>
 
-    {/* Right Image – Quick float in */}
-    <div className="hero-image-wrapper fast-float">
-      <div className="hero-image-container-new">
-        <img
-          src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-          alt="Beautiful paint color samples and application"
-          className="hero-image-new"
-        />
-        <div className="image-overlay-gradient"></div>
-      </div>
+                    {/* Right Image – Quick float in */}
+                    <div className="hero-image-wrapper fast-float">
+                        <div className="hero-image-container-new">
+                            <img
+                                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
+                                alt="Beautiful paint color samples and application"
+                                className="hero-image-new"
+                            />
+                            <div className="image-overlay-gradient"></div>
+                        </div>
 
-      <div className="floating-badge quick-pulse">
-        <i className="fas fa-award"></i>
-        <span>Authorized Dealer for Asian Paints & More</span>
-      </div>
-    </div>
-  </div>
+                        <div className="floating-badge quick-pulse">
+                            <i className="fas fa-award"></i>
+                            <span>Authorized Dealer for Asian Paints & More</span>
+                        </div>
+                    </div>
+                </div>
 
-  <div className="hero-bg-pattern"></div>
-</section>
+                <div className="hero-bg-pattern"></div>
+            </section>
 
 
             {/* Showcase Section */}
@@ -208,7 +208,7 @@ const Paints = () => {
                     <div className="showcase-header">
                         <h2>Premium Paint Categories</h2>
                         {/* Beautiful Simple Underline */}
-  <div className="elegant-underline"></div>
+                        <div className="elegant-underline"></div>
                     </div>
 
                     <div className="kitchen-showcase">
@@ -218,8 +218,8 @@ const Paints = () => {
                                 <span className="kitchen-badge">Most Popular</span>
                                 <h2 className="kitchen-title">Interior Paints</h2>
                                 <p className="kitchen-description">
-                                    Transform your living spaces with our premium interior paints that offer stunning finishes, 
-                                    excellent coverage, and long-lasting beauty. Available in matte, satin, silk, and gloss finishes 
+                                    Transform your living spaces with our premium interior paints that offer stunning finishes,
+                                    excellent coverage, and long-lasting beauty. Available in matte, satin, silk, and gloss finishes
                                     to match your style and lighting requirements.
                                 </p>
                                 <div className="kitchen-features">
@@ -292,8 +292,8 @@ const Paints = () => {
                                 <span className="kitchen-badge">Weather Resistant</span>
                                 <h2 className="kitchen-title">Exterior Paints</h2>
                                 <p className="kitchen-description">
-                                    Protect and beautify your property with our high-performance exterior paints. 
-                                    Specially formulated to withstand harsh weather conditions, UV rays, and pollution 
+                                    Protect and beautify your property with our high-performance exterior paints.
+                                    Specially formulated to withstand harsh weather conditions, UV rays, and pollution
                                     while maintaining vibrant colors for years.
                                 </p>
                                 <div className="kitchen-features">
@@ -338,8 +338,8 @@ const Paints = () => {
                                 <span className="kitchen-badge">Decorative</span>
                                 <h2 className="kitchen-title">Texture Paints</h2>
                                 <p className="kitchen-description">
-                                    Add depth, character, and visual interest to your walls with our premium texture paints. 
-                                    From subtle sand textures to bold patterns, create stunning feature walls that become 
+                                    Add depth, character, and visual interest to your walls with our premium texture paints.
+                                    From subtle sand textures to bold patterns, create stunning feature walls that become
                                     the focal point of any room.
                                 </p>
                                 <div className="kitchen-features">
@@ -412,8 +412,8 @@ const Paints = () => {
                                 <span className="kitchen-badge">High Durability</span>
                                 <h2 className="kitchen-title">Enamel Paints</h2>
                                 <p className="kitchen-description">
-                                    Our premium enamel paints provide hard, glossy finishes that are exceptionally durable 
-                                    and easy to clean. Perfect for woodwork, metal surfaces, doors, windows, and areas 
+                                    Our premium enamel paints provide hard, glossy finishes that are exceptionally durable
+                                    and easy to clean. Perfect for woodwork, metal surfaces, doors, windows, and areas
                                     requiring frequent cleaning.
                                 </p>
                                 <div className="kitchen-features">
@@ -458,8 +458,8 @@ const Paints = () => {
                                 <span className="kitchen-badge">Protective</span>
                                 <h2 className="kitchen-title">Waterproofing Solutions</h2>
                                 <p className="kitchen-description">
-                                    Comprehensive waterproofing solutions to protect your property from water damage. 
-                                    Our specialized products seal cracks, prevent leakage, and provide long-term protection 
+                                    Comprehensive waterproofing solutions to protect your property from water damage.
+                                    Our specialized products seal cracks, prevent leakage, and provide long-term protection
                                     for roofs, bathrooms, terraces, and basements.
                                 </p>
                                 <div className="kitchen-features">
@@ -532,8 +532,8 @@ const Paints = () => {
                                 <span className="kitchen-badge">Essential</span>
                                 <h2 className="kitchen-title">Sealants & Primers</h2>
                                 <p className="kitchen-description">
-                                    The foundation of any great paint job. Our premium primers and sealants ensure proper adhesion, 
-                                    block stains, prevent moisture problems, and create the perfect surface for your topcoat. 
+                                    The foundation of any great paint job. Our premium primers and sealants ensure proper adhesion,
+                                    block stains, prevent moisture problems, and create the perfect surface for your topcoat.
                                     Essential for long-lasting, professional results.
                                 </p>
                                 <div className="kitchen-features">
