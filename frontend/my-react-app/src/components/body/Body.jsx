@@ -71,56 +71,21 @@ const Body = () => {
     { icon: 'fas fa-handshake', title: 'End-to-End Solutions', description: 'Complete interior solutions from concept to completion' }
   ];
 
-  // Gallery Data - Updated with company projects
   const galleryProjects = [
-    {
-      id: 1,
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1158&auto=format&fit=crop',
-      title: 'Gypsum Ceiling Installation',
-      description: 'Modern waterproof gypsum ceiling for residential project',
-      category: 'ceiling',
-      tags: ['Gypsum']
-    },
-    {
-      id: 2,
-      image: 'https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1127&auto=format&fit=crop',
-      title: 'POP Decorative Work',
-      description: 'Elegant POP ceiling with decorative cornices',
-      category: 'ceiling',
-      tags: ['POP']
-    },
-    {
-      id: 3,
-      image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=1074&auto=format&fit=crop',
-      title: 'Acoustic Mineral Ceiling',
-      description: '2x2 mineral ceiling tiles for commercial space',
-      category: 'ceiling',
-      tags: ['Acoustic']
-    },
-    {
-      id: 4,
-      image: 'https://images.unsplash.com/photo-1600585154340-043cd787c4b8?q=80&w=1155&auto=format&fit=crop',
-      title: 'GI Roofing Sheet Installation',
-      description: 'Colored GI roofing sheets for industrial project',
-      category: 'roofing',
-      tags: ['Roofing']
-    },
-    {
-      id: 5,
-      image: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1170&auto=format&fit=crop',
-      title: 'Interior Painting Project',
-      description: 'Complete interior painting with texture work',
-      category: 'painting',
-      tags: ['Painting']
-    },
-    {
-      id: 6,
-      image: 'https://images.unsplash.com/photo-1618221118493-9cfa1a1c00da?q=80&w=1032&auto=format&fit=crop',
-      title: 'Commercial Ceiling System',
-      description: 'Suspended ceiling with integrated lighting',
-      category: 'ceiling',
-      tags: ['Commercial']
-    }
+    // Ceilings (3 projects - covering different types)
+    { id: 1, title: "Modern Gypsum Ceiling", description: "Multi-level gypsum design with integrated LED lighting", image: "services/ceilings/g1.webp", category: "ceiling", tags: ["Gypsum"] },
+    { id: 2, title: "Ornate POP Ceiling", description: "Luxurious plaster of Paris with intricate patterns", image: "services/ceilings/p1.webp", category: "ceiling", tags: ["POP"] },
+    { id: 3, title: "Waterproof PVC Ceiling", description: "Glossy moisture-resistant panels for bathrooms", image: "services/ceilings/pvc1.webp", category: "ceiling", tags: ["PVC"] },
+
+    // Painting (3 projects - covering Interior, Exterior, Texture)
+    { id: 4, title: "Elegant Interior Painting", description: "Smooth premium matte finish in living space", image: "services/paints/i1.webp", category: "painting", tags: ["Interior"] },
+    { id: 5, title: "Weather-Resistant Exterior Painting", description: "Durable emulsion protecting against rain and sun", image: "services/paints/e1.webp", category: "painting", tags: ["Exterior"] },
+    { id: 6, title: "Decorative Texture Paint", description: "Metallic sand texture on feature wall", image: "services/paints/t1.webp", category: "painting", tags: ["Texture"] },
+
+    // Walls (3 projects - covering different wall systems)
+    { id: 7, title: "3D Wall Paneling", description: "Modern geometric panels adding depth and style", image: "services/walls/wp3.webp", category: "walls", tags: ["Paneling"] },
+    { id: 8, title: "Natural Stone Cladding", description: "Premium stacked stone for luxurious accent wall", image: "services/walls/ts1.webp", category: "walls", tags: ["Stone"] },
+    { id: 9, title: "Decorative Laminates", description: "High-pressure wood grain finish with durability", image: "services/walls/l1.webp", category: "walls", tags: ["Laminates"] },
   ];
 
   // Testimonials Data - Updated with relevant testimonials
@@ -469,12 +434,12 @@ const Body = () => {
         <div className="container">
           <h2 className="section-title">Our Project Gallery</h2>
           <p className="section-subtitle">
-            Explore our completed projects featuring premium ceiling installations, roofing solutions, and interior finishes
+            Explore our completed projects featuring premium ceiling installations, professional painting finishes, and modern wall systems
           </p>
 
           {/* Gallery Filter */}
           <div className="gallery-filter">
-            {['all', 'ceiling', 'roofing', 'painting'].map((filter) => (
+            {['all', 'ceiling', 'painting', 'walls'].map((filter) => (
               <button
                 key={filter}
                 className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
@@ -483,7 +448,7 @@ const Body = () => {
               >
                 {filter === 'all' ? 'All Projects' :
                   filter === 'ceiling' ? 'Ceiling Work' :
-                    filter === 'roofing' ? 'Roofing Solutions' : 'Painting Projects'}
+                    filter === 'painting' ? 'Painting Projects' : 'Wall Systems'}
               </button>
             ))}
           </div>
@@ -515,7 +480,7 @@ const Body = () => {
           {isLightboxOpen && (
             <div className="lightbox-modal active">
               <div className="lightbox-content">
-                <button className="lightbox-close" onClick={closeLightbox}>&times;</button>
+                <button className="lightbox-close" onClick={closeLightbox}>×</button>
                 <button className="lightbox-prev" onClick={showPrevImage}>
                   <i className="fas fa-chevron-left"></i>
                 </button>
@@ -664,7 +629,7 @@ const Body = () => {
                     <i className="fas fa-phone me-2"></i>
                     +91 92466 0909
                   </a>
-                  
+
                 </div>
               </div>
             </div>
@@ -680,7 +645,7 @@ const Body = () => {
                     <i className="fas fa-envelope me-2"></i>
                     gypsumngypsum4u@gmail.com
                   </a>
-                  
+
                 </div>
               </div>
             </div>
@@ -696,7 +661,7 @@ const Body = () => {
                     <i className="fas fa-location-dot me-2"></i>
                     Rajahmundry, AP
                   </a>
-                
+
                 </div>
               </div>
             </div>

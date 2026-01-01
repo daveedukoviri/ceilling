@@ -11,6 +11,7 @@ const Login = lazy(() => import('./components/login/Login'));
 const Ceilings = lazy(() => import('./components/products/ceilings/Ceilings'));
 const Paints = lazy(() => import('./components/products/paints/Paints'));
 const Walls = lazy(() => import('./components/products/walls/Walls'));
+const Products = lazy(() => import('./components/products/products/products'));
 
 // Import React Router
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -30,7 +31,7 @@ function App() {
             <Route path="/company" element={<Aboutus />} /> {/* Assuming Aboutus is Company page */}
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contacts" element={<Contact />} /> {/* Note: you used /contacts in nav */}
-            <Route path="/offers" element={<div><h1>Offers Page (Create this component)</h1></div>} />
+            <Route path="/products" element={<Products />} />
             <Route path="/blog" element={<div><h1>Blogs Page</h1></div>} />
 
             {/* Product sub-pages */}

@@ -119,10 +119,10 @@ function Aboutus() {
             <div className="A-custom-cursor" ref={cursorRef}></div>
 
             {/* HERO SECTION - Content updated, structure same */}
-            <section className="A-hero-section" ref={heroRef}>
+            <section className="A-hero-section  mt-3" ref={heroRef}>
                 <div className="A-hero-gradient"></div>
                 
-                <div className="A-container A-pb-5 A-mb-4 mb-4 pb-5">
+                <div className="A-container A-pb-5 A-mb-4 ">
                     <div className="A-hero-content">
                         <div className="A-hero-subtitle" data-reveal>
                             <span className="A-gold-accent">Excellence in Construction Materials Since 2008</span>
@@ -456,14 +456,14 @@ function Aboutus() {
                             <div className="A-cta-contact-item">
                                 <i className="fas fa-envelope"></i>
                                 <div>
-                                    <h4 className='text-black fs-2 mt-3 pt-3'>Email Us</h4>
+                                    <h5 className='text-black fs-2 mt-3 pt-3'>Email Us</h5>
                                     <div className='text-white'>gypsumngypsum4u@gmail.com</div>
                                 </div>
                             </div>
                             <div className="A-cta-contact-item">
                                 <i className="fas fa-map-marker-alt"></i>
                                 <div >
-                                    <h4 className='text-black fs-2 mt-3 pt-3'>Visit Our Showroom</h4>
+                                    <h5 className='text-black fs-2 mt-3 pt-3'>Visit Our Showroom</h5>
                                     <span className='text-white'>RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry</span>
                                 </div>
                             </div>

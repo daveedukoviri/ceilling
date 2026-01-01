@@ -259,16 +259,16 @@ const Ceilings = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="services/ceilings/f1.webp" alt="Gypsum Ceiling Design" />
+                                    <img src="services/ceilings/g1.webp" alt="Gypsum Ceiling Design" />
                                     <div className="gallery-overlay">
                                         <h4>Modern Gypsum Design</h4>
                                         <p>Multi-level gypsum ceiling with integrated LED lighting</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1519643381401-22c77e605fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="gypsum1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="gypsum2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="gypsum3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/g2.webp" alt="Gypsum ceiling design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/g3.webp" alt="Gypsum ceiling design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/g4.webp" alt="Gypsum ceiling design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
@@ -277,16 +277,16 @@ const Ceilings = () => {
                         <div className="kitchen-type lshape-kitchen" id="pop">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="POP Ceiling Design" />
+                                    <img src="services/ceilings/p1.webp" alt="POP Ceiling Design" />
                                     <div className="gallery-overlay">
                                         <h4>Ornate POP Design</h4>
                                         <p>Custom decorative POP work with intricate patterns</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="pop1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503387769-00f4f3f4f8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="pop2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="pop3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/p2.webp" alt="POP ceiling design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/p3.webp" alt="POP ceiling design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/p4.webp" alt="POP ceiling design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
@@ -379,16 +379,16 @@ const Ceilings = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Acoustic Ceiling" />
+                                    <img src="services/ceilings/m1.webp" alt="Acoustic Ceiling" />
                                     <div className="gallery-overlay">
                                         <h4>Acoustic Tile Grid</h4>
                                         <p>2'×2' mineral tiles in suspended grid system</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="acoustic1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="acoustic2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503387769-00f4f3f4f8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="acoustic3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/m2.webp" alt="Acoustic ceiling design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/m3.webp" alt="Acoustic ceiling design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/m4.webp" alt="Acoustic ceiling design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
@@ -397,16 +397,16 @@ const Ceilings = () => {
                         <div className="kitchen-type parallel-kitchen " id="pvc">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="PVC Ceiling" />
+                                    <img src="services/ceilings/pvc1.webp" alt="PVC Ceiling" />
                                     <div className="gallery-overlay">
                                         <h4>Waterproof PVC Panels</h4>
                                         <p>Moisture-resistant ceiling perfect for bathrooms & kitchens</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="pvc1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1519643381401-22c77e605fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="pvc2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="pvc3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/pvc2.webp" alt="PVC ceiling design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/pvc3.webp" alt="PVC ceiling design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/pvc4.webp" alt="PVC ceiling design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
@@ -499,16 +499,16 @@ const Ceilings = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Fiber Cement Ceiling" />
+                                    <img src="services/ceilings/f1.webp" alt="Fiber Cement Ceiling" />
                                     <div className="gallery-overlay">
                                         <h4>Durable Cement Board</h4>
                                         <p>High-strength fiber cement for demanding applications</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="cement1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503387769-00f4f3f4f8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="cement2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="cement3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/f2.webp" alt="Fiber cement ceiling design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/f3.webp" alt="Fiber cement ceiling design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/f4.webp" alt="Fiber cement ceiling design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
@@ -517,16 +517,16 @@ const Ceilings = () => {
                         <div className="kitchen-type peninsula-kitchen" id="roofing">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="GI Roofing Sheets" />
+                                    <img src="services/ceilings/g1.webp" alt="GI Roofing Sheets" />
                                     <div className="gallery-overlay">
                                         <h4>Colored GI Roofing</h4>
                                         <p>Durable galvanized iron sheets with protective coatings</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="roofing1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="roofing2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503387769-00f4f3f4f8c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="roofing3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/g2.webp" alt="GI roofing design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/g3.webp" alt="GI roofing design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/g4.webp" alt="GI roofing design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">

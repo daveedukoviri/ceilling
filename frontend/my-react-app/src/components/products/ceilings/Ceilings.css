@@ -26,7 +26,7 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  /* padding: 0 40px; */
 }
 
 /* NEW LIGHT & ELEGANT HERO SECTION */
@@ -538,7 +538,7 @@ body {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 1200px) {
-  .container { padding: 0 30px; }
+  /* .container { padding: 0 30px; } */
   .kitchen-title { font-size: 2.5rem; }
   .island-kitchen, .lshape-kitchen, .ushape-kitchen, .parallel-kitchen, .galley-kitchen, .peninsula-kitchen { gap: 60px; }
 }

@@ -258,16 +258,16 @@ const Paints = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Interior Paint Application" />
+                                    <img src="services/paints/i1.webp" alt="Interior Paint Application" />
                                     <div className="gallery-overlay">
                                         <h4>Elegant Interior Finish</h4>
                                         <p>Smooth matte finish in contemporary living space</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="interior1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="interior2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="interior3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/i2.webp" alt="Interior painting design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/i3.webp" alt="Interior painting design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/i4.webp" alt="Interior painting design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
@@ -276,16 +276,16 @@ const Paints = () => {
                         <div className="kitchen-type lshape-kitchen" id="exterior">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Exterior House Painting" />
+                                    <img src="services/paints/e1.webp" alt="Exterior House Painting" />
                                     <div className="gallery-overlay">
                                         <h4>Weather Protection</h4>
                                         <p>Durable exterior emulsion protecting against sun and rain</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="exterior1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="exterior2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="exterior3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/e2.webp" alt="Exterior painting design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/e3.webp" alt="Exterior painting design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/e4.webp" alt="Exterior painting design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
@@ -378,16 +378,16 @@ const Paints = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Texture Paint Walls" />
+                                    <img src="services/paints/t1.webp" alt="Texture Paint Walls" />
                                     <div className="gallery-overlay">
                                         <h4>Decorative Texture</h4>
                                         <p>Sand texture with metallic accents for feature wall</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="texture1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="texture2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="texture3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/t2.webp" alt="Texture painting design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/t3.webp" alt="Texture painting design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/t4.webp" alt="Texture painting design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
@@ -396,16 +396,16 @@ const Paints = () => {
                         <div className="kitchen-type parallel-kitchen" id="enamel">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Enamel Paint Application" />
+                                    <img src="services/paints/en1.webp" alt="Waterproofing Application" />
                                     <div className="gallery-overlay">
-                                        <h4>High Gloss Finish</h4>
-                                        <p>Durable enamel for doors, windows, and metal surfaces</p>
+                                        <h4>Roof Waterproofing</h4>
+                                        <p>Elastic coating for terrace and roof protection</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="enamel1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="enamel2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="enamel3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/en2.webp" alt="Waterproofing design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/en3.webp" alt="Waterproofing design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/en4.webp" alt="Waterproofing design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
@@ -498,16 +498,16 @@ const Paints = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Waterproofing Application" />
+                                    <img src="services/paints/w1.webp" alt="Waterproofing Application" />
                                     <div className="gallery-overlay">
                                         <h4>Roof Waterproofing</h4>
                                         <p>Elastic coating for terrace and roof protection</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="waterproof1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="waterproof2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="waterproof3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/w2.webp" alt="Waterproofing design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/w3.webp" alt="Waterproofing design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/w4.webp" alt="Waterproofing design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
@@ -516,16 +516,16 @@ const Paints = () => {
                         <div className="kitchen-type peninsula-kitchen" id="sealants">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Sealants and Primers" />
+                                    <img src="services/paints/s1.webp" alt="Sealants and Primers" />
                                     <div className="gallery-overlay">
                                         <h4>Surface Preparation</h4>
                                         <p>Essential primers and sealants for perfect paint adhesion</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="sealant1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="sealant2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="sealant3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/s2.webp" alt="Primer/sealant design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/s3.webp" alt="Primer/sealant design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/paints/s4.webp" alt="Primer/sealant design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">

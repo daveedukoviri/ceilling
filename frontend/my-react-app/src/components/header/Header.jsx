@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/img/banner_logo.webp';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -33,7 +33,6 @@ function Header() {
     }));
   };
 
-  // Helper to close mobile menu on link click
   const handleMobileLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
@@ -59,18 +58,6 @@ function Header() {
 
                     <li className="has-submenu">
                       <a href="#" onClick={(e) => e.preventDefault()}>
-                        WHAT WE DO <i className="fas fa-chevron-down"></i>
-                      </a>
-                      <div className="submenu">
-                        <ul>
-                          <li><Link to="/custom-made">Customized Interiors</Link></li>
-                          <li><Link to="/design-and-build">Design and Build</Link></li>
-                        </ul>
-                      </div>
-                    </li>
-
-                    <li className="has-submenu">
-                      <a href="#" onClick={(e) => e.preventDefault()}>
                         Services <i className="fas fa-chevron-down"></i>
                       </a>
                       <div className="submenu">
@@ -78,12 +65,11 @@ function Header() {
                           <li><Link to="/ceilings">Ceiling Systems</Link></li>
                           <li><Link to="/paints">Paints & Coatings</Link></li>
                           <li><Link to="/walls">Wall Solutions</Link></li>
-                          
                         </ul>
                       </div>
                     </li>
 
-                    <li><Link to="/offers">OFFERS</Link></li>
+                    <li><Link to="/products">PRODUCTS</Link></li>
                     <li><Link to="/gallery">GALLERY</Link></li>
                     <li><Link to="/login">Login</Link></li>
                     <li><Link to="/contacts">CONTACT</Link></li>
@@ -126,33 +112,20 @@ function Header() {
               </li>
 
               <li className="mobile-submenu-item">
-                <div className="submenu-header" onClick={() => toggleSubmenu('whatWeDo')}>
-                  <span>WHAT WE DO</span>
-                  <i className={`fas fa-chevron-${isSubmenuOpen.whatWeDo ? 'up' : 'down'}`}></i>
-                </div>
-                <div className={`mobile-submenu ${isSubmenuOpen.whatWeDo ? 'active' : ''}`}>
-                  <ul>
-                    <li><Link to="/custom-made" onClick={handleMobileLinkClick}>Customized Interiors</Link></li>
-                    <li><Link to="/design-and-build" onClick={handleMobileLinkClick}>Design and Build</Link></li>
-                  </ul>
-                </div>
-              </li>
-
-              <li className="mobile-submenu-item">
                 <div className="submenu-header" onClick={() => toggleSubmenu('products')}>
-                  <span>PRODUCTS</span>
+                  <span>SERVICES</span>
                   <i className={`fas fa-chevron-${isSubmenuOpen.products ? 'up' : 'down'}`}></i>
                 </div>
                 <div className={`mobile-submenu ${isSubmenuOpen.products ? 'active' : ''}`}>
                   <ul>
-                    <li><Link to="/ceilings">Ceiling Systems</Link></li>
-                          <li><Link to="/paints">Paints & Coatings</Link></li>
-                          <li><Link to="/walls">Wall Solutions</Link></li>
+                    <li><Link to="/ceilings" onClick={handleMobileLinkClick}>Ceiling Systems</Link></li>
+                    <li><Link to="/paints" onClick={handleMobileLinkClick}>Paints & Coatings</Link></li>
+                    <li><Link to="/walls" onClick={handleMobileLinkClick}>Wall Solutions</Link></li>
                   </ul>
                 </div>
               </li>
 
-              <li><Link to="/offers" onClick={handleMobileLinkClick}>OFFERS</Link></li>
+              <li><Link to="/products" onClick={handleMobileLinkClick}>PRODUCTS</Link></li>
               <li><Link to="/gallery" onClick={handleMobileLinkClick}>GALLERY</Link></li>
               <li><Link to="/blog" onClick={handleMobileLinkClick}>BLOGS</Link></li>
               <li><Link to="/contacts" onClick={handleMobileLinkClick}>CONTACT</Link></li>
@@ -187,7 +160,7 @@ function Header() {
         </div>
       </header>
 
-      {/* Fixed Right Sidebar */}
+      {/* Fixed Right Sidebar - KEPT EXACTLY AS IS */}
       <div className="fixedRit hidden">
         <ul>
           <li>
@@ -246,7 +219,7 @@ function Header() {
         </a>
       </div>
 
-      {/* Fixed Bottom Mobile Navigation */}
+      {/* Fixed Bottom Mobile Navigation - KEPT EXACTLY AS IS */}
       <div className="fixedBottom">
         <ul>
           <li>

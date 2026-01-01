@@ -212,7 +212,7 @@ const Walls = () => {
                     </div>
 
                     <div className="kitchen-showcase">
-                        {/* 1. Wall Coverings */}
+                        {/* 1. Wall Coverings   wc*/}
                         <div className="kitchen-type island-kitchen" id="coverings">
                             <div className="kitchen-content">
                                 <span className="kitchen-badge">Most Popular</span>
@@ -258,34 +258,34 @@ const Walls = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Wall Coverings" />
+                                    <img src="services/walls/wc1.webp" alt="Wall Coverings" />
                                     <div className="gallery-overlay">
                                         <h4>Premium Wall Covering</h4>
                                         <p>Textured wall covering in contemporary living space</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="covering1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="covering2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="covering3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/wc2.webp" alt="Wall covering design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/wc3.webp" alt="Wall covering design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/wc4.webp" alt="Wall covering design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
 
-                        {/* 2. Wall Paneling */}
+                        {/* 2. Wall Paneling  wp*/}
                         <div className="kitchen-type lshape-kitchen" id="paneling">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Wall Paneling" />
+                                    <img src="services/walls/wp2.webp" alt="Wall Paneling" />
                                     <div className="gallery-overlay">
                                         <h4>3D Wall Panels</h4>
                                         <p>Geometric paneling creating depth and visual interest</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="panel1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="panel2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="panel3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/wp.webp" alt="Wall paneling design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/wp3.webp" alt="Wall paneling design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/wp4.webp" alt="Wall paneling design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
@@ -332,7 +332,7 @@ const Walls = () => {
                             </div>
                         </div>
 
-                        {/* 3. Tiles & Stone Cladding */}
+                        {/* 3. Tiles & Stone Cladding  ts*/}
                         <div className="kitchen-type ushape-kitchen" id="tiles">
                             <div className="kitchen-content">
                                 <span className="kitchen-badge">Durable</span>
@@ -378,34 +378,34 @@ const Walls = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Stone Cladding" />
+                                    <img src="services/walls/ts1.webp" alt="Stone Cladding" />
                                     <div className="gallery-overlay">
                                         <h4>Natural Stone Wall</h4>
                                         <p>Stacked stone cladding for rustic elegance</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="tile1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="tile2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="tile3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/ts2.webp" alt="Tile & stone cladding design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/ts3.webp" alt="Tile & stone cladding design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/ts4.webp" alt="Tile & stone cladding design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
 
-                        {/* 4. Laminates */}
+                        {/* 4. Laminates l1 */}
                         <div className="kitchen-type parallel-kitchen" id="laminates">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Laminate Walls" />
+                                    <img src="services/walls/l1.webp" alt="Laminate Walls" />
                                     <div className="gallery-overlay">
                                         <h4>Decorative Laminates</h4>
                                         <p>High-pressure laminates in wood and abstract patterns</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="laminate1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="laminate2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="laminate3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/l2.webp" alt="Laminate design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/l3.webp" alt="Laminate design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/l4.webp" alt="Laminate design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
@@ -452,7 +452,7 @@ const Walls = () => {
                             </div>
                         </div>
 
-                        {/* 5. False Wall Systems */}
+                        {/* 5. False Wall Systems f1*/}
                         <div className="kitchen-type galley-kitchen" id="falsewalls">
                             <div className="kitchen-content">
                                 <span className="kitchen-badge">Functional</span>
@@ -498,34 +498,34 @@ const Walls = () => {
                             </div>
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="False Wall Systems" />
+                                    <img src="services/walls/f1.webp" alt="False Wall Systems" />
                                     <div className="gallery-overlay">
                                         <h4>Modular False Wall</h4>
                                         <p>Custom false wall with integrated storage and lighting</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="falsewall1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="falsewall2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="falsewall3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/f2.webp" alt="False wall design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/f3.webp" alt="False wall design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/f4.webp" alt="False wall design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                         </div>
 
-                        {/* 6. Partition Systems */}
+                        {/* 6. Partition Systems p1*/}
                         <div className="kitchen-type peninsula-kitchen" id="partitions">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Partition Systems" />
+                                    <img src="services/walls/p1.webp" alt="Partition Systems" />
                                     <div className="gallery-overlay">
                                         <h4>Professional Partition Systems</h4>
                                         <p>Cement board, gypsum board, and PVC partition solutions</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="partition1" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="partition2" onClick={handleThumbnailClick} />
-                                    <img src="https://images.unsplash.com/photo-1519643381401-22c77e605fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="partition3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/p2.webp" alt="Partition design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/p3.webp" alt="Partition design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/walls/p4.webp" alt="Partition design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
