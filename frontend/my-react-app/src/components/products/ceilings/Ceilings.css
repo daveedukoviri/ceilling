@@ -243,6 +243,7 @@
   gap: 120px;
   /* FIX: Prevent horizontal overflow */
   overflow-x: hidden;
+  overflow-y: hidden
 }
 
 #ceiling .kitchen-type {
