@@ -113,3 +113,7 @@
 #footer .banner_logo{
     width: 100%;
 }
+
+#footer .container{
+    max-width: 1600px;
+}

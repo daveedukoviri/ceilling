@@ -164,15 +164,15 @@ function Gallery() {
       <section className="gallery-hero">
         <div className="hero-overlay"></div>
         <div className="container text-center">
-          <h1>Our Interior Design Gallery</h1>
-          <p>Discover exquisite interior designs that transform houses into homes. Click any image to view full size and navigate.</p>
+          <h1 className='section-title'>Our Interior Design Gallery</h1>
+          <p className='small'>Discover exquisite interior designs that transform houses into homes. Click any image to view full size and navigate.</p>
         </div>
       </section>
 
       <div className="gallery-wrapper">
         <div className="gallery-header">
-          <h1>Visual Inspiration</h1>
-          <p>Beautiful interiors from around the world.</p>
+          <h1 className='section-title'>Visual Inspiration</h1>
+          <p className='small'>Beautiful interiors from around the world.</p>
         </div>
 
         <div className="pinterest-gallery">

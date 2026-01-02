@@ -26,9 +26,30 @@
   margin: 0 auto;
 }
 
+#Gallery .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--deep-charcoal);
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  
+}
+
 /* Gallery Hero - Only within #Gallery */
 #Gallery .gallery-hero {
-  background: linear-gradient(rgba(58, 58, 56, 0.7), rgba(58, 58, 56, 0.8));
+  background: 
+  linear-gradient(
+    rgba(58, 58, 56, 0.7),
+    rgba(58, 58, 56, 0.8)
+  ),
+  url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
   background-size: cover;
   background-position: center;
   padding: 100px 0;
