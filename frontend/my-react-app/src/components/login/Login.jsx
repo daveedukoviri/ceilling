@@ -115,8 +115,9 @@ function Login() {
                                 {/* Contact Footer */}
                                 <div className="form-footer mt-4 text-center">
                                     <p>
-                                        Need help? Call us at <strong>+91 92988 03332</strong><br />
-                                        or email <strong>sreisai.shambhavi.enterprises@gmail.com</strong>
+                                        Need help? Call us at <br /> <div className='small fw-semibold'>+91 92988 03332</div>
+                                        or email 
+                                        <div className='small fw-semibold'>sreisai.shambhavi.enterprises@gmail.com</div>
                                     </p>
                                 </div>
                             </div>

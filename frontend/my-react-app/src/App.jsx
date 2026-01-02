@@ -1,5 +1,8 @@
 import { lazy, Suspense } from 'react';
 import './index.css';
+import ScrollToTop from "./components/ScrollToTop";
+
+
 import Header from './components/header/Header';
 import Footer from './components/footter/Footer'; // Fixed typo: Footter → Footer
 const Body = lazy(() => import('./components/body/Body'));
@@ -19,6 +22,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
 
@@ -38,7 +42,7 @@ function App() {
             <Route path="/ceilings" element={<Ceilings />} />
             <Route path="/paints" element={<Paints />} />
             <Route path="/walls" element={<Walls />} />
-            
+
 
             {/* Optional other pages */}
             <Route path="/custom-made" element={<div><h1>Customized Interiors</h1></div>} />

@@ -1917,3 +1917,124 @@
 @keyframes spin {
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
+
+
+
+
+/* Banner Modal Styles - Only Image */
+#body .banner-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 24, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+  cursor: pointer;
+}
+
+#body .banner-modal {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  cursor: default;
+}
+
+#body .banner-image-container {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#body .banner-image-container:hover {
+  transform: scale(1.01);
+}
+
+#body .banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+#body .banner-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  background: var(--classic-gold);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#body .banner-close:hover {
+  background: var(--classic-walnut);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  #body .banner-modal {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  #body .banner-modal {
+    max-width: 95%;
+  }
+  
+  #body .banner-close {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    top: -12px;
+    right: -12px;
+  }
+}
+
+@media (max-width: 576px) {
+  #body .banner-modal-overlay {
+    padding: 10px;
+  }
+  
+  #body .banner-modal {
+    max-width: 100%;
+  }
+  
+  #body .banner-close {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -127,7 +127,6 @@ function Header() {
 
               <li><Link to="/products" onClick={handleMobileLinkClick}>PRODUCTS</Link></li>
               <li><Link to="/gallery" onClick={handleMobileLinkClick}>GALLERY</Link></li>
-              <li><Link to="/blog" onClick={handleMobileLinkClick}>BLOGS</Link></li>
               <li><Link to="/login" onClick={handleMobileLinkClick}>LOGIN</Link></li>
               <li><Link to="/contacts" onClick={handleMobileLinkClick}>CONTACT</Link></li>
             </ul>
@@ -136,14 +135,14 @@ function Header() {
           {/* Mobile Contact Info */}
           <div className="mobile-contact-info">
             <div className="mobile-call-btn">
-              <a href="tel:+919298803332" className="btn-call-mobile">
+              <a href="tel:+919246660909" className="btn-call-mobile">
                 <i className="fas fa-phone-alt"></i>
                 <span>CALL NOW</span>
               </a>
             </div>
             <div className="mobile-social-links">
               <a
-                href="https://wa.me/9298803332"
+                href="https://wa.me/9246660909"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn w-50 p-2 rounded-3"

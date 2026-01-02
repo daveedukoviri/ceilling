@@ -5,10 +5,10 @@ function Aboutus() {
     const heroRef = useRef(null);
     const cursorRef = useRef(null);
 
-    // Optimized cursor effect
+    // Optimized cursor effect - UPDATED: Check for tablet instead of mobile
     useEffect(() => {
         const cursor = cursorRef.current;
-        if (!cursor || window.innerWidth < 768) return;
+        if (!cursor || window.innerWidth < 768) return; // 768px is tablet breakpoint
 
         let rafId;
         const updateCursor = (e) => {
@@ -58,10 +58,13 @@ function Aboutus() {
             revealElements.forEach(el => observer.observe(el));
         }
 
-        // Smooth page entrance
+        // Smooth page entrance - UPDATED: Target #About instead of body
         setTimeout(() => {
-            document.body.style.opacity = '1';
-            document.body.style.transition = 'opacity 0.4s ease';
+            const aboutSection = document.getElementById('About');
+            if (aboutSection) {
+                aboutSection.style.opacity = '1';
+                aboutSection.style.transition = 'opacity 0.4s ease';
+            }
         }, 100);
 
         return () => {
@@ -115,15 +118,15 @@ function Aboutus() {
 
     return (
         <div id='About'>
-            {/* Custom Cursor - Hidden on mobile */}
+            {/* Custom Cursor - Hidden on mobile, shown on tablet+ */}
             <div className="A-custom-cursor" ref={cursorRef}></div>
 
-            {/* HERO SECTION - Content updated, structure same */}
-            <section className="A-hero-section  mt-3" ref={heroRef}>
+            {/* HERO SECTION - Updated padding classes removed */}
+            <section className="A-hero-section" ref={heroRef}>
                 <div className="A-hero-gradient"></div>
                 
-                <div className="A-container A-pb-5 A-mb-4 ">
-                    <div className="A-hero-content">
+                <div className="A-container">
+                    <div className="A-hero-content pt-4">
                         <div className="A-hero-subtitle" data-reveal>
                             <span className="A-gold-accent">Excellence in Construction Materials Since 2008</span>
                         </div>
@@ -136,12 +139,10 @@ function Aboutus() {
                         <p className="A-hero-desc" data-reveal data-delay="400">
                             We are a leading supplier and manufacturer of ceiling systems, GI roofing sheets and GI channels, and a trusted dealer for premium ceiling and paint brands. We provide end-to-end solutions for residential and commercial interiors — from gypsum & POP ceilings to waterproofing, paints and roof sheets — backed by trained installers and reputed brand partnerships.
                         </p>
-
-                       
                     </div>
                 </div>
 
-                {/* Performance Stats - Same structure, updated numbers */}
+                {/* Performance Stats */}
                 <div className="A-hero-stats">
                     <div className="A-container">
                         <div className="A-stats-grid">
@@ -277,7 +278,7 @@ function Aboutus() {
                         ].map((principle, index) => (
                             <div 
                                 key={index} 
-                                className="A-principle-card A-interactive-card"
+                                className="A-principle-card" // Removed A-interactive-card as it's not defined in CSS
                                 data-reveal 
                                 data-delay={index * 150}
                             >
@@ -291,7 +292,7 @@ function Aboutus() {
                 </div>
             </section>
 
-            {/* WHO WE ARE SECTION - Content updated, structure same */}
+            {/* WHO WE ARE SECTION */}
             <section className="A-section A-who-section">
                 <div className="A-container">
                     <div className="A-who-wrapper">
@@ -327,11 +328,9 @@ function Aboutus() {
                                     </div>
                                 </div>
                             </div>
-
-                           
                         </div>
 
-                        {/* Gallery Column with Fixed Alignment */}
+                        {/* Gallery Column */}
                         <div className="A-who-gallery">
                             <div className="A-gallery-layout">
                                 {/* Main Large Image */}
@@ -377,14 +376,12 @@ function Aboutus() {
                                     </div>
                                 </div>
 
-                                {/* Decorative Elements */}
+                                {/* Decorative Elements - Will only show on desktop */}
                                 <div className="A-gallery-decoration">
                                     <div className="A-deco-circle A-deco-1"></div>
                                     <div className="A-deco-circle A-deco-2"></div>
                                     <div className="A-deco-line"></div>
                                 </div>
-
-                               
                             </div>
                         </div>
                     </div>
@@ -426,11 +423,11 @@ function Aboutus() {
                 </div>
             </section>
 
-            {/* CTA SECTION - Content updated, structure same */}
+            {/* CTA SECTION - Updated to use proper CSS classes */}
             <section className="A-section A-cta-section">
                 <div className="A-container">
                     <div className="A-cta-content" data-reveal>
-                        <h1 className="text-white mb-4 pb-4 w-100">
+                        <h1 className="A-cta-title" data-reveal data-delay="0">
                             Ready to Start Your<br />Construction Project?
                         </h1>
                         <p className="A-cta-desc" data-reveal data-delay="100">
@@ -451,20 +448,20 @@ function Aboutus() {
                             </a>
                         </div>
                         
-                        {/* Contact Info in same layout */}
+                        {/* Contact Info */}
                         <div className="A-cta-contact-info" data-reveal data-delay="300">
                             <div className="A-cta-contact-item">
                                 <i className="fas fa-envelope"></i>
                                 <div>
-                                    <h5 className='text-black fs-2 mt-3 pt-3'>Email Us</h5>
-                                    <div className='text-white'>gypsumngypsum4u@gmail.com</div>
+                                    <h5>Email Us</h5>
+                                    <div>gypsumngypsum4u@gmail.com</div>
                                 </div>
                             </div>
                             <div className="A-cta-contact-item">
                                 <i className="fas fa-map-marker-alt"></i>
-                                <div >
-                                    <h5 className='text-black fs-2 mt-3 pt-3'>Visit Our Showroom</h5>
-                                    <span className='text-white'>RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry</span>
+                                <div>
+                                    <h5>Visit Our Showroom</h5>
+                                    <span>RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry</span>
                                 </div>
                             </div>
                         </div>

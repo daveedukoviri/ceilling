@@ -38,6 +38,9 @@ const Body = () => {
   const slideIntervalRef = useRef(null);
   const testimonialIntervalRef = useRef(null);
 
+  // Modal State - ADD THIS
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+
   // Hero Carousel Data - Updated with company info
   const slides = [
     {
@@ -107,21 +110,21 @@ const Body = () => {
     {
       name: 'Mohan Reddy',
       role: 'Architect, Godavari Designs',
-       avatar: '/testimonals/t3.webp',
+      avatar: '/testimonals/t3.webp',
       text: '"As an authorized dealer for top brands, they provide quality materials. Their GI roofing sheets and channels are durable and perfect for our projects in East Godavari."',
       rating: 4.5
     },
     {
       name: 'Arjun Patel',
       role: 'Homeowner',
-       avatar: '/testimonals/t4.webp',
+      avatar: '/testimonals/t4.webp',
       text: '"Complete painting and waterproofing solution for our home. Used Asian Paints sealants and their team did excellent texture work on walls. Highly recommended!"',
       rating: 5
     },
     {
       name: 'Geetha Nair',
       role: 'Construction Company Director',
-       avatar: '/testimonals/t6.webp',
+      avatar: '/testimonals/t6.webp',
       text: '"We\'ve been sourcing GI channels and suspension systems from them for years. Consistent quality and reliable supply for all our ceiling projects."',
       rating: 5
     }
@@ -218,6 +221,12 @@ const Body = () => {
     if (activeFilter === 'all') return true;
     return project.category.includes(activeFilter);
   });
+
+  // Show banner modal on every page load/refresh
+  useEffect(() => {
+    // Show modal immediately on every load
+    setShowWelcomeModal(true);
+  }, []);
 
   // Handle window resize for responsive testimonial cards
   useEffect(() => {
@@ -382,8 +391,8 @@ const Body = () => {
           <div className="about-container">
             <div className="about-image-container">
               <img
-                src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?q=80&w=1174&auto=format&fit=crop"
-                alt="GNG Group Ceiling Solutions"
+                src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                alt="Luxury Living Room Interior"
                 className="about-image"
               />
               <div className="about-badge">Trusted Since Years</div>
@@ -874,6 +883,31 @@ const Body = () => {
         </div>
       </section>
 
+
+      {/* BANNER MODAL - ONLY IMAGE */}
+      {showWelcomeModal && (
+        <div className="banner-modal-overlay" onClick={() => setShowWelcomeModal(false)}>
+          <div className="banner-modal" onClick={(e) => e.stopPropagation()}>
+            {/* Only Image - Click anywhere on image to close */}
+            <div className="banner-image-container">
+              <img
+                src="modal_photo.webp"
+                alt="GNG Group - Premium Ceiling Solutions"
+                className="banner-image"
+                onClick={() => setShowWelcomeModal(false)}
+              />
+            </div>
+
+            {/* Optional: Small close button */}
+            <button
+              className="banner-close"
+              onClick={() => setShowWelcomeModal(false)}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
