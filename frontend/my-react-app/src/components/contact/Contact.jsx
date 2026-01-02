@@ -74,7 +74,7 @@ function Contact() {
     };
 
     return (
-        <>
+        <div id='contact'>
 
             <section className="contact-hero text-center">
                 <div className="container">
@@ -464,7 +464,7 @@ function Contact() {
 
 
             
-        </>
+        </div>
     );
 }
 

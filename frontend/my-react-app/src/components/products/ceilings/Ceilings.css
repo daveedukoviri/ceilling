@@ -1,3 +1,4 @@
+/* CSS Variables - Keep global */
 :root {
   --pastel-cream: #F9F5F0;
   --pastel-sand: #F0E6D6;
@@ -9,28 +10,24 @@
   --transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-* {
+/* ALL STYLES SCOPED TO #ceiling */
+#ceiling * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: white !important;
-  color: var(--classic-charcoal);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-.container {
+/* Container - Only within #ceiling */
+#ceiling .container {
   max-width: 1400px;
   margin: 0 auto;
-  /* padding: 0 40px; */
+  padding: 0 20px;
 }
 
-/* NEW LIGHT & ELEGANT HERO SECTION */
-.hero-section-new {
+/* FIX: Remove CSS variables from here - they should be in :root above */
+
+/* NEW LIGHT & ELEGANT HERO SECTION - Only within #ceiling */
+#ceiling .hero-section-new {
   position: relative;
   padding: 120px 0;
   background: linear-gradient(135deg, #fdfcfb 0%, #f8f5f2 100%);
@@ -40,7 +37,7 @@ body {
   align-items: center;
 }
 
-.hero-container-new {
+#ceiling .hero-container-new {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 80px;
@@ -49,11 +46,11 @@ body {
   z-index: 2;
 }
 
-.hero-content-new {
+#ceiling .hero-content-new {
   max-width: 600px;
 }
 
-.hero-badge-new {
+#ceiling .hero-badge-new {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -70,7 +67,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
-.hero-title-new {
+#ceiling .hero-title-new {
   font-family: 'Playfair Display', serif;
   font-size: 3.2rem;
   font-weight: 600;
@@ -79,7 +76,7 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-title-new span {
+#ceiling .hero-title-new span {
   color: var(--classic-gold);
   background: linear-gradient(135deg, var(--classic-gold), #d4b587);
   -webkit-background-clip: text;
@@ -87,7 +84,7 @@ body {
   background-clip: text;
 }
 
-.hero-subtitle-new {
+#ceiling .hero-subtitle-new {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   color: var(--classic-walnut);
@@ -95,24 +92,25 @@ body {
   font-style: italic;
 }
 
-.hero-description-new {
+#ceiling .hero-description-new {
   font-size: 1rem;
   color: #555;
   line-height: 1.8;
   margin-bottom: 40px;
+  text-align: justify;
 }
 
-.hero-stats-new {
+#ceiling .hero-stats-new {
   display: flex;
   gap: 50px;
   margin-bottom: 50px;
 }
 
-.stat-item-new {
+#ceiling .stat-item-new {
   text-align: center;
 }
 
-.stat-number-new {
+#ceiling .stat-number-new {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 700;
@@ -120,7 +118,7 @@ body {
   line-height: 1;
 }
 
-.stat-label-new {
+#ceiling .stat-label-new {
   font-size: 14px;
   color: var(--classic-walnut);
   text-transform: uppercase;
@@ -129,7 +127,7 @@ body {
   font-weight: 500;
 }
 
-.hero-cta-new {
+#ceiling .hero-cta-new {
   background: linear-gradient(135deg, var(--classic-gold), var(--classic-walnut));
   color: white;
   border: none;
@@ -146,42 +144,42 @@ body {
   box-shadow: 0 10px 30px rgba(197, 165, 114, 0.3);
 }
 
-.hero-cta-new:hover {
+#ceiling .hero-cta-new:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(197, 165, 114, 0.4);
 }
 
-/* Image Side */
-.hero-image-wrapper {
+/* Image Side - Only within #ceiling */
+#ceiling .hero-image-wrapper {
   position: relative;
 }
 
-.hero-image-container-new {
+#ceiling .hero-image-container-new {
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
-.hero-image-new {
+#ceiling .hero-image-new {
   width: 100%;
   height: 650px;
   object-fit: cover;
   transition: transform 1.5s ease;
 }
 
-.hero-image-new:hover {
+#ceiling .hero-image-new:hover {
   transform: scale(1.05);
 }
 
-.image-overlay-gradient {
+#ceiling .image-overlay-gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.2), transparent 40%);
   pointer-events: none;
 }
 
-.floating-badge {
+#ceiling .floating-badge {
   position: absolute;
   bottom: 40px;
   right: 20px;
@@ -198,7 +196,7 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
-.hero-bg-pattern {
+#ceiling .hero-bg-pattern {
   position: absolute;
   inset: 0;
   background-image: radial-gradient(circle at 20% 80%, rgba(197, 165, 114, 0.08) 0%, transparent 50%),
@@ -211,27 +209,26 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-/* Kitchen Showcase */
-.showcase-section {
+/* Kitchen Showcase - Only within #ceiling */
+#ceiling .showcase-section {
   padding: 120px 0;
   background: var(--pastel-cream);
   position: relative;
 }
 
-.showcase-header {
+#ceiling .showcase-header {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.showcase-header h2 {
+#ceiling .showcase-header h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--deep-charcoal);
-  /* margin-bottom: 20px; */
 }
 
-.showcase-header p {
+#ceiling .showcase-header p {
   font-size: 1.2rem;
   color: var(--classic-walnut);
   max-width: 600px;
@@ -239,74 +236,62 @@ body {
   line-height: 1.6;
 }
 
-/* Kitchen Type Showcase */
-.kitchen-showcase {
+/* Kitchen Type Showcase - Only within #ceiling */
+#ceiling .kitchen-showcase {
   display: flex;
   flex-direction: column;
   gap: 120px;
+  /* FIX: Prevent horizontal overflow */
+  overflow-x: hidden;
 }
 
-.kitchen-type {
+#ceiling .kitchen-type {
   opacity: 0;
   transform: translateY(80px);
+  /* FIX: Ensure proper container sizing */
+  min-width: 0;
+  width: 100%;
 }
 
-.kitchen-type.in-view {
+#ceiling .kitchen-type.in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Kitchen Layouts */
-.island-kitchen {
+/* Kitchen Layouts - Only within #ceiling */
+#ceiling .island-kitchen,
+#ceiling .lshape-kitchen,
+#ceiling .ushape-kitchen,
+#ceiling .parallel-kitchen,
+#ceiling .galley-kitchen,
+#ceiling .peninsula-kitchen {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 80px;
   align-items: center;
+  /* FIX: Prevent grid overflow */
+  width: 100%;
+  min-width: 0;
 }
 
-.lshape-kitchen {
-  display: grid;
+/* FIX: Alternate layouts for better mobile display */
+#ceiling .lshape-kitchen,
+#ceiling .parallel-kitchen,
+#ceiling .peninsula-kitchen {
   grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
 }
 
-.ushape-kitchen {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.parallel-kitchen {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.galley-kitchen {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-
-.peninsula-kitchen {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  align-items: center;
-}
-
-/* Kitchen Content */
-.kitchen-content {
+/* Kitchen Content - Only within #ceiling */
+#ceiling .kitchen-content {
   padding: 40px;
   position: relative;
   overflow: hidden;
+  /* FIX: Prevent content overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-.kitchen-content::before {
+#ceiling .kitchen-content::before {
   content: '';
   position: absolute;
   top: 0;
@@ -317,11 +302,11 @@ body {
   transition: left 0.7s ease;
 }
 
-.kitchen-type.in-view .kitchen-content::before {
+#ceiling .kitchen-type.in-view .kitchen-content::before {
   left: 100%;
 }
 
-.kitchen-badge {
+#ceiling .kitchen-badge {
   display: inline-block;
   background: linear-gradient(135deg, var(--classic-gold), var(--classic-walnut));
   color: white;
@@ -337,34 +322,38 @@ body {
   transform: translateX(-30px);
 }
 
-.kitchen-title {
+#ceiling .kitchen-title {
   font-family: 'Playfair Display', serif;
-  /* font-size: 3rem; */
   font-weight: 700;
   color: var(--deep-charcoal);
   margin-bottom: 25px;
   line-height: 1.2;
   opacity: 0;
   transform: translateX(-30px);
+  /* FIX: Prevent text overflow */
+  font-size: 2.5rem;
 }
 
-.kitchen-description {
+#ceiling .kitchen-description {
   font-size: 1rem;
   color: var(--classic-walnut);
   line-height: 1.8;
   margin-bottom: 40px;
   opacity: 0;
   transform: translateX(-30px);
+  /* FIX: Text wrapping */
+  text-align: justify;
+  hyphens: auto;
 }
 
-.kitchen-features {
+#ceiling .kitchen-features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   margin-bottom: 40px;
 }
 
-.feature-item {
+#ceiling .feature-item {
   display: flex;
   gap: 15px;
   align-items: flex-start;
@@ -372,7 +361,7 @@ body {
   transform: translateX(-20px);
 }
 
-.feature-icon {
+#ceiling .feature-icon {
   width: 32px;
   height: 32px;
   background: linear-gradient(135deg, var(--classic-gold), var(--classic-walnut));
@@ -383,22 +372,24 @@ body {
   color: white;
   font-size: 16px;
   flex-shrink: 0;
+  min-width: 32px;
 }
 
-.feature-content h4 {
+#ceiling .feature-content h4 {
   font-size: 16px;
   font-weight: 600;
   color: var(--deep-charcoal);
   margin-bottom: 8px;
+  font-family: 'Inter', sans-serif !important;
 }
 
-.feature-content p {
+#ceiling .feature-content p {
   font-size: 14px;
   color: var(--classic-walnut);
   line-height: 1.5;
 }
 
-.kitchen-cta {
+#ceiling .kitchen-cta {
   background: transparent;
   color: var(--classic-gold);
   border: 2px solid var(--classic-gold);
@@ -408,7 +399,7 @@ body {
   font-size: 15px;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -418,7 +409,7 @@ body {
   transform: translateY(30px);
 }
 
-.kitchen-cta::before {
+#ceiling .kitchen-cta::before {
   content: '';
   position: absolute;
   top: 0;
@@ -429,24 +420,26 @@ body {
   transition: left 0.6s;
 }
 
-.kitchen-cta:hover::before {
+#ceiling .kitchen-cta:hover::before {
   left: 100%;
 }
 
-.kitchen-cta:hover {
+#ceiling .kitchen-cta:hover {
   background: var(--classic-gold);
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(197, 165, 114, 0.3);
 }
 
-/* Kitchen Gallery */
-.kitchen-gallery {
+/* Kitchen Gallery - Only within #ceiling */
+#ceiling .kitchen-gallery {
   position: relative;
   perspective: 1000px;
+  /* FIX: Prevent gallery overflow */
+  min-width: 0;
 }
 
-.main-gallery {
+#ceiling .main-gallery {
   position: relative;
   height: 400px;
   border-radius: 20px;
@@ -456,20 +449,22 @@ body {
   transform-style: preserve-3d;
   opacity: 0;
   transform: translateX(30px);
+  /* FIX: Responsive height */
+  min-height: 300px;
 }
 
-.main-gallery img {
+#ceiling .main-gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 1s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.main-gallery:hover img {
+#ceiling .main-gallery:hover img {
   transform: scale(1.08);
 }
 
-.gallery-overlay {
+#ceiling .gallery-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -481,23 +476,23 @@ body {
   transition: transform 0.6s ease;
 }
 
-.main-gallery:hover .gallery-overlay {
+#ceiling .main-gallery:hover .gallery-overlay {
   transform: translateY(0);
 }
 
-.gallery-overlay h4 {
+#ceiling .gallery-overlay h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.gallery-overlay p {
+#ceiling .gallery-overlay p {
   font-size: 14px;
   color: var(--pastel-sand);
 }
 
-.thumbnail-grid {
+#ceiling .thumbnail-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
@@ -505,18 +500,18 @@ body {
   transform: translateY(30px);
 }
 
-.thumbnail-grid img {
+#ceiling .thumbnail-grid img {
   width: 100%;
   height: 120px;
   object-fit: cover;
   border-radius: 12px;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   border: 3px solid transparent;
   filter: brightness(0.9);
 }
 
-.thumbnail-grid img:hover {
+#ceiling .thumbnail-grid img:hover {
   border-color: var(--classic-gold);
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 15px 35px rgba(197, 165, 114, 0.25);
@@ -524,95 +519,38 @@ body {
   z-index: 2;
 }
 
-/* Animation Classes & Keyframes (unchanged) */
-.animate-fade-in-up { animation: fadeInUp 0.8s ease forwards; }
-.animate-slide-in-left { animation: slideInLeft 0.8s ease forwards; }
-.animate-slide-in-right { animation: slideInRight 0.8s ease forwards; }
-.animate-fade-in { animation: fadeIn 0.8s ease forwards; }
+/* Animation Classes & Keyframes */
+#ceiling .animate-fade-in-up { animation: fadeInUp 0.8s ease forwards; }
+#ceiling .animate-slide-in-left { animation: slideInLeft 0.8s ease forwards; }
+#ceiling .animate-slide-in-right { animation: slideInRight 0.8s ease forwards; }
+#ceiling .animate-fade-in { animation: fadeIn 0.8s ease forwards; }
 
-/* All your existing keyframes remain here */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 1200px) {
-  /* .container { padding: 0 30px; } */
-  .kitchen-title { font-size: 2.5rem; }
-  .island-kitchen, .lshape-kitchen, .ushape-kitchen, .parallel-kitchen, .galley-kitchen, .peninsula-kitchen { gap: 60px; }
-}
-
-@media (max-width: 992px) {
-  .hero-container-new { grid-template-columns: 1fr; text-align: center; gap: 60px; }
-  .hero-content-new { max-width: 700px; margin: 0 auto; }
-  .hero-stats-new { justify-content: center; }
-  .hero-title-new { font-size: 3.5rem; }
-  .island-kitchen, .lshape-kitchen, .ushape-kitchen, .parallel-kitchen, .galley-kitchen, .peninsula-kitchen {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  .kitchen-content { padding: 30px 0; }
-  .main-gallery { height: 350px; }
-}
-
-@media (max-width: 768px) {
-  /* .container { padding: 0 20px; } */
-  .hero-title-new { font-size: 2.4rem; }
-  .hero-subtitle-new { font-size: 1.2rem; }
-  .hero-image-new { height: 500px; }
-  .showcase-header h2 { font-size: 1.5rem; }
-  .kitchen-title { font-size: 2.2rem; }
-  .kitchen-features { grid-template-columns: 1fr; gap: 20px; }
-  .main-gallery { height: 300px; }
-  .thumbnail-grid img { height: 100px; }
-}
-
-@media (max-width: 576px) {
-  .hero-title-new { font-size: 2.8rem; }
-  .hero-image-new { height: 450px; }
-  .main-gallery { height: 250px; }
-  .thumbnail-grid img { height: 80px; }
-  .hero-description-new {font-size: 14px;}
-}
-
-@media (max-width: 480px) {
-  .hero-title-new { font-size: 1.8rem; }
-  .kitchen-title { font-size: 1.8rem; }
-}
-
-
-/* FAST & LIGHT HERO ANIMATIONS – Instant Feel */
-
-/* Quick fade in for all text elements */
-.fast-fade {
+/* FAST & LIGHT HERO ANIMATIONS */
+#ceiling .fast-fade {
   opacity: 0;
   animation: quickFadeIn 0.8s ease-out forwards;
 }
 
-/* Quick float in from right for image */
-.fast-float {
+#ceiling .fast-float {
   opacity: 0;
   animation: quickFloatIn 0.9s ease-out forwards;
 }
 
-/* Very subtle pulse for badge – barely noticeable */
-.quick-pulse {
+#ceiling .quick-pulse {
   animation: quickPulse 3s ease-in-out infinite;
 }
 
-/* Keyframes – Super fast and light */
 @keyframes quickFadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 @keyframes quickFloatIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes quickPulse {
@@ -620,23 +558,13 @@ body {
   50% { transform: scale(1.02); }
 }
 
-/* Instant hover for image – snappy */
-.hero-image-new:hover {
+#ceiling .hero-image-new:hover {
   transform: scale(1.03);
   transition: transform 0.6s ease;
 }
 
-
-
-
-
-/* Elegant Simple Underline – Clean & Premium */
-.showcase-header {
-  text-align: center;
-  margin-bottom: 100px; /* More breathing room */
-}
-
-.elegant-underline {
+/* Elegant Simple Underline */
+#ceiling .elegant-underline {
   width: 360px;
   height: 3px;
   background: linear-gradient(90deg, 
@@ -651,26 +579,188 @@ body {
   box-shadow: 0 2px 8px rgba(197, 165, 114, 0.2);
 }
 
-/* Optional: Gentle fade-in when section appears */
-.showcase-section.in-view .elegant-underline {
+#ceiling .showcase-section.in-view .elegant-underline {
   animation: underlineReveal 1.4s ease-out forwards;
 }
 
 @keyframes underlineReveal {
-  0% {
-    opacity: 0;
-    transform: scaleX(0);
+  0% { opacity: 0; transform: scaleX(0); }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+
+/* Typography */
+#ceiling h4 {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* FIX: CRITICAL RESPONSIVE FIXES for mobile scroll issues */
+@media (max-width: 1200px) {
+  #ceiling .kitchen-title { 
+    font-size: 2.2rem; 
   }
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
+  #ceiling .island-kitchen,
+  #ceiling .lshape-kitchen,
+  #ceiling .ushape-kitchen,
+  #ceiling .parallel-kitchen,
+  #ceiling .galley-kitchen,
+  #ceiling .peninsula-kitchen { 
+    gap: 60px; 
+    /* FIX: Prevent overflow on medium screens */
+    grid-template-columns: 1fr 1fr;
+  }
+  #ceiling .kitchen-content { 
+    padding: 30px; 
+  }
+  #ceiling .main-gallery { 
+    height: 350px; 
   }
 }
 
-h4{
-      font-family: 'Inter', sans-serif !important;
+@media (max-width: 992px) {
+  #ceiling .hero-container-new { 
+    grid-template-columns: 1fr; 
+    text-align: center; 
+    gap: 60px; 
+  }
+  #ceiling .hero-content-new { 
+    max-width: 700px; 
+    margin: 0 auto; 
+  }
+  #ceiling .hero-stats-new { 
+    justify-content: center; 
+  }
+  #ceiling .hero-title-new { 
+    font-size: 3rem; 
+  }
+  /* FIX: Stack kitchen layouts on tablet */
+  #ceiling .island-kitchen,
+  #ceiling .lshape-kitchen,
+  #ceiling .ushape-kitchen,
+  #ceiling .parallel-kitchen,
+  #ceiling .galley-kitchen,
+  #ceiling .peninsula-kitchen {
+    grid-template-columns: 1fr !important; /* Force single column */
+    gap: 40px;
+    text-align: center;
+  }
+  #ceiling .kitchen-content { 
+    padding: 20px 0; 
+    order: 2; /* Make content come after image on mobile */
+  }
+  #ceiling .kitchen-gallery { 
+    order: 1; /* Make image come first on mobile */
+  }
+  #ceiling .kitchen-features {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  #ceiling .main-gallery { 
+    height: 300px; 
+  }
+  #ceiling .hero-image-new { 
+    height: 500px; 
+  }
 }
 
-.hero-description-new{
-  text-align:justify ;
+@media (max-width: 768px) {
+  #ceiling .hero-title-new { 
+    font-size: 2.4rem; 
+  }
+  #ceiling .hero-subtitle-new { 
+    font-size: 1.5rem; 
+  }
+  #ceiling .showcase-header h2 { 
+    font-size: 2rem; 
+  }
+  #ceiling .kitchen-title { 
+    font-size: 1.8rem; 
+  }
+  #ceiling .kitchen-showcase {
+    gap: 80px; /* Reduce gap on mobile */
+  }
+  #ceiling .main-gallery { 
+    height: 250px; 
+  }
+  #ceiling .thumbnail-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+  }
+  #ceiling .thumbnail-grid img { 
+    height: 80px; 
+  }
+  #ceiling .hero-description-new {
+    font-size: 0.95rem;
+  }
+  #ceiling .kitchen-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #ceiling .hero-title-new { 
+    font-size: 2rem; 
+  }
+  #ceiling .hero-image-new { 
+    height: 400px; 
+  }
+  #ceiling .showcase-section {
+    padding: 80px 0;
+  }
+  #ceiling .kitchen-showcase {
+    gap: 60px;
+  }
+  #ceiling .main-gallery { 
+    height: 200px; 
+  }
+  #ceiling .thumbnail-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px; 
+  }
+  #ceiling .thumbnail-grid img { 
+    height: 70px; 
+  }
+  #ceiling .kitchen-badge {
+    padding: 10px 20px;
+    font-size: 11px;
+  }
+  #ceiling .kitchen-cta {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #ceiling .hero-title-new { 
+    font-size: 1.8rem; 
+  }
+  #ceiling .kitchen-title { 
+    font-size: 1.6rem; 
+  }
+  #ceiling .hero-image-new { 
+    height: 350px; 
+  }
+  #ceiling .thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns on very small screens */
+  }
+  #ceiling .thumbnail-grid img {
+    height: 60px;
+  }
+  #ceiling .kitchen-content {
+    padding: 15px 0;
+  }
+  #ceiling .kitchen-features {
+    gap: 15px;
+  }
+}
+
+/* FIX: Ensure no horizontal scroll on any screen */
+#ceiling {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+#ceiling .container {
+  width: 100%;
+  max-width: 100%;
 }

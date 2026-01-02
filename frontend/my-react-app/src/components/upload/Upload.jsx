@@ -168,7 +168,7 @@ export default function Upload() {
     /* ----------------------------- render ----------------------------- */
 
     return (
-        <>
+        <div id="upload">
             {/* Hero Section */}
             <section className="contact-hero text-center mb-4">
                 <div className="container">
@@ -378,6 +378,6 @@ export default function Upload() {
                     )}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

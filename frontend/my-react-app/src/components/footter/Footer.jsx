@@ -3,13 +3,14 @@ import logo from '../../assets/img/banner_logo.webp';
 
 function Footter() {
     return (
-        <footer className="main-footer">
+        <div id='footer'>
+            <footer className="main-footer">
             <div className="container">
                 <div className="row px-0">
                     {/* Logo and Description Section */}
                     <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                         <a aria-label="logo">
-                            <img src={logo} alt="logo" className='banner_logo' />
+                            <img src={logo} alt="logo" className='banner_logo'  />
                         </a>
                         <p className="mb-4 mt-4 small text-justify">
                             Leading supplier and manufacturer of ceiling systems, GI roofing sheets, 
@@ -137,6 +138,7 @@ function Footter() {
                 </div>
             </div>
         </footer>
+        </div>
     )
 }
 

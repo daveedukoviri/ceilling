@@ -335,7 +335,7 @@ const Body = () => {
   };
 
   return (
-    <div className="body-content">
+    <div className="body-content" id='body'>
       {/* 1. HERO CAROUSEL SECTION */}
       <section className="hero-carousel" id="home"
         onMouseEnter={() => setIsCarouselPaused(true)}

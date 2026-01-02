@@ -124,7 +124,7 @@ const Walls = () => {
     };
 
     return (
-        <>
+        <div id='ceiling'>
 
             {/* Fast, Light & Sentimental Hero Section */}
             <section className="hero-section-new">
@@ -572,7 +572,7 @@ const Walls = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 

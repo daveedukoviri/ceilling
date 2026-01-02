@@ -1,100 +1,115 @@
- .main-footer {
-     background: var(--classic-charcoal);
-     color: var(--pastel-cream);
-     padding: 4rem 0 0;
- }
+/* CSS Variables - Keep global (you should have these defined elsewhere) */
+:root {
+    --classic-charcoal: #2A2A28;
+    --pastel-cream: #F9F5F0;
+    --classic-gold: #C5A572;
+    --pastel-clay: #D4C4B8;
+    --transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
- .footer-logo {
-     font-family: 'Cormorant Garamond', serif;
-     font-size: 2.5rem;
-     font-weight: 700;
-     color: var(--classic-gold);
-     margin-bottom: 1.5rem;
- }
+/* ALL STYLES SCOPED TO #footer ELEMENT */
+#footer .main-footer {
+    background: var(--classic-charcoal);
+    color: var(--pastel-cream);
+    padding: 4rem 0 0;
+}
 
- .footer-links h5 {
-     color: white;
-     margin-bottom: 1.5rem;
-     font-size: 1.1rem;
-     position: relative;
-     padding-bottom: 0.75rem;
- }
+#footer .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--classic-gold);
+    margin-bottom: 1.5rem;
+}
 
- .footer-links h5::after {
-     content: '';
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 40px;
-     height: 2px;
-     background: var(--classic-gold);
- }
+#footer .footer-links h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
 
- .footer-links ul {
-     list-style: none;
-     padding: 0;
- }
+#footer .footer-links h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--classic-gold);
+}
 
- .footer-links li {
-     margin-bottom: 0.75rem;
- }
+#footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
 
- .footer-links a {
-     color: var(--pastel-clay);
-     text-decoration: none;
-     transition: var(--transition);
-     position: relative;
-     padding-left: 0;
-     display: inline-block;
- }
+#footer .footer-links li {
+    margin-bottom: 0.75rem;
+}
 
- .footer-links a::before {
-     content: '→';
-     position: absolute;
-     left: -20px;
-     opacity: 0;
-     transition: var(--transition);
- }
+#footer .footer-links a {
+    color: var(--pastel-clay);
+    text-decoration: none;
+    transition: var(--transition);
+    position: relative;
+    padding-left: 0;
+    display: inline-block;
+}
 
- .footer-links a:hover {
-     color: var(--classic-gold);
-     padding-left: 20px;
- }
+#footer .footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: var(--transition);
+}
 
- .footer-links a:hover::before {
-     opacity: 1;
-     left: 0;
- }
+#footer .footer-links a:hover {
+    color: var(--classic-gold);
+    padding-left: 20px;
+}
 
- .footer-bottom {
-     background: rgba(0, 0, 0, 0.2);
-     padding: 1.5rem 0;
-     margin-top: 4rem;
- }
+#footer .footer-links a:hover::before {
+    opacity: 1;
+    left: 0;
+}
 
- .social-icons {
-     display: flex;
-     gap: 1rem;
- }
+#footer .footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+}
 
- .social-icon {
-     width: 40px;
-     height: 40px;
-     background: rgba(255, 255, 255, 0.1);
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: var(--pastel-cream);
-     text-decoration: none;
-     transition: var(--transition);
- }
+#footer .social-icons {
+    display: flex;
+    gap: 1rem;
+}
 
- .social-icon:hover {
-     background: var(--classic-gold);
-     transform: translateY(-3px);
- }
+#footer .social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pastel-cream);
+    text-decoration: none;
+    transition: var(--transition);
+}
 
- .gold{
-     color: var(--classic-gold);
- }
+#footer .social-icon:hover {
+    background: var(--classic-gold);
+    transform: translateY(-3px);
+}
+
+#footer .gold {
+    color: var(--classic-gold);
+}
+
+
+#footer .banner_logo{
+    width: 100%;
+}

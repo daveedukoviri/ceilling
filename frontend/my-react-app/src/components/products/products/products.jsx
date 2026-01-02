@@ -1,6 +1,6 @@
 // Products.jsx
 import React, { useEffect, useRef } from 'react';
-import './Products.css';
+import './products.css';
 
 const Products = () => {
     const videoRefs = useRef([]);
@@ -164,7 +164,7 @@ const Products = () => {
     ];
 
     return (
-        <>
+        <div id='Products'>
             {/* Hero Section for Products */}
             <section className="products-hero-section">
                 <div className="container products-hero-container">
@@ -474,7 +474,7 @@ const Products = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 
