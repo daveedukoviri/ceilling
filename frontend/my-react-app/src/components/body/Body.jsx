@@ -91,45 +91,38 @@ const Body = () => {
   // Testimonials Data - Updated with relevant testimonials
   const testimonials = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Vijay Prasad Kumar ',
       role: 'Building Contractor, Rajahmundry',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      avatar: '/testimonals/t1.webp',
       text: '"GNG Group provided excellent gypsum ceiling materials and professional installation for our residential project. Their attention to detail and quality products exceeded our expectations."',
       rating: 5
     },
     {
-      name: 'Priya Sharma',
+      name: 'Prashant Sharma',
       role: 'Commercial Space Owner',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+      avatar: '/testimonals/t2.webp',
       text: '"The acoustic ceiling tiles from Sree Sai Shambhavi Enterprises transformed our office space. Great soundproofing and the installation team was very professional."',
       rating: 5
     },
     {
       name: 'Mohan Reddy',
       role: 'Architect, Godavari Designs',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+       avatar: '/testimonals/t3.webp',
       text: '"As an authorized dealer for top brands, they provide quality materials. Their GI roofing sheets and channels are durable and perfect for our projects in East Godavari."',
       rating: 4.5
     },
     {
-      name: 'Anjali Patel',
+      name: 'Arjun Patel',
       role: 'Homeowner',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+       avatar: '/testimonals/t4.webp',
       text: '"Complete painting and waterproofing solution for our home. Used Asian Paints sealants and their team did excellent texture work on walls. Highly recommended!"',
       rating: 5
     },
     {
-      name: 'Suresh Babu',
-      role: 'Construction Company Director',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"We\'ve been sourcing GI channels and suspension systems from them for years. Consistent quality and reliable supply for all our ceiling projects."',
-      rating: 5
-    },
-    {
       name: 'Geetha Nair',
-      role: 'Hotel Manager',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-      text: '"The fire-retardant gypsum ceilings installed in our hotel have been excellent. The team completed installation on schedule with minimal disruption."',
+      role: 'Construction Company Director',
+       avatar: '/testimonals/t6.webp',
+      text: '"We\'ve been sourcing GI channels and suspension systems from them for years. Consistent quality and reliable supply for all our ceiling projects."',
       rating: 5
     }
   ];
