@@ -21,7 +21,7 @@ function Contact() {
     const [submitStatus, setSubmitStatus] = useState(null);
 
     // Update this URL based on your backend server
-    const API_URL = 'http://localhost:5000/api';
+    const API_URL = 'https://ceilling.vercel.app/api';
 
     const faqItems = [
         {
