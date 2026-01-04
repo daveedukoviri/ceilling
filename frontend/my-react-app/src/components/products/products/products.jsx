@@ -1,8 +1,12 @@
 // Products.jsx
 import React, { useEffect, useRef } from 'react';
 import './products.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Products = () => {
+
+    const Navigate = useNavigate();
+
     const videoRefs = useRef([]);
 
     useEffect(() => {
@@ -123,18 +127,7 @@ const Products = () => {
 
     // Handle product inquiry
     const handleInquiryClick = (productName) => {
-        const btn = document.querySelector(`.inquiry-btn[data-product="${productName}"]`);
-        if (btn) {
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                alert(`Thank you for your interest in ${productName}! Our specialist will contact you soon with more details.`);
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 1500);
-        }
+        Navigate('/contacts')
     };
 
     // Video sources - replace these with your actual video paths

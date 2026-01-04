@@ -1,5 +1,6 @@
 import './Aboutus.css';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function Aboutus() {
     const heroRef = useRef(null);
@@ -38,7 +39,7 @@ function Aboutus() {
     useEffect(() => {
         let observer;
         const revealElements = document.querySelectorAll('[data-reveal]');
-        
+
         if (revealElements.length > 0 && 'IntersectionObserver' in window) {
             observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -78,22 +79,22 @@ function Aboutus() {
             const duration = 2000;
             const startTime = performance.now();
             const startValue = 0;
-            
+
             const updateCounter = (currentTime) => {
                 const elapsed = currentTime - startTime;
                 const progress = Math.min(elapsed / duration, 1);
-                const easeProgress = progress < 0.5 
-                    ? 2 * progress * progress 
+                const easeProgress = progress < 0.5
+                    ? 2 * progress * progress
                     : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-                
+
                 const current = Math.floor(startValue + (target - startValue) * easeProgress);
                 element.textContent = current.toLocaleString();
-                
+
                 if (progress < 1) {
                     requestAnimationFrame(updateCounter);
                 }
             };
-            
+
             requestAnimationFrame(updateCounter);
         };
 
@@ -124,9 +125,9 @@ function Aboutus() {
             {/* HERO SECTION - Updated padding classes removed */}
             <section className="A-hero-section" ref={heroRef}>
                 <div className="A-hero-gradient"></div>
-                
+
                 <div className="A-container">
-                    <div className="A-hero-content pt-4">
+                    <div className="A-hero-content pt-4 mt-lg-5">
                         <div className="A-hero-subtitle" data-reveal>
                             <span className="A-gold-accent">Excellence in Construction Materials Since 2008</span>
                         </div>
@@ -184,7 +185,7 @@ function Aboutus() {
                     <div className="A-story-grid">
                         <div className="A-story-visual" data-reveal>
                             <div className="A-image-frame">
-                                <img 
+                                <img
                                     src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                     alt="GNG Group Premium Materials"
                                     loading="lazy"
@@ -220,12 +221,12 @@ function Aboutus() {
                             ))}
 
                             <div className="A-story-cta" data-reveal data-delay="500">
-                                <a href="/products" className="A-btn A-btn-ghost">
-                                    <span>View Our Products</span>
+                                <Link to="/products"> <a href="/products" className="A-btn A-btn-ghost">
+                                    View Our Products
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2"/>
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" />
                                     </svg>
-                                </a>
+                                </a></Link>
                             </div>
                         </div>
                     </div>
@@ -276,10 +277,10 @@ function Aboutus() {
                                 desc: 'GI roofing sheets, colored roofing, GI channels, ceiling channels, suspension systems, and structural solutions.'
                             }
                         ].map((principle, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="A-principle-card" // Removed A-interactive-card as it's not defined in CSS
-                                data-reveal 
+                                data-reveal
                                 data-delay={index * 150}
                             >
                                 <div className="A-principle-icon">{principle.icon}</div>
@@ -302,7 +303,7 @@ function Aboutus() {
                             <h2 className="A-who-title" data-reveal data-delay="100">
                                 Gypsum 'N' Gypsum Group<br />Your Trusted Partner
                             </h2>
-                            
+
                             <p className="A-who-desc" data-reveal data-delay="200">
                                 Operating as GNG Paints, Gypsum 'N' Gypsum, and Sree Sai Shambhavi Enterprises, we have established ourselves as premier suppliers and manufacturers in the construction materials industry. Our commitment to quality, timely delivery, and customer satisfaction drives everything we do.
                             </p>
@@ -336,7 +337,7 @@ function Aboutus() {
                                 {/* Main Large Image */}
                                 <div className="A-main-image-container" data-reveal>
                                     <div className="A-main-image-frame">
-                                        <img 
+                                        <img
                                             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                             alt="GNG Group Ceiling Installation"
                                             loading="lazy"
@@ -349,25 +350,25 @@ function Aboutus() {
                                 {/* Small Images Grid */}
                                 <div className="A-small-images-grid">
                                     <div className="A-small-image A-small-image-1" data-reveal data-delay="100">
-                                        <img 
+                                        <img
                                             src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                             alt="Paint Color Samples"
                                             loading="lazy"
                                         />
                                         <div className="A-image-overlay-shape"></div>
                                     </div>
-                                    
+
                                     <div className="A-small-image A-small-image-2" data-reveal data-delay="150">
-                                        <img 
+                                        <img
                                             src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                             alt="Construction Materials"
                                             loading="lazy"
                                         />
                                         <div className="A-image-overlay-shape"></div>
                                     </div>
-                                    
+
                                     <div className="A-small-image A-small-image-3" data-reveal data-delay="200">
-                                        <img 
+                                        <img
                                             src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                             alt="Roofing Materials"
                                             loading="lazy"
@@ -405,10 +406,10 @@ function Aboutus() {
                             { number: '03', title: 'Professional Installation', desc: 'Expert installation by trained technicians and installers' },
                             { number: '04', title: 'Quality Assurance', desc: 'Final inspection and handover with quality guarantee' }
                         ].map((step, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="A-process-step"
-                                data-reveal 
+                                data-reveal
                                 data-delay={index * 150}
                             >
                                 <div className="A-step-number">{step.number}</div>
@@ -434,20 +435,22 @@ function Aboutus() {
                             Contact us for free consultation, quotations, or to visit our showroom. Get premium materials and professional installation services.
                         </p>
                         <div className="A-cta-actions" data-reveal data-delay="200">
-                            <a href="/contact" className="A-btn A-btn-primary A-btn-large">
-                                <span>Request Quotation</span>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2"/>
-                                </svg>
-                            </a>
+                            <Link to='/contacts'>
+                                <a href="/contacts" className="A-btn A-btn-primary A-btn-large">
+                                    <span>Request Quotation</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" />
+                                    </svg>
+                                </a>
+                            </Link>
                             <a href="tel:+91924660909" className="A-btn A-btn-secondary">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.24 8.69 6.45 9.06 7.57C9.18 7.92 9.09 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor"/>
+                                    <path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.24 8.69 6.45 9.06 7.57C9.18 7.92 9.09 8.31 8.82 8.59L6.62 10.79Z" fill="currentColor" />
                                 </svg>
                                 <span>Call Now</span>
                             </a>
                         </div>
-                        
+
                         {/* Contact Info */}
                         <div className="A-cta-contact-info" data-reveal data-delay="300">
                             <div className="A-cta-contact-item">

@@ -9,7 +9,7 @@ export default function Upload() {
     const [progress, setProgress] = useState(0);
     const [status, setStatus] = useState(null);
     const [toast, setToast] = useState(null);
-    const [readyToUpload, setReadyToUpload] = useState(false); // Controls button visibility
+    const [readyToUpload, setReadyToUpload] = useState(false);
 
     /* ----------------------------- helpers ----------------------------- */
 
@@ -23,7 +23,8 @@ export default function Upload() {
         const invalid = [];
 
         incoming.forEach((file) => {
-            if (file.type.startsWith("image/") && file.size <= 5 * 1024 * 1024) {
+            // Only allow images AND size ≤ 30 KB
+            if (file.type.startsWith("image/") && file.size <= 30 * 1024) {
                 valid.push(file);
             } else {
                 invalid.push(file);
@@ -31,14 +32,19 @@ export default function Upload() {
         });
 
         if (invalid.length) {
+            const reasons = [];
+            invalid.forEach((f) => {
+                if (!f.type.startsWith("image/")) reasons.push(`${f.name} (not an image)`);
+                if (f.size > 30 * 1024) reasons.push(`${f.name} (>${30}KB)`);
+            });
             showToast(
-                "Some files rejected",
-                `${invalid.length} file(s) exceeded 5MB or were not images`,
+                "Files rejected",
+                `Only images ≤ 30KB allowed. Rejected: ${invalid.length} file(s)`,
                 "warning"
             );
         }
 
-        return valid.slice(0, 10);
+        return valid.slice(0, 10); // Max 10 files
     };
 
     /* ----------------------------- handlers ----------------------------- */
@@ -46,7 +52,7 @@ export default function Upload() {
     const handleFiles = (fileList) => {
         const selected = validateFiles(Array.from(fileList));
         if (!selected.length) {
-            setStatus({ text: "No valid images selected", type: "error" });
+            setStatus({ text: "No valid images selected (must be ≤ 30KB)", type: "error" });
             return;
         }
 
@@ -58,7 +64,7 @@ export default function Upload() {
         setStatus({ text: "Preparing images...", type: "info" });
         setReadyToUpload(false);
 
-        let uploaded = 0;
+        let processed = 0;
 
         const previewEntries = selected.map((file) => ({
             name: file.name,
@@ -71,21 +77,21 @@ export default function Upload() {
 
         selected.forEach((file, index) => {
             setTimeout(() => {
-                uploaded++;
-                setProgress(Math.round((uploaded / selected.length) * 100));
+                processed++;
+                setProgress(Math.round((processed / selected.length) * 100));
 
                 setFiles((prev) => {
                     const entry = previewEntries.find((e) => e.originalFile === file);
-                    return entry ? [entry, ...prev] : prev;
+                    return entry ? [...prev, entry] : prev; // Add to end or beginning as preferred
                 });
 
-                if (uploaded === selected.length) {
-                    setStatus({ text: `${uploaded} images ready! Click below to upload to server.`, type: "success" });
-                    showToast("Ready!", `${uploaded} images prepared`, "success");
-                    setReadyToUpload(true); // Show the upload button
+                if (processed === selected.length) {
+                    setStatus({ text: `${processed} small images ready! Click to upload.`, type: "success" });
+                    showToast("Ready!", `${processed} images prepared (≤30KB each)`, "success");
+                    setReadyToUpload(true);
                     setProgress(0);
                 }
-            }, 500 + index * 400);
+            }, 300 + index * 200);
         });
     };
 
@@ -112,22 +118,26 @@ export default function Upload() {
             const data = await response.json();
 
             if (data.success) {
-                setFiles((prev) =>
-                    prev.map((entry) => {
-                        const serverFile = data.files.find((f) => f.originalName === entry.name);
-                        if (serverFile) {
-                            return {
-                                ...entry,
-                                serverUrl: serverFile.url,
-                                isUploadedToServer: true,
-                            };
-                        }
-                        return entry;
-                    })
-                );
-
+                // SUCCESS: Show success message
                 setStatus({ text: "All images uploaded successfully!", type: "success" });
-                showToast("Success!", `${data.count} images saved on server`, "success");
+                showToast("Uploaded!", `${data.count} images saved on server`, "success");
+
+                // AUTO CLEAR EVERYTHING after 2 seconds
+                setTimeout(() => {
+                    // Revoke blob URLs
+                    files.forEach((f) => {
+                        if (f.previewUrl?.startsWith("blob:")) {
+                            URL.revokeObjectURL(f.previewUrl);
+                        }
+                    });
+
+                    // Reset all state
+                    setFiles([]);
+                    setReadyToUpload(false);
+                    setProgress(0);
+                    setStatus(null);
+                    showToast("Cleared", "All images removed after upload", "info");
+                }, 2000);
             } else {
                 throw new Error(data.message || "Upload failed");
             }
@@ -136,8 +146,6 @@ export default function Upload() {
             setStatus({ text: "Upload failed", type: "error" });
             showToast("Error", error.message || "Failed to upload", "error");
             setReadyToUpload(true); // Allow retry
-        } finally {
-            setTimeout(() => setStatus(null), 4000);
         }
     };
 
@@ -162,6 +170,8 @@ export default function Upload() {
         });
         setFiles([]);
         setReadyToUpload(false);
+        setProgress(0);
+        setStatus(null);
         showToast("Cleared", "All images removed", "info");
     };
 
@@ -178,9 +188,9 @@ export default function Upload() {
                             <li className="breadcrumb-item active" aria-current="page">Upload</li>
                         </ol>
                     </nav>
-                    <h1>Let's Create Your Dream Space Together</h1>
+                    <h1>Upload Small Images</h1>
                     <p className="lead">
-                        Get in touch with our design experts. We're here to listen, understand, and bring your vision to life.
+                        Only images ≤ 30KB are allowed. Perfect for thumbnails, icons, or quick uploads.
                     </p>
                 </div>
             </section>
@@ -188,7 +198,7 @@ export default function Upload() {
             <div className="upload-component-container">
                 <div className="container">
                     <section className="row justify-content-center">
-                        {/* Guidelines */}
+                        {/* Guidelines - Updated */}
                         <div className="col-lg-12 mb-4">
                             <div className="instructions">
                                 <h2 className="instructions-title">
@@ -201,25 +211,16 @@ export default function Upload() {
                                         </div>
                                         <div>
                                             <strong>Accepted formats</strong>
-                                            <p>JPEG, PNG, WebP, GIF (Max 5MB each)</p>
+                                            <p>JPEG, PNG, WebP, GIF</p>
                                         </div>
                                     </li>
                                     <li className="col-lg-4">
                                         <div className="instruction-icon-wrapper">
-                                            <i className="fas fa-expand-alt instruction-icon"></i>
+                                            <i className="fas fa-weight-hanging instruction-icon"></i>
                                         </div>
                                         <div>
-                                            <strong>Recommended resolution</strong>
-                                            <p>At least 1200px on the longest side</p>
-                                        </div>
-                                    </li>
-                                    <li className="col-lg-4">
-                                        <div className="instruction-icon-wrapper">
-                                            <i className="fas fa-magic instruction-icon"></i>
-                                        </div>
-                                        <div>
-                                            <strong>Automatic optimization</strong>
-                                            <p>Images optimized for web viewing</p>
+                                            <strong>Max size</strong>
+                                            <p><strong>30 KB per image</strong></p>
                                         </div>
                                     </li>
                                     <li className="col-lg-4">
@@ -228,7 +229,7 @@ export default function Upload() {
                                         </div>
                                         <div>
                                             <strong>Batch upload</strong>
-                                            <p>Upload up to 10 images at once</p>
+                                            <p>Up to 10 images at once</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -254,9 +255,9 @@ export default function Upload() {
                                     <i className="fas fa-cloud-upload-alt upload-icon"></i>
                                 </div>
 
-                                <h2 className="upload-title">Upload Your Images</h2>
+                                <h2 className="upload-title">Upload Images </h2>
                                 <p className="upload-text">
-                                    Drag & drop images or click browse. JPEG, PNG, WebP, GIF (max 5MB)
+                                    Drag & drop or click browse. Only images under 30KB allowed.
                                 </p>
 
                                 <input
@@ -296,7 +297,7 @@ export default function Upload() {
                                     </div>
                                 )}
 
-                                {/* THE MAIN UPLOAD BUTTON */}
+                                {/* Upload to Server Button */}
                                 {readyToUpload && (
                                     <div className="text-center mt-4">
                                         <button
@@ -313,21 +314,19 @@ export default function Upload() {
 
                     {/* Preview Section */}
                     <section className="preview-section mb-4">
-                        <h2 className="section-title">Uploaded Images</h2>
+                        <h2 className="section-title">Selected Images</h2>
 
                         <div className="preview-container">
                             {!files.length && (
                                 <div className="empty-preview">
                                     <i className="fas fa-images empty-icon"></i>
-                                    <h3>No images uploaded</h3>
+                                    <h3>No images selected</h3>
+                                    <p>Upload small images (≤ 30KB each)</p>
                                 </div>
                             )}
 
                             {files.map((entry) => {
-                                const size =
-                                    entry.size > 1024 * 1024
-                                        ? `${(entry.size / 1024 / 1024).toFixed(1)} MB`
-                                        : `${(entry.size / 1024).toFixed(1)} KB`;
+                                const size = `${(entry.size / 1024).toFixed(1)} KB`;
 
                                 const imageSrc = entry.serverUrl
                                     ? `http://localhost:5000${entry.serverUrl}`
@@ -339,18 +338,15 @@ export default function Upload() {
                                             src={imageSrc}
                                             alt={entry.name}
                                             className="preview-image"
-                                            onError={(e) => {
-                                                if (entry.previewUrl && !e.target.src.includes("blob:")) {
-                                                    e.target.src = entry.previewUrl;
-                                                }
-                                            }}
                                         />
                                         <div className="preview-info">
                                             <div className="preview-name">{entry.name}</div>
                                             <div className="preview-details">
                                                 <span className="preview-size">{size}</span>
                                                 {entry.isUploadedToServer && (
-                                                    <span className="preview-uploaded badge bg-success ms-2">Uploaded</span>
+                                                    <span className="preview-uploaded badge bg-success ms-2">
+                                                        Uploaded
+                                                    </span>
                                                 )}
                                                 <span
                                                     className="preview-remove"
@@ -366,10 +362,10 @@ export default function Upload() {
                         </div>
                     </section>
 
-                    {/* Toast */}
+                    {/* Toast Notification */}
                     {toast && (
                         <div className={`toast show toast-${toast.type || "info"}`}>
-                            <i className="fas fa-check-circle toast-icon"></i>
+                            <i className={`fas fa-${toast.type === "success" ? "check" : toast.type === "error" ? "exclamation" : "info"}-circle toast-icon`}></i>
                             <div className="toast-content">
                                 <h4>{toast.title}</h4>
                                 <p>{toast.message}</p>

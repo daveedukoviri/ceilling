@@ -25,10 +25,10 @@ function Footter() {
                             <h5>Quick Links</h5>
                             <ul>
                                 <li><a href="/">Home</a></li>
-                                <li><a href="/about">About Us</a></li>
+                                <li><a href="/company">About Us</a></li>
                                 <li><a href="/products">Products</a></li>
-                                <li><a href="/services">Services</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/ceilings">Services</a></li>
+                                <li><a href="/contacts">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -41,8 +41,8 @@ function Footter() {
                                 <li><a href="/ceilings">Ceiling Systems</a></li>
                                 <li><a href="/paints">Paints & Coatings</a></li>
                                 <li><a href="/walls">Wall Solutions</a></li>
-                                <li><a href="/roofing">Roofing Materials</a></li>
-                                <li><a href="/waterproofing">Waterproofing</a></li>
+                                <li><a href="/paints">Roofing Materials</a></li>
+                                <li><a href="/walls">Waterproofing</a></li>
                             </ul>
                         </div>
                     </div>

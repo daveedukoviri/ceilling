@@ -128,23 +128,32 @@ const images = [
 ];
 
 
+
 function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [uploadedImages, setUploadedImages] = useState([]); // From backend
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [hasMore, setHasMore] = useState(true); // Assume more until we know
 
-  // Shuffle images on load for Pinterest feel
-  const shuffledImages = [...images];
+  // Shuffle static images once
+  const shuffledStatic = [...images];
 
+  // Combine all images: static + uploaded
+  const allImages = [...shuffledStatic, ...uploadedImages];
+
+  // Lightbox handlers
   const openLightbox = (index) => setSelectedIndex(index);
   const closeLightbox = () => setSelectedIndex(null);
 
   const goPrev = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev > 0 ? prev - 1: shuffledImages.length - 1));
+    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : allImages.length - 1));
   };
 
   const goNext = (e) => {
     e.stopPropagation();
-    setSelectedIndex((prev) => (prev < shuffledImages.length - 1? prev + 1: 0));
+    setSelectedIndex((prev) => (prev < allImages.length - 1 ? prev + 1 : 0));
   };
 
   // Keyboard navigation
@@ -159,44 +168,125 @@ function Gallery() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [selectedIndex]);
 
+  // Fetch uploaded images from backend
+  const loadUploadedImages = async () => {
+    if (loading || !hasMore) return;
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/upload');
+      const data = await response.json();
+
+      if (data.success && data.images.length > 0) {
+        const newImages = data.images.map(img => ({
+          src: `http://localhost:5000${img.url}`, // Full URL
+          isUploaded: true
+        }));
+        setUploadedImages(prev => [...prev, ...newImages]);
+        setHasMore(data.images.length === 10); // If less than max, probably no more
+      } else {
+        setHasMore(false);
+        if (uploadedImages.length === 0) {
+          setError('No uploaded images found yet.');
+        }
+      }
+    } catch (err) {
+      console.error('Failed to load uploaded images:', err);
+      setError('Failed to load uploaded images. Please try again.');
+      setHasMore(false);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div id='Gallery'>
+    <div id="Gallery">
       <section className="gallery-hero">
         <div className="hero-overlay"></div>
         <div className="container text-center">
-          <h1 className='section-title'>Our Interior Design Gallery</h1>
-          <p className='small'>Discover exquisite interior designs that transform houses into homes. Click any image to view full size and navigate.</p>
+          <h1 className="section-title">Our Interior Design Gallery</h1>
+          <p className="small">
+            Discover exquisite interior designs that transform houses into homes.
+            Click any image to view full size and navigate.
+          </p>
         </div>
       </section>
 
       <div className="gallery-wrapper">
         <div className="gallery-header">
-          <h1 className='section-title'>Visual Inspiration</h1>
-          <p className='small'>Beautiful interiors from around the world.</p>
+          <h1 className="section-title">Visual Inspiration</h1>
+          <p className="small">Beautiful interiors • Plus your uploaded projects below</p>
         </div>
 
         <div className="pinterest-gallery">
-          {shuffledImages.map((image, index) => (
+          {allImages.map((image, index) => (
             <div key={index} className="pin" onClick={() => openLightbox(index)}>
-              <img src={image.src} alt={image.alt} className="pin-image" loading="lazy" />
+              <img
+                src={image.src}
+                alt={`Gallery image ${index + 1}`}
+                className="pin-image"
+                loading="lazy"
+              />
+             
             </div>
           ))}
         </div>
 
+        {/* Load More Button & Status */}
+        <div className="text-center my-5">
+          {error && <p className="text-danger">{error}</p>}
+
+          {hasMore || uploadedImages.length === 0 ? (
+            <button
+              className="cta-button"
+              onClick={loadUploadedImages}
+              disabled={loading}
+            >
+              {loading ? (
+                <>Loading Uploaded Images...</>
+              ) : uploadedImages.length === 0 ? (
+                <span class="">Explore More</span>
+
+              ) : (
+                <span class="">Explore More</span>
+              )}
+            </button>
+          ) : (
+            <p className="text-muted">All uploaded images loaded!</p>
+          )}
+        </div>
+
+        {/* Lightbox */}
         {selectedIndex !== null && (
           <div className="g-lightbox-overlay" onClick={closeLightbox}>
             <div className="g-lightbox-content" onClick={(e) => e.stopPropagation()}>
-              <img src={shuffledImages[selectedIndex].src} alt={shuffledImages[selectedIndex].alt} className="g-lightbox-image" />
+              <img
+                src={allImages[selectedIndex].src}
+                alt={`Full view ${selectedIndex + 1}`}
+                className="g-lightbox-image"
+              />
               <button className="g-lightbox-close" onClick={closeLightbox}>×</button>
-              <button className="g-lightbox-prev" onClick={goPrev}><i className='fa fa-chevron-left'></i></button>
-              <button className="g-lightbox-next " onClick={goNext}><i className='fa fa-chevron-right'></i></button>
-              <div className="g-lightbox-caption">{selectedIndex + 1} / {shuffledImages.length}</div>
+              <button className="g-lightbox-prev" onClick={goPrev}>
+                <i className="fa fa-chevron-left"></i>
+              </button>
+              <button className="g-lightbox-next" onClick={goNext}>
+                <i className="fa fa-chevron-right"></i>
+              </button>
+              <div className="g-lightbox-caption">
+                {selectedIndex + 1} / {allImages.length}
+                {allImages[selectedIndex].isUploaded && ' • Your Upload'}
+              </div>
             </div>
           </div>
         )}
 
         <div className="gallery-footer">
-          <p>Images sourced from premium design collections sai shambhavi • Gallery inspired by Us</p>
+          <p>
+            Inspiration images from premium collections •
+            Uploaded images from Shambhavi Enterprises clients
+          </p>
         </div>
       </div>
     </div>

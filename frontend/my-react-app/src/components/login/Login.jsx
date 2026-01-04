@@ -1,21 +1,65 @@
 import './login.css';
 import logo_banner from '../../assets/img/logo_banner.webp';
+import { useState } from 'react';
 
 function Login() {
-    return (
-        <div id='login'>
-            <div className="">
-                    <div className="pb-5 pt-5 mt-5">
-                <div className="row justify-content-center">
+    // State management
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
+    const [isError, setIsError] = useState(false);
 
+    // Handle form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setMessage('');
+        setIsError(false);
+
+        try {
+            const response = await fetch('http://localhost:5000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setMessage('Login Successful! Welcome back.');
+                setIsError(false);
+
+                // Optional: Redirect to dashboard after success
+                setTimeout(() => {
+                    window.location.href = '/upload';
+                }, 100);
+            } else {
+                setMessage(data.message || 'Invalid email or password');
+                setIsError(true);
+            }
+        } catch (err) {
+            setMessage('Unable to connect to server. Please try again later.');
+            setIsError(true);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div id="login">
+            <div className="">
+                <div className="pb-5 pt-5 mt-5">
+                    <div className="row justify-content-center">
                         <div className="login-container m-auto">
-                            {/* Image Section */}
+                            {/* Image Section - Visible only on large screens */}
                             <div className="image-section d-none d-lg-block">
                                 <img
                                     src={logo_banner}
                                     alt="Shambhavi Enterprises Interior Works"
                                 />
-
                                 <div className="image-overlay">
                                     <div className="image-content">
                                         <h2>Shambhavi Enterprises</h2>
@@ -23,12 +67,10 @@ function Login() {
                                             Professional interior, ceiling, and painting solutions
                                             delivered with precision, trust, and premium quality.
                                         </p>
-
                                         <div className="image-badge">
                                             <i className="fas fa-phone-alt"></i>
                                             +91 92988 03332
                                         </div>
-
                                         <div className="image-badge mt-2">
                                             <i className="far fa-envelope"></i>
                                             sreisai.shambhavi.enterprises@gmail.com
@@ -39,15 +81,7 @@ function Login() {
 
                             {/* Form Section */}
                             <div className="form-section">
-                                <div className="form-logo d-none d-lg-block">
-                                    <svg viewBox="0 0 36 36">
-                                        <rect x="6" y="9" width="10" height="18" rx="1" />
-                                        <rect x="20" y="7" width="6" height="20" rx="1" />
-                                        <path d="M8,28 L28,28" strokeWidth="2" strokeLinecap="round" />
-                                        <path d="M10,31 L26,31" strokeWidth="2" strokeLinecap="round" />
-                                    </svg>
-                                    <span>Shambhavi Enterprises</span>
-                                </div>
+                                
 
                                 <div className="form-header">
                                     <h1>Welcome Back</h1>
@@ -57,7 +91,7 @@ function Login() {
                                     </p>
                                 </div>
 
-                                <form>
+                                <form onSubmit={handleSubmit}>
                                     {/* Email */}
                                     <div className="form-group">
                                         <label className="form-label">Email Address</label>
@@ -66,6 +100,8 @@ function Login() {
                                                 type="email"
                                                 className="form-input"
                                                 placeholder="Enter your email"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
                                                 required
                                             />
                                             <div className="input-icon">
@@ -82,6 +118,8 @@ function Login() {
                                                 type="password"
                                                 className="form-input"
                                                 placeholder="Enter your password"
+                                                value={password}
+                                                onChange={(e) => setPassword(e.target.value)}
                                                 required
                                             />
                                             <div className="input-icon">
@@ -93,36 +131,46 @@ function Login() {
                                         </div>
                                     </div>
 
-                                    {/* Options */}
-                                    <div className="form-options">
-                                        <label className="remember-checkbox">
-                                            <input type="checkbox" defaultChecked />
-                                            <div className="checkbox-custom"></div>
-                                            <span>Keep me signed in</span>
-                                        </label>
+                                    {/* Success / Error Message */}
+                                    {message && (
+                                        <div
+                                            className={`text-center mt-3 mb-3 fw-semibold ${
+                                                isError ? 'text-danger' : 'text-success'
+                                            }`}
+                                        >
+                                            {message}
+                                        </div>
+                                    )}
 
-                                        <a href="#" className="forgot-link">
-                                            Forgot Password?
-                                        </a>
-                                    </div>
-
-                                    {/* Submit */}
-                                    <button type="submit" className="submit-btn">
-                                        <i className="fas fa-sign-in-alt"></i> Sign In
+                                    {/* Submit Button */}
+                                    <button
+                                        type="submit"
+                                        className="submit-btn"
+                                        disabled={loading}
+                                    >
+                                        {loading ? (
+                                            'Signing In...'
+                                        ) : (
+                                            <>
+                                                <i className="fas fa-sign-in-alt"></i> Sign In
+                                            </>
+                                        )}
                                     </button>
                                 </form>
 
                                 {/* Contact Footer */}
                                 <div className="form-footer mt-4 text-center">
                                     <p>
-                                        Need help? Call us at <br /> <div className='small fw-semibold'>+91 92988 03332</div>
-                                        or email 
-                                        <div className='small fw-semibold'>sreisai.shambhavi.enterprises@gmail.com</div>
+                                        Need help? Call us at <br />
+                                        <div className="small fw-semibold pt-3">+91 92988 03332</div>
+                                        {/* or email
+                                        <div className="small fw-semibold">
+                                            sreisai.shambhavi.enterprises@gmail.com
+                                        </div> */}
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

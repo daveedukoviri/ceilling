@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Body.css'; // We'll extract the CSS separately
 
 import dealer1 from '../../assets/img/dealers/1.webp';
@@ -48,21 +49,21 @@ const Body = () => {
       title: 'Premium Ceiling & Roofing Solutions',
       description: 'Leading supplier and manufacturer of gypsum ceilings, GI roofing sheets, and premium paints for residential and commercial spaces.',
       buttonText: 'Explore Products',
-      buttonLink: '#about'
+      buttonLink: '/products'
     },
     {
       backgroundImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Authorized Dealer for Top Brands',
       description: 'Trusted partner for Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, and other premium ceiling and paint brands.',
-      buttonText: 'View Brands',
-      buttonLink: '#dealers'
+      buttonText: 'About Us',
+      buttonLink: '/company'
     },
     {
       backgroundImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'End-to-End Interior Solutions',
       description: 'From gypsum ceilings to waterproofing, paints, and roof sheets - complete solutions backed by trained professional installers.',
       buttonText: 'Our Services',
-      buttonLink: '#contact'
+      buttonLink: '/ceilings'
     }
   ];
 
@@ -355,7 +356,7 @@ const Body = () => {
             <div className="slide-content">
               <h1>{slide.title}</h1>
               <p>{slide.description}</p>
-              <a href={slide.buttonLink} className="cta-button">{slide.buttonText}</a>
+              <Link to={slide.buttonLink} className="cta-button">{slide.buttonText}</Link>
             </div>
           </div>
         ))}
@@ -506,7 +507,9 @@ const Body = () => {
           )}
 
           <div className="view-more-container">
-            <a href="#contact" className="cta-button">View More Projects</a>
+            <Link to="/gallery" className="cta-button">
+              View More Projects
+            </Link>
           </div>
         </div>
       </section>

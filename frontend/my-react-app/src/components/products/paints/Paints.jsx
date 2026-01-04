@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import '../ceilings/Ceilings.css'; // You might want to rename or keep as Ceilings.css if using same styles
+import { Link , useNavigate} from 'react-router-dom';
 
 const Paints = () => {
+
+    const navigate = useNavigate();
+    
     useEffect(() => {
         // Hero load animations
         const animateHero = () => {
@@ -111,16 +115,7 @@ const Paints = () => {
 
     // CTA button feedback
     const handleCTAClick = (e) => {
-        const btn = e.currentTarget;
-        const originalText = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-        btn.disabled = true;
-
-        setTimeout(() => {
-            alert('Thank you! Our paint expert will contact you soon.');
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-        }, 1500);
+        navigate('/gallery');
     };
 
     return (
@@ -175,9 +170,11 @@ const Paints = () => {
                             </div>
                         </div>
 
-                        <button className="hero-cta-new fast-fade" onClick={handleCTAClick}>
-                            <i className="fas fa-phone-alt"></i> Get Color Consultation
-                        </button>
+                        <Link to="/contact" >
+                            <button className="hero-cta-new fast-fade" >
+                                <i className="fas fa-phone-alt"></i> Get Color Consultation
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Right Image – Quick float in */}

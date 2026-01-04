@@ -41,7 +41,7 @@ function Header() {
     <div id='header'>
       <header id="Header">
         <section id="HeaderMain">
-          <div className="container-fluid">
+          <div className="container">
             <div className="FRow">
               <div className="LogoSec">
                 <Link to="/" aria-label="logo">

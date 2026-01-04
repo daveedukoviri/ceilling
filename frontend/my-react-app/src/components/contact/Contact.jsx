@@ -1,56 +1,209 @@
 import './Contact.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import axios from 'axios';
 
 function Contact() {
     const [activeFaqIndex, setActiveFaqIndex] = useState(0);
+    const [formData, setFormData] = useState({
+        name: '',
+        company: '',
+        email: '',
+        phone: '',
+        materialType: '',
+        projectType: '',
+        quantity: '',
+        services: [],
+        message: '',
+        urgent: false
+    });
+    const [loading, setLoading] = useState(false);
+    const [formErrors, setFormErrors] = useState({});
+    const [submitStatus, setSubmitStatus] = useState(null);
+
+    // Update this URL based on your backend server
+    const API_URL = 'http://localhost:5000/api';
 
     const faqItems = [
-    {
-        question: 'What is your delivery timeline for construction materials?',
-        answer: 'Our delivery timeline is efficient and reliable: Standard orders within Rajahmundry are delivered within 24-48 hours. Bulk orders require 2-3 working days, while specialty materials may take 3-5 working days. For emergency construction requirements, we offer same-day delivery service. Exact delivery timelines are provided with your quotation.'
-    },
-    {
-        question: 'Are you authorized dealers for the brands you sell?',
-        answer: 'Yes, we are authorized dealers for all major construction material brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, and Armstrong. All products come with genuine manufacturer warranties and quality certificates. We maintain direct relationships with manufacturers to ensure authentic products and best prices.'
-    },
-    {
-        question: 'Do you provide installation services along with material supply?',
-        answer: 'Absolutely! We provide professional installation services for all materials we supply: Gypsum & POP ceiling installation, interior/exterior painting services, wall paneling & cladding installation, GI roofing sheet installation, and waterproofing solutions. Our team of trained installers ensures perfect execution with proper tools and techniques.'
-    },
-    {
-        question: 'What is your pricing structure for materials and services?',
-        answer: 'We offer competitive and transparent pricing: Retail customers get standard market rates with quality assurance. Contractors & builders receive special wholesale rates. Bulk orders (above 5000 sq.ft) qualify for discounted package rates. Installation services are quoted separately based on project scope, with detailed breakdowns provided in our quotations.'
-    },
-    {
-        question: 'Do you provide technical support and site visits?',
-        answer: 'Yes, we provide comprehensive technical support including: Free site visits for projects above 1000 sq.ft, technical consultation for material selection, accurate quantity estimation and BOQ preparation, on-site installation guidance, and post-installation warranty support. Our technical team is available throughout Rajahmundry and surrounding areas.'
-    },
-    {
-        question: 'What types of payments do you accept?',
-        answer: 'We accept multiple payment methods for customer convenience: Cash payments at our showroom, bank transfers (NEFT/RTGS/IMPS), credit/debit cards, UPI payments (Google Pay, PhonePe, Paytm), and cheque payments (subject to clearance). For large projects, we offer flexible payment schedules as per project milestones.'
-    },
-    {
-        question: 'Do you offer material warranties and after-sales support?',
-        answer: 'Yes, all materials come with manufacturer warranties: Gypsum boards - 1-5 years depending on type, Paints - 5-10 years for premium ranges, GI sheets - 10-15 years corrosion warranty, Installation services - 1-year workmanship warranty. Our after-sales team assists with warranty claims and provides maintenance guidance.'
-    },
-    {
-        question: 'Can you handle urgent requirements or emergency orders?',
-        answer: 'Yes, we have a dedicated emergency response team for urgent construction material requirements. Emergency orders placed before 4 PM are delivered the same day within Rajahmundry. We maintain strategic stock of essential materials for immediate dispatch. Our 24/7 helpline (+91 92466 09090) handles emergency construction needs.'
-    },
-    {
-        question: 'Do you work with contractors and builders on large projects?',
-        answer: 'Yes, we specialize in contractor and builder partnerships. We offer: Special wholesale rates for bulk purchases, staggered delivery as per construction schedule, technical support for site teams, customized billing cycles, and priority service for ongoing projects. We have successfully supplied materials for residential complexes, commercial buildings, and industrial projects.'
-    },
-    {
-        question: 'What makes GNG Group different from other material suppliers?',
-        answer: 'GNG Group stands out with: 1) 15+ years of industry experience in Rajahmundry, 2) Authorized dealerships for premium brands, 3) Complete solution from supply to installation, 4) Expert technical consultation and site support, 5) Emergency service availability, and 6) Strong relationships with contractors and builders across East Godavari district.'
-    }
-];
+        {
+            question: 'What is your delivery timeline for construction materials?',
+            answer: 'Our delivery timeline is efficient and reliable: Standard orders within Rajahmundry are delivered within 24-48 hours. Bulk orders require 2-3 working days, while specialty materials may take 3-5 working days. For emergency construction requirements, we offer same-day delivery service. Exact delivery timelines are provided with your quotation.'
+        },
+        {
+            question: 'Are you authorized dealers for the brands you sell?',
+            answer: 'Yes, we are authorized dealers for all major construction material brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, and Armstrong. All products come with genuine manufacturer warranties and quality certificates. We maintain direct relationships with manufacturers to ensure authentic products and best prices.'
+        },
+        {
+            question: 'Do you provide installation services along with material supply?',
+            answer: 'Absolutely! We provide professional installation services for all materials we supply: Gypsum & POP ceiling installation, interior/exterior painting services, wall paneling & cladding installation, GI roofing sheet installation, and waterproofing solutions. Our team of trained installers ensures perfect execution with proper tools and techniques.'
+        },
+        {
+            question: 'What is your pricing structure for materials and services?',
+            answer: 'We offer competitive and transparent pricing: Retail customers get standard market rates with quality assurance. Contractors & builders receive special wholesale rates. Bulk orders (above 5000 sq.ft) qualify for discounted package rates. Installation services are quoted separately based on project scope, with detailed breakdowns provided in our quotations.'
+        },
+        {
+            question: 'Do you provide technical support and site visits?',
+            answer: 'Yes, we provide comprehensive technical support including: Free site visits for projects above 1000 sq.ft, technical consultation for material selection, accurate quantity estimation and BOQ preparation, on-site installation guidance, and post-installation warranty support. Our technical team is available throughout Rajahmundry and surrounding areas.'
+        },
+        {
+            question: 'What types of payments do you accept?',
+            answer: 'We accept multiple payment methods for customer convenience: Cash payments at our showroom, bank transfers (NEFT/RTGS/IMPS), credit/debit cards, UPI payments (Google Pay, PhonePe, Paytm), and cheque payments (subject to clearance). For large projects, we offer flexible payment schedules as per project milestones.'
+        },
+        {
+            question: 'Do you offer material warranties and after-sales support?',
+            answer: 'Yes, all materials come with manufacturer warranties: Gypsum boards - 1-5 years depending on type, Paints - 5-10 years for premium ranges, GI sheets - 10-15 years corrosion warranty, Installation services - 1-year workmanship warranty. Our after-sales team assists with warranty claims and provides maintenance guidance.'
+        },
+        {
+            question: 'Can you handle urgent requirements or emergency orders?',
+            answer: 'Yes, we have a dedicated emergency response team for urgent construction material requirements. Emergency orders placed before 4 PM are delivered the same day within Rajahmundry. We maintain strategic stock of essential materials for immediate dispatch. Our 24/7 helpline (+91 92466 09090) handles emergency construction needs.'
+        },
+        {
+            question: 'Do you work with contractors and builders on large projects?',
+            answer: 'Yes, we specialize in contractor and builder partnerships. We offer: Special wholesale rates for bulk purchases, staggered delivery as per construction schedule, technical support for site teams, customized billing cycles, and priority service for ongoing projects. We have successfully supplied materials for residential complexes, commercial buildings, and industrial projects.'
+        },
+        {
+            question: 'What makes GNG Group different from other material suppliers?',
+            answer: 'GNG Group stands out with: 1) 15+ years of industry experience in Rajahmundry, 2) Authorized dealerships for premium brands, 3) Complete solution from supply to installation, 4) Expert technical consultation and site support, 5) Emergency service availability, and 6) Strong relationships with contractors and builders across East Godavari district.'
+        }
+    ];
 
     const toggleFaq = (index) => {
         setActiveFaqIndex(activeFaqIndex === index ? -1 : index);
     };
-    // Scroll helpers
+
+    // CHANGES START HERE: Updated handleInputChange function
+    const handleInputChange = (e) => {
+        const { name, value, type, checked } = e.target;
+
+        if (type === 'checkbox' && name === 'urgent') {
+            setFormData(prev => ({ ...prev, [name]: checked }));
+        } else if (type === 'checkbox') {
+            const serviceId = e.target.id;
+            setFormData(prev => {
+                if (checked) {
+                    return { ...prev, services: [...prev.services, serviceId] };
+                } else {
+                    return { ...prev, services: prev.services.filter(s => s !== serviceId) };
+                }
+            });
+        } else {
+            setFormData(prev => ({ ...prev, [name]: value }));
+            // Clear error when user starts typing
+            if (formErrors[name]) {
+                setFormErrors(prev => ({ ...prev, [name]: '' }));
+            }
+        }
+    };
+
+    // NEW: Form validation function
+    const validateForm = () => {
+        const errors = {};
+
+        if (!formData.name.trim()) errors.name = 'Name is required';
+        if (!formData.email.trim()) errors.email = 'Email is required';
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = 'Email is invalid';
+        if (!formData.phone.trim()) errors.phone = 'Phone number is required';
+        else if (!/^[6-9]\d{9}$/.test(formData.phone)) errors.phone = 'Please enter a valid Indian phone number';
+        if (!formData.materialType) errors.materialType = 'Material type is required';
+        if (!formData.quantity) errors.quantity = 'Please select quantity range';
+        if (!formData.message.trim()) errors.message = 'Project details are required';
+        else if (formData.message.trim().length < 10) errors.message = 'Please provide more details (minimum 10 characters)';
+
+        return errors;
+    };
+
+    // UPDATED: handleSubmit function with API integration
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const errors = validateForm();
+        if (Object.keys(errors).length > 0) {
+            setFormErrors(errors);
+
+            // Scroll to first error
+            const firstErrorField = Object.keys(errors)[0];
+            document.getElementById(firstErrorField)?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+            return;
+        }
+
+        setLoading(true);
+        setSubmitStatus(null);
+        setFormErrors({});
+
+        try {
+            const response = await axios.post(`${API_URL}/contact/submit`, formData, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (response.data.success) {
+                setSubmitStatus({
+                    type: 'success',
+                    message: response.data.message,
+                    referenceId: response.data.data?.referenceId
+                });
+
+                // Reset form
+                setFormData({
+                    name: '',
+                    company: '',
+                    email: '',
+                    phone: '',
+                    materialType: '',
+                    projectType: '',
+                    quantity: '',
+                    services: [],
+                    message: '',
+                    urgent: false
+                });
+
+                // Reset checkboxes
+                ['supplyOnly', 'withInstallation', 'consultation', 'siteVisit'].forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) checkbox.checked = false;
+                });
+
+                // Scroll to success message
+                setTimeout(() => {
+                    document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+
+            } else {
+                throw new Error(response.data.message || 'Submission failed');
+            }
+
+        } catch (error) {
+            console.error('Submission error:', error);
+
+            let errorMessage = 'Failed to submit your request. Please try again.';
+            if (error.response?.data?.errors) {
+                // Server validation errors
+                const serverErrors = {};
+                error.response.data.errors.forEach(err => {
+                    serverErrors[err.field] = err.message;
+                });
+                setFormErrors(serverErrors);
+                errorMessage = 'Please fix the errors above.';
+            } else if (error.response?.data?.message) {
+                errorMessage = error.response.data.message;
+            } else if (error.message.includes('Network Error')) {
+                errorMessage = 'Network error. Please check your connection and try again.';
+            }
+
+            setSubmitStatus({
+                type: 'error',
+                message: errorMessage
+            });
+
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    // Keep existing helper functions
     const scrollToForm = () => {
         document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -66,15 +219,26 @@ function Contact() {
         );
     };
 
-    // Basic form handling (no backend yet)
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert('Thank you! Your message has been sent. We will contact you soon.');
-        e.target.reset();
-    };
-
     return (
         <div id='contact'>
+            {/* NEW: Status Alert Component */}
+            {submitStatus && (
+                <div className={`alert ${submitStatus.type === 'success' ? 'alert-success' : 'alert-danger'} alert-dismissible fade show m-3`} role="alert" style={{
+                    position: 'fixed',
+                    top: '20px',
+                    right: '20px',
+                    zIndex: 1000,
+                    maxWidth: '400px'
+                }}>
+                    {submitStatus.message}
+                    {submitStatus.referenceId && (
+                        <div className="mt-2">
+                            <small>Reference ID: <strong>{submitStatus.referenceId}</strong></small>
+                        </div>
+                    )}
+                    <button type="button" className="btn-close" onClick={() => setSubmitStatus(null)}></button>
+                </div>
+            )}
 
             <section className="contact-hero text-center">
                 <div className="container">
@@ -88,7 +252,6 @@ function Contact() {
                     <p className="lead">Get in touch with our construction materials experts. We're here to provide premium quality materials and professional installation services.</p>
                 </div>
             </section>
-
 
             <section className="contact-container">
                 <div className="container">
@@ -112,7 +275,6 @@ function Contact() {
                                             <i className="fas fa-phone me-2"></i>
                                             +91 92466 09090
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
@@ -126,10 +288,6 @@ function Contact() {
                                     <h4>Email Us</h4>
                                     <p className='small'>Send us your material inquiries and orders</p>
                                     <div className="email-addresses">
-                                        {/* <a href="mailto:gypsumngypsum4u@gmail.com" className="contact-link d-block mb-1">
-                                    <i className="fas fa-envelope me-2"></i>
-                                    gypsumngypsum4u@gmail.com
-                                </a> */}
                                         <a href="mailto:sreisai.shambhavi.enterprises@gmail.com" className="contact-link d-block">
                                             <i className="fas fa-envelope me-2"></i>
                                             sreisai.shambhavi.enterprises@gmail.com
@@ -157,7 +315,7 @@ function Contact() {
                 </div>
             </section>
 
-
+            {/* UPDATED FORM SECTION */}
             <section className="contact-form-section">
                 <div className="container">
                     <div className="row">
@@ -172,17 +330,34 @@ function Contact() {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="form-group">
-                                                <label htmlFor="firstName" className="form-label">Name *</label>
-                                                <input type="text" className="form-control" id="firstName" required />
-                                                <div className="invalid-feedback">
-                                                    Please enter your name.
-                                                </div>
+                                                <label htmlFor="name" className="form-label">Name *</label>
+                                                <input
+                                                    type="text"
+                                                    className={`form-control ${formErrors.name ? 'is-invalid' : ''}`}
+                                                    id="name"
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleInputChange}
+                                                    required
+                                                />
+                                                {formErrors.name && (
+                                                    <div className="invalid-feedback d-block">
+                                                        {formErrors.name}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-group">
                                                 <label htmlFor="company" className="form-label">Company Name</label>
-                                                <input type="text" className="form-control" id="company" />
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    id="company"
+                                                    name="company"
+                                                    value={formData.company}
+                                                    onChange={handleInputChange}
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -191,19 +366,39 @@ function Contact() {
                                         <div className="col-md-6">
                                             <div className="form-group">
                                                 <label htmlFor="email" className="form-label">Email Address *</label>
-                                                <input type="email" className="form-control" id="email" required />
-                                                <div className="invalid-feedback">
-                                                    Please enter a valid email address.
-                                                </div>
+                                                <input
+                                                    type="email"
+                                                    className={`form-control ${formErrors.email ? 'is-invalid' : ''}`}
+                                                    id="email"
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleInputChange}
+                                                    required
+                                                />
+                                                {formErrors.email && (
+                                                    <div className="invalid-feedback d-block">
+                                                        {formErrors.email}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="form-group">
                                                 <label htmlFor="phone" className="form-label">Phone Number *</label>
-                                                <input type="tel" className="form-control" id="phone" required />
-                                                <div className="invalid-feedback">
-                                                    Please enter your phone number.
-                                                </div>
+                                                <input
+                                                    type="tel"
+                                                    className={`form-control ${formErrors.phone ? 'is-invalid' : ''}`}
+                                                    id="phone"
+                                                    name="phone"
+                                                    value={formData.phone}
+                                                    onChange={handleInputChange}
+                                                    required
+                                                />
+                                                {formErrors.phone && (
+                                                    <div className="invalid-feedback d-block">
+                                                        {formErrors.phone}
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -211,31 +406,46 @@ function Contact() {
                                     <div className="form-group">
                                         <label htmlFor="materialType" className="form-label">Material Type *</label>
                                         <div className="select-wrapper">
-                                            <select className="form-control" id="materialType" required>
-                                                <option value="" defaultValue>Select material type</option>
-                                                <option value="ceiling">Ceiling Systems</option>
-                                                <option value="paints">Paints & Coatings</option>
-                                                <option value="walls">Wall Solutions</option>
-                                                <option value="roofing">Roofing Materials</option>
-                                                <option value="waterproofing">Waterproofing</option>
-                                                <option value="all">Multiple Materials</option>
+                                            <select
+                                                className={`form-control ${formErrors.materialType ? 'is-invalid' : ''}`}
+                                                id="materialType"
+                                                name="materialType"
+                                                value={formData.materialType}
+                                                onChange={handleInputChange}
+                                                required
+                                            >
+                                                <option value="">Select material type</option>
+                                                <option value="Ceiling Systems">Ceiling Systems</option>
+                                                <option value="Paints & Coatings">Paints & Coatings</option>
+                                                <option value="Wall Solutions">Wall Solutions</option>
+                                                <option value="Roofing Materials">Roofing Materials</option>
+                                                <option value="Waterproofing">Waterproofing</option>
+                                                <option value="Multiple Materials">Multiple Materials</option>
                                             </select>
                                         </div>
-                                        <div className="invalid-feedback">
-                                            Please select material type.
-                                        </div>
+                                        {formErrors.materialType && (
+                                            <div className="invalid-feedback d-block">
+                                                {formErrors.materialType}
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="projectType" className="form-label">Project Type</label>
                                         <div className="select-wrapper">
-                                            <select className="form-control" id="projectType">
-                                                <option value="" defaultValue>Select project type</option>
-                                                <option value="residential">Residential</option>
-                                                <option value="commercial">Commercial</option>
-                                                <option value="industrial">Industrial</option>
-                                                <option value="contractor">Contractor Supply</option>
-                                                <option value="retail">Retail Purchase</option>
+                                            <select
+                                                className="form-control"
+                                                id="projectType"
+                                                name="projectType"
+                                                value={formData.projectType}
+                                                onChange={handleInputChange}
+                                            >
+                                                <option value="">Select project type</option>
+                                                <option value="Residential">Residential</option>
+                                                <option value="Commercial">Commercial</option>
+                                                <option value="Industrial">Industrial</option>
+                                                <option value="Contractor Supply">Contractor Supply</option>
+                                                <option value="Retail Purchase">Retail Purchase</option>
                                             </select>
                                         </div>
                                     </div>
@@ -243,43 +453,76 @@ function Contact() {
                                     <div className="form-group">
                                         <label htmlFor="quantity" className="form-label">Estimated Quantity *</label>
                                         <div className="select-wrapper">
-                                            <select className="form-control" id="quantity" required>
-                                                <option value="" defaultValue>Select quantity range</option>
-                                                <option value="small">Small Project (Up to 500 sq.ft)</option>
-                                                <option value="medium">Medium Project (500-2000 sq.ft)</option>
-                                                <option value="large">Large Project (2000-5000 sq.ft)</option>
-                                                <option value="xlarge">Commercial Scale (5000+ sq.ft)</option>
-                                                <option value="bulk">Bulk Order</option>
+                                            <select
+                                                className={`form-control ${formErrors.quantity ? 'is-invalid' : ''}`}
+                                                id="quantity"
+                                                name="quantity"
+                                                value={formData.quantity}
+                                                onChange={handleInputChange}
+                                                required
+                                            >
+                                                <option value="">Select quantity range</option>
+                                                <option value="Small Project (Up to 500 sq.ft)">Small Project (Up to 500 sq.ft)</option>
+                                                <option value="Medium Project (500-2000 sq.ft)">Medium Project (500-2000 sq.ft)</option>
+                                                <option value="Large Project (2000-5000 sq.ft)">Large Project (2000-5000 sq.ft)</option>
+                                                <option value="Commercial Scale (5000+ sq.ft)">Commercial Scale (5000+ sq.ft)</option>
+                                                <option value="Bulk Order">Bulk Order</option>
                                             </select>
                                         </div>
-                                        <div className="invalid-feedback">
-                                            Please select quantity range.
-                                        </div>
+                                        {formErrors.quantity && (
+                                            <div className="invalid-feedback d-block">
+                                                {formErrors.quantity}
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div className="form-group">
-                                        <label htmlFor="services" className="form-label">Services Required</label>
+                                        <label className="form-label">Services Required</label>
                                         <div className="checkbox-group">
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="supplyOnly" />
+                                                <input
+                                                    className="form-check-input"
+                                                    type="checkbox"
+                                                    id="supplyOnly"
+                                                    checked={formData.services.includes('supplyOnly')}
+                                                    onChange={handleInputChange}
+                                                />
                                                 <label className="form-check-label" htmlFor="supplyOnly">
                                                     Material Supply Only
                                                 </label>
                                             </div>
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="withInstallation" />
+                                                <input
+                                                    className="form-check-input"
+                                                    type="checkbox"
+                                                    id="withInstallation"
+                                                    checked={formData.services.includes('withInstallation')}
+                                                    onChange={handleInputChange}
+                                                />
                                                 <label className="form-check-label" htmlFor="withInstallation">
                                                     Supply with Installation
                                                 </label>
                                             </div>
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="consultation" />
+                                                <input
+                                                    className="form-check-input"
+                                                    type="checkbox"
+                                                    id="consultation"
+                                                    checked={formData.services.includes('consultation')}
+                                                    onChange={handleInputChange}
+                                                />
                                                 <label className="form-check-label" htmlFor="consultation">
                                                     Technical Consultation
                                                 </label>
                                             </div>
                                             <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" id="siteVisit" />
+                                                <input
+                                                    className="form-check-input"
+                                                    type="checkbox"
+                                                    id="siteVisit"
+                                                    checked={formData.services.includes('siteVisit')}
+                                                    onChange={handleInputChange}
+                                                />
                                                 <label className="form-check-label" htmlFor="siteVisit">
                                                     Site Visit Required
                                                 </label>
@@ -289,22 +532,53 @@ function Contact() {
 
                                     <div className="form-group">
                                         <label htmlFor="message" className="form-label">Project Details *</label>
-                                        <textarea className="form-control" id="message" rows="5" placeholder="Tell us about your project requirements, area, and any specific brand preferences..." required></textarea>
-                                        <div className="invalid-feedback">
-                                            Please enter project details.
-                                        </div>
+                                        <textarea
+                                            className={`form-control ${formErrors.message ? 'is-invalid' : ''}`}
+                                            id="message"
+                                            name="message"
+                                            rows="5"
+                                            placeholder="Tell us about your project requirements, area, and any specific brand preferences..."
+                                            value={formData.message}
+                                            onChange={handleInputChange}
+                                            required
+                                        ></textarea>
+                                        {formErrors.message && (
+                                            <div className="invalid-feedback d-block">
+                                                {formErrors.message}
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div className="form-group">
                                         <label className="checkbox-label">
-                                            <input type="checkbox" className="form-check-input" id="urgent" />
+                                            <input
+                                                type="checkbox"
+                                                className="form-check-input"
+                                                id="urgent"
+                                                name="urgent"
+                                                checked={formData.urgent}
+                                                onChange={handleInputChange}
+                                            />
                                             <span>This is an urgent requirement</span>
                                         </label>
                                     </div>
 
-                                    <button type="submit" className="submit-btn">
-                                        <i className="fas fa-file-invoice me-2"></i>
-                                        Request Quotation
+                                    <button
+                                        type="submit"
+                                        className="submit-btn"
+                                        disabled={loading}
+                                    >
+                                        {loading ? (
+                                            <>
+                                                <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                                Processing...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <i className="fas fa-file-invoice me-2"></i>
+                                                Request Quotation
+                                            </>
+                                        )}
                                     </button>
                                 </form>
                             </div>
@@ -313,7 +587,7 @@ function Contact() {
                 </div>
             </section>
 
-
+            {/* REST OF YOUR SECTIONS REMAIN EXACTLY THE SAME */}
             <section className="map-section">
                 <div className="container">
                     <div className="row mb-5">
@@ -325,7 +599,6 @@ function Contact() {
                     <div className="row">
                         <div className="col-lg-6 mb-4 mb-lg-0">
                             <div id="map" className="location-map">
-                                {/* Map placeholder - you can integrate Google Maps here */}
                                 <div className="map-placeholder">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3815.358644180359!2d81.7751528!3d17.006069399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDAwJzIxLjkiTiA4McKwNDYnMzAuNiJF!5e0!3m2!1sen!2sin!4v1767140172484!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
@@ -345,7 +618,6 @@ function Contact() {
                                 <p><i className="fas fa-map-pin me-2 text-gold"></i> 79-3-3/1, RTC Complex Road,Opp. Jio Petrol Bunk, V L Puram,Rajahmundry, AP — 533103</p>
                                 <p><i className="fas fa-phone me-2 text-gold"></i> +91 92466 09090</p>
                                 <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
-
                             </div>
 
                             <div className="location-card mt-4">
@@ -362,7 +634,6 @@ function Contact() {
                                 <p><i className="fas fa-phone me-2 text-gold"></i> +91 92988 03332</p>
                                 <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:00 AM - 8:00 PM
                                     <span className=' d-block ms-4 mt-2'> Sunday: 10:00 AM - 6:00 PM</span></p>
-
                             </div>
                         </div>
                     </div>
@@ -404,17 +675,12 @@ function Contact() {
                                 <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Technical Consultation:</strong> Free site assessment</p>
                                 <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Delivery:</strong> Timely delivery across Rajahmundry</p>
                                 <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Response Time:</strong> Quotations within 2 hours</p>
-
-                               
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
-            {/* 6. FAQ SECTION */}
             <section className="section faq-section bg-light" id="faq">
                 <div className="container">
                     <div className="row mb-5">
@@ -461,9 +727,6 @@ function Contact() {
                     </div>
                 </div>
             </section>
-
-
-            
         </div>
     );
 }
