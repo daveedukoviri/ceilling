@@ -15,6 +15,7 @@ app.use(cors({
   origin: process.env.CLIENT_URL || 'http://localhost:5000',
   credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -64,7 +65,9 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on http://localhost:${PORT}`);
+//   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+// });
+
+module.exports = app;
