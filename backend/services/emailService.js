@@ -413,22 +413,45 @@ class EmailService {
             </div>
             
             <!-- Actions -->
-            <div class="actions">
-              <div class="action-title">Next Steps</div>
-              <div class="action-steps">
-                <div class="action-step">
-                  <div class="step-number">1</div>
-                  <div>Prepare quotation document</div>
-                </div>
-                <div class="action-step">
-                  <div class="step-number">2</div>
-                  <div>Contact customer for clarification</div>
-                </div>
-                <div class="action-step">
-                  <div class="step-number">3</div>
-                  <div>Follow up within 2 hours</div>
-                </div>
-              </div>
+           <div class="actions">
+  <div class="action-title">Next Steps</div>
+
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="padding-bottom:12px;">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+           
+            <td style="padding-left:12px;">Prepare quotation document</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding-bottom:12px;">
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+           
+            <td style="padding-left:12px;">Contact customer for clarification</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <table cellpadding="0" cellspacing="0">
+          <tr>
+          
+            <td style="padding-left:12px;">Follow up within 2 hours</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
             </div>
           </div>
           
@@ -450,14 +473,14 @@ class EmailService {
             </div>
             <div class="timestamp">
               Request received: ${new Date().toLocaleString('en-IN', {
-                weekday: 'short',
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                timeZone: 'Asia/Kolkata'
-              })}
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'Asia/Kolkata'
+    })}
             </div>
           </div>
         </div>

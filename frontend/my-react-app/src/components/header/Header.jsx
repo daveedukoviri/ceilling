@@ -215,7 +215,7 @@ function Header() {
           </li>
         </ul>
         <a href="#" className="estimateBtn" data-bs-toggle="modal" data-bs-target="#freeestimate">
-          <span>Free Estimate</span>
+          <span> Estimate</span>
         </a>
       </div>
 
