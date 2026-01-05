@@ -2,19 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Body.css'; // We'll extract the CSS separately
 
-import dealer1 from '../../assets/img/dealers/1.webp';
-import dealer2 from '../../assets/img/dealers/2.webp';
-import dealer3 from '../../assets/img/dealers/3.webp';
-import dealer4 from '../../assets/img/dealers/4.webp';
-import dealer5 from '../../assets/img/dealers/5.webp';
-import dealer6 from '../../assets/img/dealers/6.webp';
-import dealer7 from '../../assets/img/dealers/7.webp';
-import dealer8 from '../../assets/img/dealers/8.webp';
-import dealer9 from '../../assets/img/dealers/9.webp';
-import dealer10 from '../../assets/img/dealers/10.webp';
-import dealer11 from '../../assets/img/dealers/11.webp';
-import dealer12 from '../../assets/img/dealers/12.webp';
-import dealer13 from '../../assets/img/dealers/13.webp';
 
 
 const Body = () => {
@@ -119,7 +106,7 @@ const Body = () => {
       name: 'Arjun Patel',
       role: 'Homeowner',
       avatar: '/testimonals/t4.webp',
-      text: '"Complete painting and waterproofing solution for our home. Used Asian Paints sealants and their team did excellent texture work on walls. Highly recommended!"',
+      text: '"Complete painting and waterproofing solution for our home. Used JSW Paints sealants and their team did excellent texture work on walls. Highly recommended!"',
       rating: 5
     },
     {
@@ -133,19 +120,22 @@ const Body = () => {
 
   // Dealers Data - Updated with brand logos
   const dealers = [
-    { logo: dealer1, icon: 'fa-medal', width: '100%' },
-    { logo: dealer2, icon: 'fa-award', width: '100%' },
-    { logo: dealer3, icon: 'fa-trophy', width: '100%' },
-    { logo: dealer4, icon: 'fa-gem', width: '100%' },
-    { logo: dealer5, icon: 'fa-heart', width: '90%' },
-    { logo: dealer6, icon: 'fa-hammer', width: '100%' },
-    { logo: dealer7, icon: 'fa-trophy', width: '80%' },
-    { logo: dealer8, icon: 'fa-heart', width: '100%' },
-    { logo: dealer9, icon: 'fa-star', width: '100%' },
-    { logo: dealer10, icon: 'fa-hammer', width: '85%' },
-    { logo: dealer11, icon: 'fa-trophy', width: '72%' },
-    { logo: dealer12, icon: 'fa-leaf', width: '85%' },
-    { logo: dealer13, icon: 'fa-medal', width: '100%' }
+    { logo: 'dealers/1.webp', icon: 'fa-medal', width: '100%' },
+    { logo: 'dealers/2.webp', icon: 'fa-award', width: '100%' },
+    { logo: 'dealers/3.webp', icon: 'fa-trophy', width: '100%' },
+    { logo: 'dealers/4.webp', icon: 'fa-gem', width: '100%' },
+    { logo: 'dealers/5.webp', icon: 'fa-heart', width: '90%' },
+    { logo: 'dealers/6.webp', icon: 'fa-hammer', width: '100%' },
+    { logo: 'dealers/7.webp', icon: 'fa-trophy', width: '80%' },
+    { logo: 'dealers/8.webp', icon: 'fa-heart', width: '100%' },
+    { logo: 'dealers/9.webp', icon: 'fa-star', width: '100%' },
+    { logo: 'dealers/10.webp', icon: 'fa-hammer', width: '85%' },
+    { logo: 'dealers/11.webp', icon: 'fa-trophy', width: '72%' },
+    { logo: 'dealers/12.webp', icon: 'fa-leaf', width: '85%' },
+    { logo: 'dealers/13.webp', icon: 'fa-medal', width: '100%' },
+    { logo: 'dealers/14.webp', icon: 'fa-heart', width: '100%' },
+    { logo: 'dealers/15.webp', icon: 'fa-trophy', width: '100%' },
+
   ];
 
   // FAQ Data - Updated with company-specific questions
