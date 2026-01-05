@@ -510,11 +510,11 @@ const Ceilings = () => {
                             </div>
                         </div>
 
-                        {/* 6. GI Roofing Sheets */}
+                        {/* 6. GI channels PPGL Roofing sheets */}
                         <div className="kitchen-type peninsula-kitchen" id="roofing">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="services/ceilings/g1.webp" alt="GI Roofing Sheets" />
+                                    <img src="services/ceilings/g1.webp" alt="GI channels PPGL Roofing sheets" />
                                     <div className="gallery-overlay">
                                         <h4>Colored GI Roofing</h4>
                                         <p>Durable galvanized iron sheets with protective coatings</p>
@@ -528,7 +528,7 @@ const Ceilings = () => {
                             </div>
                             <div className="kitchen-content">
                                 <span className="kitchen-badge">Exterior Solution</span>
-                                <h2 className="kitchen-title">GI Roofing Sheets</h2>
+                                <h2 className="kitchen-title">GI channels PPGL Roofing sheets</h2>
                                 <p className="kitchen-description">
                                     Our Galvanized Iron Roofing Sheets offer superior protection against weather elements
                                     with excellent durability and corrosion resistance. Available in various colors and

@@ -110,7 +110,7 @@ export default function Upload() {
         setStatus({ text: "Uploading to server...", type: "info" });
 
         try {
-            const response = await fetch("http://localhost:5000/api/upload", {
+            const response = await fetch("https://ceilling.vercel.app/api/upload", {
                 method: "POST",
                 body: formData,
             });

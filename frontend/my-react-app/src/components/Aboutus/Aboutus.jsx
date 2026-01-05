@@ -133,12 +133,12 @@ function Aboutus() {
                         </div>
 
                         <h1 className="A-hero-title" data-reveal data-delay="200">
-                            <span className="A-title-line">Sree Sai Shambhavi Enterprises</span>
-                            <span className="A-title-line A-gold-accent">(GNG Group)</span>
+                            <span className="A-title-line A-gold-accent">Gypsum <span>‘N’</span>Gypsum</span>
+                            <span className=" small mt-2" style={{ fontSize: '35px' }}>Sree Sai Shambhavi Enterprises</span>
                         </h1>
 
                         <p className="A-hero-desc" data-reveal data-delay="400">
-                            We are a leading supplier and manufacturer of ceiling systems, GI roofing sheets and GI channels, and a trusted dealer for premium ceiling and paint brands. We provide end-to-end solutions for residential and commercial interiors — from gypsum & POP ceilings to waterproofing, paints and roof sheets — backed by trained installers and reputed brand partnerships.
+                            We are a leading supplier and manufacturer of ceiling systems, GI channels PPGL Roofing sheets , and a trusted dealer for premium ceiling and paint brands. We provide end-to-end solutions for residential and commercial interiors — from gypsum & POP ceilings to waterproofing, paints and roof sheets — backed by trained installers and reputed brand partnerships.
                         </p>
                     </div>
                 </div>
@@ -274,7 +274,7 @@ function Aboutus() {
                                     <i className="fas fa-home"></i>
                                 ),
                                 title: 'Roofing & Structural',
-                                desc: 'GI roofing sheets, colored roofing, GI channels, ceiling channels, suspension systems, and structural solutions.'
+                                desc: 'GI channels PPGL Roofing sheets, colored roofing, GI channels, ceiling channels, suspension systems, and structural solutions.'
                             }
                         ].map((principle, index) => (
                             <div
@@ -301,7 +301,7 @@ function Aboutus() {
                         <div className="A-who-content">
                             <span className="A-who-label" data-reveal>WHO WE ARE</span>
                             <h2 className="A-who-title" data-reveal data-delay="100">
-                                Gypsum 'N' Gypsum Group<br />Your Trusted Partner
+                                Gypsum 'N' Gypsum <br />Your Trusted Partner
                             </h2>
 
                             <p className="A-who-desc" data-reveal data-delay="200">
@@ -315,7 +315,7 @@ function Aboutus() {
                                     </div>
                                     <div className="A-feature-content">
                                         <h4>Manufacturing & Supply</h4>
-                                        <p>Direct manufacturers of GI roofing sheets and channels, and authorized suppliers of premium ceiling systems, paints, and building materials.</p>
+                                        <p>Direct manufacturers of GI channels PPGL Roofing sheets and channels, and authorized suppliers of premium ceiling systems, paints, and building materials.</p>
                                     </div>
                                 </div>
 
@@ -463,9 +463,12 @@ function Aboutus() {
                             <div className="A-cta-contact-item">
                                 <i className="fas fa-map-marker-alt"></i>
                                 <div>
-                                    <h5>Visit Our Showroom</h5>
-                                    <span>RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry</span>
+                                    <h5>Head Office</h5>
+                                    <span>
+                                        Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram – 533125
+                                    </span>
                                 </div>
+
                             </div>
                         </div>
                     </div>

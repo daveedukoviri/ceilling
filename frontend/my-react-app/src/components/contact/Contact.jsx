@@ -608,19 +608,34 @@ function Contact() {
                             <div className="location-card">
                                 <div className="location-header">
                                     <div className="location-icon">
-                                        <i className="fas fa-map-marker-alt"></i>
+                                        <i className="fas fa-building"></i>
                                     </div>
                                     <div className="location-info">
-                                        <h4>Head Office</h4>
+                                        <h4>Head Office – Dowleswaram</h4>
                                         <span className="location-badge">Main Office</span>
                                     </div>
                                 </div>
-                                <p><i className="fas fa-map-pin me-2 text-gold"></i> 79-3-3/1, RTC Complex Road,Opp. Jio Petrol Bunk, V L Puram,Rajahmundry, AP — 533103</p>
-                                <p><i className="fas fa-phone me-2 text-gold"></i> +91 92466 09090</p>
-                                <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
+
+                                <p>
+                                    <i className="fas fa-map-pin me-2 text-gold"></i>
+                                    Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram,
+                                    East Godavari, Andhra Pradesh – 533125
+                                </p>
+
+                                <p>
+                                    <i className="fas fa-phone me-2 text-gold"></i>
+                                    +91 92466 0909
+                                </p>
+
+                                <p>
+                                    <i className="fas fa-clock me-2 text-gold"></i>
+                                    Mon–Sat: 9:00 AM – 7:00 PM
+                                </p>
+
+
                             </div>
 
-                            <div className="location-card mt-4">
+                            {/* <div className="location-card mt-4">
                                 <div className="location-header">
                                     <div className="location-icon">
                                         <i className="fas fa-store"></i>
@@ -634,7 +649,7 @@ function Contact() {
                                 <p><i className="fas fa-phone me-2 text-gold"></i> +91 92988 03332</p>
                                 <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:00 AM - 8:00 PM
                                     <span className=' d-block ms-4 mt-2'> Sunday: 10:00 AM - 6:00 PM</span></p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

@@ -987,26 +987,7 @@
     font-size: 1rem;
   }
   
-  /* CUSTOM CURSOR - Show on tablet and up */
-  #About .A-custom-cursor {
-    display: block;
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: var(--A-primary-gold);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.3s, height 0.3s;
-    mix-blend-mode: difference;
-  }
-  
-  #About .A-custom-cursor.active {
-    width: 40px;
-    height: 40px;
-    background: rgba(197, 165, 114, 0.2);
-  }
+ 
 }
 
 /* =============================================== */

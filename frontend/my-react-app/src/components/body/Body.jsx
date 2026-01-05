@@ -34,7 +34,7 @@ const Body = () => {
     {
       backgroundImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Premium Ceiling & Roofing Solutions',
-      description: 'Leading supplier and manufacturer of gypsum ceilings, GI roofing sheets, and premium paints for residential and commercial spaces.',
+      description: 'Leading supplier and manufacturer of gypsum ceilings, GI channels PPGL Roofing sheets, and premium paints for residential and commercial spaces.',
       buttonText: 'Explore Products',
       buttonLink: '/products'
     },
@@ -56,7 +56,7 @@ const Body = () => {
 
   // About Features Data - Updated with company info
   const aboutFeatures = [
-    { icon: 'fas fa-building', title: 'Manufacturing & Supply', description: 'Quality gypsum ceilings & GI roofing sheets' },
+    { icon: 'fas fa-building', title: 'Manufacturing & Supply', description: 'Quality gypsum ceilings & GI channels PPGL Roofing sheets' },
     { icon: 'fas fa-paint-roller', title: 'Authorized Dealer', description: 'Premium ceiling and paint brands' },
     { icon: 'fas fa-tools', title: 'Professional Installation', description: 'Trained installers for all ceiling types' },
     { icon: 'fas fa-handshake', title: 'End-to-End Solutions', description: 'Complete interior solutions from concept to completion' }
@@ -99,7 +99,7 @@ const Body = () => {
       name: 'Mohan Reddy',
       role: 'Architect, Godavari Designs',
       avatar: '/testimonals/t3.webp',
-      text: '"As an authorized dealer for top brands, they provide quality materials. Their GI roofing sheets and channels are durable and perfect for our projects in East Godavari."',
+      text: '"As an authorized dealer for top brands, they provide quality materials. Their GI channels PPGL Roofing sheets and channels are durable and perfect for our projects in East Godavari."',
       rating: 4.5
     },
     {
@@ -374,7 +374,7 @@ const Body = () => {
       {/* 2. ABOUT SECTION - Updated with company info */}
       <section className="section about-section" id="about">
         <div className="container">
-          <h2 className="section-title">About GNG Group</h2>
+          <h2 className="section-title"> Gypsum 'N' Gypsum</h2>
           <p className="section-subtitle">
             Sree Sai Shambhavi Enterprises (GNG Group) - Leading supplier and manufacturer of premium ceiling systems, roofing solutions, and paint products
           </p>
@@ -393,7 +393,7 @@ const Body = () => {
               <h2>Your Complete Interior Solution Partner</h2>
               <p>
                 Sree Sai Shambhavi Enterprises (GNG Group) is a leading manufacturer and supplier of ceiling systems,
-                GI roofing sheets and channels, and an authorized dealer for premium ceiling and paint brands.
+                GI channels PPGL Roofing sheets and channels, and an authorized dealer for premium ceiling and paint brands.
                 We provide end-to-end solutions for residential and commercial interiors.
               </p>
               <p>
@@ -806,20 +806,32 @@ const Body = () => {
                     <i className="fas fa-building"></i>
                   </div>
                   <div className="location-info">
-                    <h4>Head Office - V L Puram</h4>
+                    <h4>Head Office – Dowleswaram</h4>
                     <span className="location-badge">Main Office</span>
                   </div>
                 </div>
-                <p><i className="fas fa-map-pin me-2 text-gold"></i> 79-3-3/1, RTC Complex Road, Opp. Jio Petrol Bunk, V L Puram, Rajahmundry, East Godavari, Andhra Pradesh - 533103</p>
-                <p><i className="fas fa-phone me-2 text-gold"></i> +91 92466 0909</p>
-                <p><i className="fas fa-clock me-2 text-gold"></i> Mon-Sat: 9:00 AM - 7:00 PM</p>
-                <button className="btn btn-outline-gold mt-3" onClick={() => navigateToLocation(16.9848, 81.7872)}>
-                  <i className="fas fa-directions me-2"></i>
-                  Get Directions
-                </button>
+
+                <p>
+                  <i className="fas fa-map-pin me-2 text-gold"></i>
+                  Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram,
+                  East Godavari, Andhra Pradesh – 533125
+                </p>
+
+                <p>
+                  <i className="fas fa-phone me-2 text-gold"></i>
+                  +91 92466 0909
+                </p>
+
+                <p>
+                  <i className="fas fa-clock me-2 text-gold"></i>
+                  Mon–Sat: 9:00 AM – 7:00 PM
+                </p>
+
+
               </div>
 
-              <div className="location-card">
+
+              {/* <div className="location-card">
                 <div className="location-header">
                   <div className="location-icon">
                     <i className="fas fa-store"></i>
@@ -836,7 +848,7 @@ const Body = () => {
                   <i className="fas fa-directions me-2"></i>
                   Get Directions
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
