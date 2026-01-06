@@ -61,8 +61,8 @@ function Contact() {
             answer: 'Yes, we specialize in contractor and builder partnerships. We offer: Special wholesale rates for bulk purchases, staggered delivery as per construction schedule, technical support for site teams, customized billing cycles, and priority service for ongoing projects. We have successfully supplied materials for residential complexes, commercial buildings, and industrial projects.'
         },
         {
-            question: 'What makes GNG Group different from other material suppliers?',
-            answer: 'GNG Group stands out with: 1) 15+ years of industry experience in Rajahmundry, 2) Authorized dealerships for premium brands, 3) Complete solution from supply to installation, 4) Expert technical consultation and site support, 5) Emergency service availability, and 6) Strong relationships with contractors and builders across East Godavari district.'
+            question: 'What makes Gypsum N Gypsum different from other material suppliers?',
+            answer: 'Gypsum N Gypsum stands out with: 1) 15+ years of industry experience in Rajahmundry, 2) Authorized dealerships for premium brands, 3) Complete solution from supply to installation, 4) Expert technical consultation and site support, 5) Emergency service availability, and 6) Strong relationships with contractors and builders across East Godavari district.'
         }
     ];
 

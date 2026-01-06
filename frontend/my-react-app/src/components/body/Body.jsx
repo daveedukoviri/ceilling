@@ -85,7 +85,7 @@ const Body = () => {
       name: 'Vijay Prasad Kumar ',
       role: 'Building Contractor, Rajahmundry',
       avatar: '/testimonals/t1.webp',
-      text: '"GNG Group provided excellent gypsum ceiling materials and professional installation for our residential project. Their attention to detail and quality products exceeded our expectations."',
+      text: '"We provided excellent gypsum ceiling materials and professional installation for our residential project. Their attention to detail and quality products exceeded our expectations."',
       rating: 5
     },
     {
@@ -376,7 +376,7 @@ const Body = () => {
         <div className="container">
           <h2 className="section-title"> Gypsum 'N' Gypsum</h2>
           <p className="section-subtitle">
-            Sree Sai Shambhavi Enterprises (GNG Group) - Leading supplier and manufacturer of premium ceiling systems, roofing solutions, and paint products
+            SGypsum 'N' Gypsum  - Leading supplier and manufacturer of premium ceiling systems, roofing solutions, and paint products
           </p>
 
           <div className="about-container">
@@ -392,7 +392,7 @@ const Body = () => {
             <div className="about-content">
               <h2>Your Complete Interior Solution Partner</h2>
               <p>
-                Sree Sai Shambhavi Enterprises (GNG Group) is a leading manufacturer and supplier of ceiling systems,
+                Gypsum 'N' Gypsum is a leading manufacturer and supplier of ceiling systems,
                 GI channels PPGL Roofing sheets and channels, and an authorized dealer for premium ceiling and paint brands.
                 We provide end-to-end solutions for residential and commercial interiors.
               </p>
@@ -897,7 +897,7 @@ const Body = () => {
             <div className="banner-image-container">
               <img
                 src="modal_photo.webp"
-                alt="GNG Group - Premium Ceiling Solutions"
+                alt="Gypsum 'N' Gypsum - Premium Ceiling Solutions"
                 className="banner-image"
                 onClick={() => setShowWelcomeModal(false)}
               />

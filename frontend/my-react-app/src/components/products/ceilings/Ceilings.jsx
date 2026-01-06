@@ -130,7 +130,7 @@ const Ceilings = () => {
                     {/* Left Content */}
                     <div className="hero-content-new">
                         <div className="hero-badge-new fast-fade">
-                            <i className="fas fa-crown"></i> GNG Group Premium Ceilings
+                            <i className="fas fa-crown"></i>  Gypsum ‘N’ Gypsum Premium Ceilings
                         </div>
 
                         <h1 className="hero-title-new fast-fade">
@@ -142,7 +142,7 @@ const Ceilings = () => {
                         </p>
 
                         <p className="hero-description-new fast-fade">
-                            For years, Sree Sai Shambhavi Enterprises (GNG Group) has been redefining interiors with premium ceiling systems that combine beauty, functionality, and durability. From elegant gypsum designs to practical POP ceilings and advanced acoustic solutions, we create overhead spaces that inspire.
+                            For years, Gypsum ‘N’ Gypsum has been redefining interiors with premium ceiling systems that combine beauty, functionality, and durability. From elegant gypsum designs to practical POP ceilings and advanced acoustic solutions, we create overhead spaces that inspire.
                         </p>
                         <p className="hero-description-new fast-fade">
                             As authorized dealers for leading brands like Gyproc, USG Boral, JSW, and Armstrong, we bring you certified quality, professional installation, and designs that reflect your vision. Because the ceiling isn't just overhead — it's a statement.

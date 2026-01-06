@@ -126,7 +126,7 @@ const Walls = () => {
                     {/* Left Content */}
                     <div className="hero-content-new">
                         <div className="hero-badge-new fast-fade">
-                            <i className="fas fa-th-large"></i> GNG Group Wall Solutions
+                            <i className="fas fa-th-large"></i>  Gypsum ‘N’ Gypsum Wall Solutions
                         </div>
 
                         <h1 className="hero-title-new fast-fade">
@@ -138,7 +138,7 @@ const Walls = () => {
                         </p>
 
                         <p className="hero-description-new fast-fade">
-                            Sree Sai Shambhavi Enterprises (GNG Group) offers comprehensive wall solutions that transform ordinary spaces into extraordinary environments. From elegant wall coverings to durable paneling systems, we provide the perfect balance of aesthetics, functionality, and durability.
+                             Gypsum ‘N’ Gypsum offers comprehensive wall solutions that transform ordinary spaces into extraordinary environments. From elegant wall coverings to durable paneling systems, we provide the perfect balance of aesthetics, functionality, and durability.
                         </p>
                         <p className="hero-description-new fast-fade">
                             As specialists in interior finishes, we supply and install premium wall systems including laminates, tiles, stone cladding, and decorative panels. Our expertise ensures your walls not only look stunning but also stand the test of time.

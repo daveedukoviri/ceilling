@@ -126,12 +126,12 @@ function Footter() {
                     <div className="row align-items-center">
                         <div className="col-md-6 text-center text-md-start mb-2 mb-md-0">
                             <p className="mb-0 small">
-                                © {new Date().getFullYear()} Sree Sai Shambhavi Enterprises (GNG Group). All rights reserved.
+                                © {new Date().getFullYear()}  Gypsum ‘N’ Gypsum <span></span>. All rights reserved.
                             </p>
                         </div>
                         <div className="col-md-6 text-center text-md-end">
                             <p className="mb-0 small">
-                                <span className="d-block d-sm-inline me-0 me-sm-3">GNG Paints | Gypsum 'N' Gypsum</span>
+                                <span className="d-block d-sm-inline me-0 me-sm-3"> Gypsum 'N' Gypsum</span>
                                 <span className="d-block d-sm-inline mt-1 mt-sm-0">
                                     Designed with <i className="fas fa-heart text-danger"></i> for excellence
                                 </span>

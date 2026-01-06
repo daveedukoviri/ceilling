@@ -187,7 +187,7 @@ function Aboutus() {
                             <div className="A-image-frame">
                                 <img
                                     src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                    alt="GNG Group Premium Materials"
+                                    alt="Gypsum 'N' Gypsum Premium Materials"
                                     loading="lazy"
                                     className="A-story-image"
                                 />
@@ -305,8 +305,9 @@ function Aboutus() {
                             </h2>
 
                             <p className="A-who-desc" data-reveal data-delay="200">
-                                Operating as GNG Paints, Gypsum 'N' Gypsum, and Sree Sai Shambhavi Enterprises, we have established ourselves as premier suppliers and manufacturers in the construction materials industry. Our commitment to quality, timely delivery, and customer satisfaction drives everything we do.
+                                Through our brands Paints, Gypsum ‘N’ Gypsum, we deliver high-quality construction materials with precision, reliability, and a commitment to exceeding customer expectations.
                             </p>
+
 
                             <div className="A-who-features">
                                 <div className="A-feature-item" data-reveal data-delay="300">
@@ -339,7 +340,7 @@ function Aboutus() {
                                     <div className="A-main-image-frame">
                                         <img
                                             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                            alt="GNG Group Ceiling Installation"
+                                            alt="Gypsum 'N' Gypsum Ceiling Installation"
                                             loading="lazy"
                                             className="A-main-image"
                                         />
