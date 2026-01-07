@@ -1,6 +1,6 @@
-import React, { useEffect ,} from 'react';
+import React, { useEffect, } from 'react';
 import './Ceilings.css';
-import { Link , useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -514,58 +514,60 @@ const Ceilings = () => {
                         <div className="kitchen-type peninsula-kitchen" id="roofing">
                             <div className="kitchen-gallery">
                                 <div className="main-gallery">
-                                    <img src="services/ceilings/g1.webp" alt="GI channels PPGL Roofing sheets" />
+                                    <img src="services/ceilings/gi1.webp" alt="GI channels PPGL Roofing sheets" />
                                     <div className="gallery-overlay">
                                         <h4>Colored GI Roofing</h4>
                                         <p>Durable galvanized iron sheets with protective coatings</p>
                                     </div>
                                 </div>
                                 <div className="thumbnail-grid">
-                                    <img src="services/ceilings/g2.webp" alt="GI roofing design 2" onClick={handleThumbnailClick} />
-                                    <img src="services/ceilings/g3.webp" alt="GI roofing design 3" onClick={handleThumbnailClick} />
-                                    <img src="services/ceilings/g4.webp" alt="GI roofing design 4" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/gi2.webp" alt="GI roofing design 2" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/gi3.webp" alt="GI roofing design 3" onClick={handleThumbnailClick} />
+                                    <img src="services/ceilings/gi4.webp" alt="GI roofing design 4" onClick={handleThumbnailClick} />
                                 </div>
                             </div>
                             <div className="kitchen-content">
-                                <span className="kitchen-badge">Exterior Solution</span>
-                                <h2 className="kitchen-title">GI channels PPGL Roofing sheets</h2>
+                                <span className="kitchen-badge">Structural Solution</span>
+                                <h2 className="kitchen-title">GI Channels</h2>
                                 <p className="kitchen-description">
-                                    Our Galvanized Iron Roofing Sheets offer superior protection against weather elements
-                                    with excellent durability and corrosion resistance. Available in various colors and
-                                    profiles for both residential and industrial applications.
+                                    Our Galvanized Iron (GI) Channels are manufactured from premium-grade steel with a hot-dip zinc coating
+                                    that provides excellent corrosion resistance. Ideal for framing, supports, partitions, false ceiling
+                                    runners, and various structural applications in both residential and commercial projects.
                                 </p>
+
                                 <div className="kitchen-features">
                                     <div className="feature-item">
-                                        <div className="feature-icon"><i className="fas fa-umbrella"></i></div>
+                                        <div className="feature-icon"><i className="fas fa-shield-alt"></i></div>
                                         <div className="feature-content">
-                                            <h4>Weather Protection</h4>
-                                            <p>Superior resistance to rain, sun, and temperature extremes</p>
+                                            <h4>Corrosion Resistant</h4>
+                                            <p>Hot-dip galvanized coating for long-lasting protection</p>
                                         </div>
                                     </div>
                                     <div className="feature-item">
-                                        <div className="feature-icon"><i className="fas fa-ruler-combined"></i></div>
+                                        <div className="feature-icon"><i className="fas fa-cubes"></i></div>
                                         <div className="feature-content">
-                                            <h4>Long Spans</h4>
-                                            <p>Cover large areas without intermediate supports</p>
+                                            <h4>High Strength</h4>
+                                            <p>Excellent load-bearing capacity for structural applications</p>
                                         </div>
                                     </div>
                                     <div className="feature-item">
-                                        <div className="feature-icon"><i className="fas fa-palette"></i></div>
+                                        <div className="feature-icon"><i className="fas fa-tools"></i></div>
                                         <div className="feature-content">
-                                            <h4>Color Options</h4>
-                                            <p>Available in multiple colors with protective coatings</p>
+                                            <h4>Easy Fabrication</h4>
+                                            <p>Can be easily cut, drilled and welded on-site</p>
                                         </div>
                                     </div>
                                     <div className="feature-item">
-                                        <div className="feature-icon"><i className="fas fa-bolt"></i></div>
+                                        <div className="feature-icon"><i className="fas fa-ruler-horizontal"></i></div>
                                         <div className="feature-content">
-                                            <h4>Quick Installation</h4>
-                                            <p>Lightweight and easy to install, reducing labor costs</p>
+                                            <h4>Various Sizes</h4>
+                                            <p>Available in standard and custom sizes (e.g. 75x40, 100x50, 125x65, 150x75 mm)</p>
                                         </div>
                                     </div>
                                 </div>
+
                                 <button className="kitchen-cta" onClick={handleCTAClick}>
-                                    View Products <i className="fas fa-arrow-right"></i>
+                                    View GI Channel Products <i className="fas fa-arrow-right"></i>
                                 </button>
                             </div>
                         </div>

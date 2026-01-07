@@ -57,7 +57,7 @@ function Footter() {
                                         <i className="fas fa-map-marker-alt me-2 me-md-3 text-gold mt-1 flex-shrink-0"></i>
                                         <div className="flex-grow-1 d-flex flex-wrap">
                                             <div className="d-inline-block me-2">Head Office:</div>
-                                            <span className="d-inline-block me-2">Plot No: 21P, Industrial Area,</span>
+                                            <span className="d-inline-block me-2">Gypsum'N' Gypsum Plot No: 21P, Industrial Area,</span>
                                             <span className="d-inline-block me-2">NH-16, Near TVS Trade,</span>
                                             <span className="d-inline-block me-2">Dowleswaram,</span>
                                             <span className="d-inline-block me-2">Andhra Pradesh 533125</span>
@@ -66,15 +66,15 @@ function Footter() {
                                     </li>
 
                                     {/* Branch Shop */}
-                                    {/* <li className="mb-3 d-flex align-items-start ">
+                                    <li className="mb-3 d-flex align-items-start ">
                                         <i className="fas fa-store me-2 me-md-3 text-gold mt-1 flex-shrink-0"></i>
-                                        <div className="flex-grow-1 d-flex flex-wrap">
-                                            <div className="d-inline-block">Branch Shop:</div>
-                                            <span className="d-inline-block">D. No. 20-3-7, G+1 Building,</span>
-                                            <span className="d-inline-block">Ground Floor Shop,</span>
-                                            <span className="d-inline-block">Ramachandrarao Peta, Rajahmundry 533105</span>
+                                        <div className="flex-grow-1 d-flex flex-column flex-wrap">
+                                            <div className="d-inline-block">Branch Offices:</div>
+                                            <span className="d-inline-block">V L Puram</span>
+                                            <span className="d-inline-block">Ramachandrapuram</span>
+                                            {/* <span className="d-inline-block">Ramachandrarao Peta, Rajahmundry 533105</span> */}
                                         </div>
-                                    </li> */}
+                                    </li>
                                 </ul>
                             </div>
                         </div>

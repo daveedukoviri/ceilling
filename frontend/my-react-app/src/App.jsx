@@ -15,6 +15,7 @@ const Ceilings = lazy(() => import('./components/products/ceilings/Ceilings'));
 const Paints = lazy(() => import('./components/products/paints/Paints'));
 const Walls = lazy(() => import('./components/products/walls/Walls'));
 const Products = lazy(() => import('./components/products/products/products'));
+const Roofing = lazy(() => import('./components/products/roof/Roofing'));
 
 // Import React Router
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -36,7 +37,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contacts" element={<Contact />} /> {/* Note: you used /contacts in nav */}
             <Route path="/products" element={<Products />} />
-            <Route path="/blog" element={<div><h1>Blogs Page</h1></div>} />
+            <Route path="/roof" element={<Roofing />} />
 
             {/* Product sub-pages */}
             <Route path="/ceilings" element={<Ceilings />} />

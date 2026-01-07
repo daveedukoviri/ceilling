@@ -65,6 +65,7 @@ function Header() {
                           <li><Link to="/ceilings">Ceiling Systems</Link></li>
                           <li><Link to="/paints">Paints & Coatings</Link></li>
                           <li><Link to="/walls">Wall Solutions</Link></li>
+                          <li><Link to="/roof">Roofing Solutions</Link></li>
                         </ul>
                       </div>
                     </li>
@@ -150,7 +151,7 @@ function Header() {
                 <i className="fab fa-whatsapp fs-5"></i>
               </a>
               <a
-                href="mailto:sreisai.shambhavi.enterprises@gmail.com"
+                href="mailto:gypsumngypsum4u@gmail.com"
                 className="btn w-50 p-2 rounded-3"
               >
                 <i className="fas fa-envelope fs-5"></i>
@@ -181,7 +182,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="https://api.whatsapp.com/send?phone=918137005598&text=Hi%20D%27LIFE,%20I%20would%20like%20to%20discuss%20about%20a%20home%20interior%20project%20of%20mine,%20and%20know%20more%20about%20your%20interior%20design%20options%20and%20services%20available."
+              href="https://api.whatsapp.com/send?phone=91 92466 0909&text=Hi%20D%27LIFE,%20I%20would%20like%20to%20discuss%20about%20a%20home%20interior%20project%20of%20mine,%20and%20know%20more%20about%20your%20interior%20design%20options%20and%20services%20available."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -203,7 +204,7 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="mailto:enquiry@dlifeinteriors.com">
+            <a href="mailto:gypsumngypsum4u@gmail.com">
               <div className="icon">
                 <svg width="19.882" height="14.891" viewBox="0 0 19.882 14.891">
                   <path id="Path_24" d="M11.6,176.927a2.99,2.99,0,0,1-3.323,0L.132,171.5Q.065,171.451,0,171.4v8.9a1.83,1.83,0,0,0,1.83,1.83H18.052a1.83,1.83,0,0,0,1.83-1.83v-8.9c-.043.032-.087.064-.133.094Z" transform="translate(0 -167.242)" fill="#814882"></path>

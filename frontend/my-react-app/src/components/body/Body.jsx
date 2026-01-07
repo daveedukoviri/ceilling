@@ -41,14 +41,14 @@ const Body = () => {
     {
       backgroundImage: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Authorized Dealer for Top Brands',
-      description: 'Trusted partner for Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, and other premium ceiling and paint brands.',
+      description: 'Trusted partner for Saint-Gobain Gyproc, USG Boral, Pollywood, JSW Paints, Armstrong, and other premium ceiling and paint brands.',
       buttonText: 'About Us',
       buttonLink: '/company'
     },
     {
       backgroundImage: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'End-to-End Interior Solutions',
-      description: 'From gypsum ceilings to waterproofing, paints, and roof sheets - complete solutions backed by trained professional installers.',
+      description: 'From different types of ceilings to waterproofing paints, roofing sheets, dry walls, and tile adhesives – complete solutions backed by trained professionals installers.',
       buttonText: 'Our Services',
       buttonLink: '/ceilings'
     }
@@ -376,7 +376,7 @@ const Body = () => {
         <div className="container">
           <h2 className="section-title"> Gypsum 'N' Gypsum</h2>
           <p className="section-subtitle">
-            SGypsum 'N' Gypsum  - Leading supplier and manufacturer of premium ceiling systems, roofing solutions, and paint products
+            Gypsum 'N' Gypsum  - Leading supplier and manufacturer of premium ceiling systems, roofing solutions, and paint products
           </p>
 
           <div className="about-container">
@@ -390,18 +390,16 @@ const Body = () => {
             </div>
 
             <div className="about-content">
-              <h2>Your Complete Interior Solution Partner</h2>
+              <h2>Premium Ceiling & Roofing Solutions</h2>
               <p>
-                Gypsum 'N' Gypsum is a leading manufacturer and supplier of ceiling systems,
-                GI channels PPGL Roofing sheets and channels, and an authorized dealer for premium ceiling and paint brands.
-                We provide end-to-end solutions for residential and commercial interiors.
+                Gypsum ‘N’ Gypsum is your trusted partner for premium ceiling boards, GI channels, PPGL roofing sheets,
+                and complete ceiling & roofing solutions.
               </p>
               <p>
-                From gypsum & POP ceilings to waterproofing, paints, and roof sheets - our services are backed by
-                trained professional installers and partnerships with reputed brands like Saint-Gobain, USG Boral,
-                JSW, and Armstrong.
+                End-to-End Interior Solutions – from different types of ceilings to waterproofing paints, roofing sheets,
+                dry walls, and tile adhesives – complete solutions backed by trained professionals and authorized partnerships
+                with leading brands: JSW Kalinga, Asian Paints SmartCare, Shera, Apollo, Polywood, and TATA PPGL Sheets.
               </p>
-
               <div className="about-features">
                 {aboutFeatures.map((feature, index) => (
                   <div key={index} className="about-feature">
@@ -792,13 +790,13 @@ const Body = () => {
               <p className="lead">Visit us at our offices in Rajahmundry</p>
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-6">
+          <div className="row justify-content-center">
+            {/* <div className="col-lg-6">
               <div id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3815.358644180359!2d81.7751528!3d17.006069399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDAwJzIxLjkiTiA4McKwNDYnMzAuNiJF!5e0!3m2!1sen!2sin!4v1767140172484!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-6">
               <div className="location-card">
                 <div className="location-header">
@@ -882,8 +880,50 @@ const Body = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div class="hours-card"><h3 class="mb-4">Our Services</h3><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Material Supply:</strong> Premium construction materials</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Professional Installation:</strong> Expert installation services</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Technical Consultation:</strong> Free site assessment</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Delivery:</strong> Timely delivery across Rajahmundry</p><p><i class="fas fa-check-circle me-2 text-gold"></i> <strong>Response Time:</strong> Quotations within 2 hours</p></div>
+              <div className="hours-card">
+                <h3 className="mb-4">Our Services</h3>
+
+                <p>
+                  <i className="fas fa-check-circle me-2 text-gold"></i>
+                  Material Supply
+                  <span className='ms-3 me-3'>
+                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                    Premium Interior Materials
+                  </span>
+                </p>
+
+
+                <p>
+                  <span>
+
+                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                    Ceiling & Roofing Solutions
+                  </span>
+                </p>
+
+
+                <p>
+                  <i className="fas fa-check-circle me-2 text-gold"></i>
+                  <strong>Professional Installation:</strong> Expert Installation Services
+                </p>
+
+                <p>
+                  <i className="fas fa-check-circle me-2 text-gold"></i>
+                  <strong>Technical Consultation:</strong>  Site Assessment
+                </p>
+
+                <p>
+                  <i className="fas fa-check-circle me-2 text-gold"></i>
+                  <strong>Delivery:</strong> Timely Delivery Across Rajahmundry
+                </p>
+
+                <p>
+                  <i className="fas fa-check-circle me-2 text-gold"></i>
+                  <strong>Response Time:</strong> Quotations Within 2 Hours
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

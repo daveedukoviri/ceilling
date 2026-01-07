@@ -60,15 +60,15 @@ const Products = () => {
         // Setup video play/pause functionality
         const setupVideoPlayers = () => {
             const videoPlayers = document.querySelectorAll('.video-player');
-            
+
             videoPlayers.forEach((player, index) => {
                 const video = player.querySelector('video');
                 const playBtn = player.querySelector('.play-button');
-                
+
                 if (playBtn && video) {
                     // Store reference
                     videoRefs.current[index] = { video, playBtn };
-                    
+
                     playBtn.addEventListener('click', (e) => {
                         e.stopPropagation();
                         togglePlayPause(video, playBtn);
@@ -104,9 +104,9 @@ const Products = () => {
             // Cleanup
             videoRefs.current.forEach(ref => {
                 if (ref && ref.video) {
-                    ref.video.removeEventListener('play', () => {});
-                    ref.video.removeEventListener('pause', () => {});
-                    ref.video.removeEventListener('ended', () => {});
+                    ref.video.removeEventListener('play', () => { });
+                    ref.video.removeEventListener('pause', () => { });
+                    ref.video.removeEventListener('ended', () => { });
                 }
             });
         };
@@ -138,7 +138,7 @@ const Products = () => {
         'videos/video4.mp4'   // Maintenance Guide
     ];
 
-    
+
 
     // Video thumbnails
     const videoThumbnails = [
@@ -230,12 +230,12 @@ const Products = () => {
                                     <video
                                         src={videoSources[index]}
                                         controls
-                                        // poster={videoThumbnails[index]}
-                                        // preload="metadata"
+                                    // poster={videoThumbnails[index]}
+                                    // preload="metadata"
                                     >
                                         Your browser does not support the video tag.
                                     </video>
-                                    
+
                                 </div>
                             </div>
                         ))}
@@ -404,6 +404,160 @@ const Products = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* PPGL Roofing Sheets */}
+                        <div className="product-card">
+                            <div className="product-image">
+                                <img src="https://prabhatglobal.com/wp-content/uploads/2025/02/Prabhats-Colour-Coated-Galvanised.webp" alt="PPGL Roofing Sheets" />
+                                <span className="product-badge">Premium Quality</span>
+                                <div className="product-overlay">
+                                    <button className="quick-view-btn" onClick={() => handleInquiryClick('PPGL Roofing Sheets')}>
+                                        <i className="fas fa-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="product-content">
+                                <div className="product-header">
+                                    <h3>PPGL Roofing Sheets</h3>
+                                    <span className="product-rating">
+                                        <i className="fas fa-star"></i> 4.8
+                                    </span>
+                                </div>
+                                <p className="product-description">
+                                    Durable color-coated PPGL sheets from trusted brands like TATA and JSW Kalinga for long-lasting roofing solutions.
+                                </p>
+                                <div className="product-specs">
+                                    <span><i className="fas fa-tint"></i> Weather Resistant</span>
+                                    <span><i className="fas fa-shield-alt"></i> Corrosion Proof</span>
+                                    <span><i className="fas fa-wind"></i> High Strength</span>
+                                </div>
+                                <div className="product-footer">
+                                    <button
+                                        className="inquiry-btn"
+                                        data-product="PPGL Roofing Sheets"
+                                        onClick={() => handleInquiryClick('PPGL Roofing Sheets')}
+                                    >
+                                        <i className="fas fa-info-circle"></i> Get Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* GI Channels */}
+                        <div className="product-card">
+                            <div className="product-image">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2021/12/CA/QE/GM/20541238/ceiling-section-500x500.jpg" alt="GI Channels" />
+                                <span className="product-badge">Strong Framework</span>
+                                <div className="product-overlay">
+                                    <button className="quick-view-btn" onClick={() => handleInquiryClick('GI Channels')}>
+                                        <i className="fas fa-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="product-content">
+                                <div className="product-header">
+                                    <h3>GI Channels</h3>
+                                    <span className="product-rating">
+                                        <i className="fas fa-star"></i> 4.7
+                                    </span>
+                                </div>
+                                <p className="product-description">
+                                    High-quality galvanized iron channels for robust ceiling and roofing support structures.
+                                </p>
+                                <div className="product-specs">
+                                    <span><i className="fas fa-shield-alt"></i> Rust Resistant</span>
+                                    <span><i className="fas fa-weight-hanging"></i> Load Bearing</span>
+                                    <span><i className="fas fa-tools"></i> Easy Installation</span>
+                                </div>
+                                <div className="product-footer">
+                                    <button
+                                        className="inquiry-btn"
+                                        data-product="GI Channels"
+                                        onClick={() => handleInquiryClick('GI Channels')}
+                                    >
+                                        <i className="fas fa-info-circle"></i> Get Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Ceiling Boards */}
+                        <div className="product-card">
+                            <div className="product-image">
+                                <img src="https://arktura.com/wp-content/uploads/2021/07/Gypsum-Board-Installation-Stock-Photo-1600x900.jpeg" alt="Ceiling Boards" />
+                                <span className="product-badge">Premium Finish</span>
+                                <div className="product-overlay">
+                                    <button className="quick-view-btn" onClick={() => handleInquiryClick('Ceiling Boards')}>
+                                        <i className="fas fa-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="product-content">
+                                <div className="product-header">
+                                    <h3>Ceiling Boards</h3>
+                                    <span className="product-rating">
+                                        <i className="fas fa-star"></i> 4.9
+                                    </span>
+                                </div>
+                                <p className="product-description">
+                                    Premium gypsum, Shera fiber cement, and other ceiling boards for elegant and durable false ceilings.
+                                </p>
+                                <div className="product-specs">
+                                    <span><i className="fas fa-fire"></i> Fire Resistant</span>
+                                    <span><i className="fas fa-tint-slash"></i> Moisture Proof</span>
+                                    <span><i className="fas fa-volume-mute"></i> Sound Insulation</span>
+                                </div>
+                                <div className="product-footer">
+                                    <button
+                                        className="inquiry-btn"
+                                        data-product="Ceiling Boards"
+                                        onClick={() => handleInquiryClick('Ceiling Boards')}
+                                    >
+                                        <i className="fas fa-info-circle"></i> Get Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Tile Adhesives */}
+                        <div className="product-card">
+                            <div className="product-image">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/334143027/EW/NZ/PH/190409614/20-kg-weberset-fastfix.jpg" alt="Tile Adhesives" />
+
+                                <grok-card data-id="6f5236" data-type="image_card" data-arg-size="LARGE" ></grok-card>
+
+                                <span className="product-badge">Strong Bond</span>
+                                <div className="product-overlay">
+                                    <button className="quick-view-btn" onClick={() => handleInquiryClick('Tile Adhesives')}>
+                                        <i className="fas fa-eye"></i> Quick View
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="product-content">
+                                <div className="product-header">
+                                    <h3>Tile Adhesives</h3>
+                                    <span className="product-rating">
+                                        <i className="fas fa-star"></i> 4.8
+                                    </span>
+                                </div>
+                                <p className="product-description">
+                                    Premium cement-based tile adhesives for secure fixing of ceramic, vitrified, and stone tiles on floors and walls.
+                                </p>
+                                <div className="product-specs">
+                                    <span><i className="fas fa-hand-holding-heart"></i> High Adhesion</span>
+                                    <span><i className="fas fa-tint"></i> Waterproof</span>
+                                    <span><i className="fas fa-tools"></i> Easy to Apply</span>
+                                </div>
+                                <div className="product-footer">
+                                    <button
+                                        className="inquiry-btn"
+                                        data-product="Tile Adhesives"
+                                        onClick={() => handleInquiryClick('Tile Adhesives')}
+                                    >
+                                        <i className="fas fa-info-circle"></i> Get Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -446,6 +600,14 @@ const Products = () => {
                             <h4>Armstrong</h4>
                             <p>World-Class Ceilings</p>
                         </div>
+                        <div className="brand-item">
+                            <div className="brand-logo">
+                                <i className="fas fa-layer-group"></i>
+                            </div>
+                            <h4>Plywood</h4>
+                            <p>Premium Wood Panels</p>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -457,9 +619,9 @@ const Products = () => {
                         <h2>Ready to Transform Your Space?</h2>
                         <p>Get expert advice and premium products for your next project</p>
                         <div className="cta-buttons">
-                            <button className="cta-btn-primary" onClick={() => handleInquiryClick('Full Product Catalog')}>
+                            {/* <button className="cta-btn-primary" onClick={() => handleInquiryClick('Full Product Catalog')}>
                                 <i className="fas fa-download"></i> Download Catalog
-                            </button>
+                            </button> */}
                             <button className="cta-btn-secondary" onClick={() => handleInquiryClick('Consultation')}>
                                 <i className="fas fa-phone-alt"></i> Book Consultation
                             </button>

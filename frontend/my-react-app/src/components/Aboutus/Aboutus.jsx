@@ -134,12 +134,13 @@ function Aboutus() {
 
                         <h1 className="A-hero-title" data-reveal data-delay="200">
                             <span className="A-title-line A-gold-accent">Gypsum <span>‘N’</span>Gypsum</span>
-                            <span className=" small mt-2" style={{ fontSize: '35px' }}>Sree Sai Shambhavi Enterprises</span>
+                            <span className=" small mt-2" style={{ fontSize: '32px' }}>Sree Sai Shambhavi Enterprises</span>
                         </h1>
 
                         <p className="A-hero-desc" data-reveal data-delay="400">
-                            We are a leading supplier and manufacturer of ceiling systems, GI channels PPGL Roofing sheets , and a trusted dealer for premium ceiling and paint brands. We provide end-to-end solutions for residential and commercial interiors — from gypsum & POP ceilings to waterproofing, paints and roof sheets — backed by trained installers and reputed brand partnerships.
+                            We are a leading supplier of premium ceiling boards, GI channels,  PPGL roofing sheets, offering complete ceiling and roofing solutions for residential and commercial spaces. From gypsum and POP ceilings to roofing systems and waterproofing solutions, our services are delivered by trained professionals and supported by reputed brand partnerships.
                         </p>
+
                     </div>
                 </div>
 
@@ -466,7 +467,7 @@ function Aboutus() {
                                 <div>
                                     <h5>Head Office</h5>
                                     <span>
-                                        Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram – 533125
+                                       Gypsum 'N' Gypsum Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram – 533125
                                     </span>
                                 </div>
 

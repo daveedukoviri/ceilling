@@ -288,9 +288,9 @@ function Contact() {
                                     <h4>Email Us</h4>
                                     <p className='small'>Send us your material inquiries and orders</p>
                                     <div className="email-addresses">
-                                        <a href="mailto:sreisai.shambhavi.enterprises@gmail.com" className="contact-link d-block">
+                                        <a href="mailto:gypsumngypsum4u@gmail.com" className="contact-link d-block">
                                             <i className="fas fa-envelope me-2"></i>
-                                            sreisai.shambhavi.enterprises@gmail.com
+                                            gypsumngypsum4u@gmail.com
                                         </a>
                                     </div>
                                 </div>
@@ -596,14 +596,14 @@ function Contact() {
                             <p className="lead">Visit us at any of our locations</p>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-lg-6 mb-4 mb-lg-0">
+                    <div className="row justify-content-center">
+                        {/* <div className="col-lg-6 mb-4 mb-lg-0">
                             <div id="map" className="location-map">
                                 <div className="map-placeholder">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3815.358644180359!2d81.7751528!3d17.006069399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDAwJzIxLjkiTiA4McKwNDYnMzAuNiJF!5e0!3m2!1sen!2sin!4v1767140172484!5m2!1sen!2sin" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-6">
                             <div className="location-card">
                                 <div className="location-header">
@@ -685,11 +685,45 @@ function Contact() {
                         <div className="col-lg-6">
                             <div className="hours-card">
                                 <h3 className="mb-4">Our Services</h3>
-                                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Material Supply:</strong> Premium construction materials</p>
-                                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Professional Installation:</strong> Expert installation services</p>
-                                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Technical Consultation:</strong> Free site assessment</p>
-                                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Delivery:</strong> Timely delivery across Rajahmundry</p>
-                                <p><i className="fas fa-check-circle me-2 text-gold"></i> <strong>Response Time:</strong> Quotations within 2 hours</p>
+
+                                <p>
+                                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                                    Material Supply
+
+                                </p>
+
+                                <p><span className=''>
+                                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                                    Premium Interior Materials
+                                </span></p>
+                                <p>
+                                    <span>
+
+                                        <i className="fas fa-check-circle me-2 text-gold"></i>
+                                        Ceiling & Roofing Solutions
+                                    </span>
+                                </p>
+
+
+                                <p>
+                                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                                    <strong>Professional Installation:</strong> Expert Installation Services
+                                </p>
+
+                                <p>
+                                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                                    <strong>Technical Consultation:</strong>  Site Assessment
+                                </p>
+
+                                <p>
+                                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                                    <strong>Delivery:</strong> Timely Delivery Across Rajahmundry
+                                </p>
+
+                                <p>
+                                    <i className="fas fa-check-circle me-2 text-gold"></i>
+                                    <strong>Response Time:</strong> Quotations Within 2 Hours
+                                </p>
                             </div>
                         </div>
                     </div>
