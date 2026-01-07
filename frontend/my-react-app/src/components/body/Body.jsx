@@ -34,7 +34,7 @@ const Body = () => {
     {
       backgroundImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Premium Ceiling & Roofing Solutions',
-      description: 'Leading supplier and manufacturer of gypsum ceilings, GI channels PPGL Roofing sheets, and premium paints for residential and commercial spaces.',
+      description: 'Leading supplier and manufacturer of gypsum ceilings, GI channels PPGL Roofing sheets premium paints for residential and commercial spaces.',
       buttonText: 'Explore Products',
       buttonLink: '/products'
     },

@@ -182,7 +182,7 @@ const Roof = () => {
 
                     {/* Right Image – Quick float in */}
                     <div className="hero-image-wrapper fast-float">
-                        <div className="hero-image-container-new">
+                        <div className="hero-image-container-new mt-5">
                             <img
                                 src="https://www.cupapizarras.com/wp-content/uploads/2024/10/readyslate-project-.jpg"
                                 alt="Modern house with premium roofing materials"

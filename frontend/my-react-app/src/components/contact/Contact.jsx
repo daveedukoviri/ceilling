@@ -25,12 +25,12 @@ function Contact() {
 
     const faqItems = [
         {
-            question: 'What is your delivery timeline for construction materials?',
-            answer: 'Our delivery timeline is efficient and reliable: Standard orders within Rajahmundry are delivered within 24-48 hours. Bulk orders require 2-3 working days, while specialty materials may take 3-5 working days. For emergency construction requirements, we offer same-day delivery service. Exact delivery timelines are provided with your quotation.'
+            question: 'What is your delivery timeline for receiving materials?',
+            answer: 'Our delivery timeline is efficient and reliable: Standard orders within Rajahmundry are delivered within 24-48 hours. Bulk orders require 2-3 working days, while specialty materials may take 3-5 working days. For emergency  requirements, we offer same-day delivery service. Exact delivery timelines are provided with your quotation.'
         },
         {
             question: 'Are you authorized dealers for the brands you sell?',
-            answer: 'Yes, we are authorized dealers for all major construction material brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, and Armstrong. All products come with genuine manufacturer warranties and quality certificates. We maintain direct relationships with manufacturers to ensure authentic products and best prices.'
+            answer: 'Yes, we are authorized dealers for all major Premium material brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, and Armstrong. All products come with genuine manufacturer warranties and quality certificates. We maintain direct relationships with manufacturers to ensure authentic products and best prices.'
         },
         {
             question: 'Do you provide installation services along with material supply?',
@@ -54,11 +54,11 @@ function Contact() {
         },
         {
             question: 'Can you handle urgent requirements or emergency orders?',
-            answer: 'Yes, we have a dedicated emergency response team for urgent construction material requirements. Emergency orders placed before 4 PM are delivered the same day within Rajahmundry. We maintain strategic stock of essential materials for immediate dispatch. Our 24/7 helpline (+91 92466 09090) handles emergency construction needs.'
+            answer: 'Yes, we have a dedicated emergency response team for urgent  material requirements. Emergency orders placed before 4 PM are delivered the same day within Rajahmundry. We maintain strategic stock of essential materials for immediate dispatch. Our 24/7 helpline (+91 92466 09090) handles emergency  needs.'
         },
         {
             question: 'Do you work with contractors and builders on large projects?',
-            answer: 'Yes, we specialize in contractor and builder partnerships. We offer: Special wholesale rates for bulk purchases, staggered delivery as per construction schedule, technical support for site teams, customized billing cycles, and priority service for ongoing projects. We have successfully supplied materials for residential complexes, commercial buildings, and industrial projects.'
+            answer: 'Yes, we specialize in contractor and builder partnerships. We offer: Special wholesale rates for bulk purchases, staggered delivery as per required schedule, technical support for site teams, customized billing cycles, and priority service for ongoing projects. We have successfully supplied materials for residential complexes, commercial buildings, and industrial projects.'
         },
         {
             question: 'What makes Gypsum N Gypsum different from other material suppliers?',
@@ -249,7 +249,7 @@ function Contact() {
                         </ol>
                     </nav>
                     <h1>Let's Build Your Dream Space Together</h1>
-                    <p className="lead">Get in touch with our construction materials experts. We're here to provide premium quality materials and professional installation services.</p>
+                    <p className="lead">Get in touch with our  materials experts. We're here to provide premium quality materials and professional installation services.</p>
                 </div>
             </section>
 
@@ -679,7 +679,7 @@ function Contact() {
                                         <span className="time">Available 24/7</span>
                                     </li>
                                 </ul>
-                                <p className="mt-4 text-muted"><i className="fas fa-info-circle me-2 text-gold"></i>Contact us for emergency construction material requirements</p>
+                                <p className="mt-4 text-muted"><i className="fas fa-info-circle me-2 text-gold"></i>Contact us for emergency Complete Roofing and Interior Material Solutionss</p>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -762,8 +762,8 @@ function Contact() {
 
             <section className="contact-cta">
                 <div className="container">
-                    <h2>Ready to Start Your Construction Project?</h2>
-                    <p className="lead">Get free consultation and quotation for premium construction materials</p>
+                    <h2>Ready to Start Your Dream Project?</h2>
+                    <p className="lead">Get free consultation and quotation for premium  materials</p>
                     <div className="cta-buttons">
                         <a href="tel:+919246609090" className="btn btn-white">
                             <i className="fas fa-phone-alt me-2"></i>

@@ -178,8 +178,8 @@ const Paints = () => {
                     </div>
 
                     {/* Right Image – Quick float in */}
-                    <div className="hero-image-wrapper fast-float">
-                        <div className="hero-image-container-new">
+                    <div className="hero-image-wrapper fast-float ">
+                        <div className="hero-image-container-new mt-5">
                             <img
                                 src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
                                 alt="Beautiful paint color samples and application"

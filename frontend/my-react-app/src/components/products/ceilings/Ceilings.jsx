@@ -181,7 +181,7 @@ const Ceilings = () => {
                     </div>
 
                     {/* Right Image – Quick float in */}
-                    <div className="hero-image-wrapper fast-float">
+                    <div className="hero-image-wrapper fast-float d-none d-lg-block">
                         <div className="hero-image-container-new">
                             <img
                                 src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"

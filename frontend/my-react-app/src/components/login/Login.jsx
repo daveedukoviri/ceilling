@@ -62,18 +62,18 @@ function Login() {
                                 />
                                 <div className="image-overlay">
                                     <div className="image-content">
-                                        <h2>Shambhavi Enterprises</h2>
+                                        <h2>Gypsum 'N' Gypsum</h2>
                                         <p>
                                             Professional interior, ceiling, and painting solutions
                                             delivered with precision, trust, and premium quality.
                                         </p>
                                         <div className="image-badge">
                                             <i className="fas fa-phone-alt"></i>
-                                            +91 92988 03332
+                                            +91 92466 09090
                                         </div>
                                         <div className="image-badge mt-2">
                                             <i className="far fa-envelope"></i>
-                                            sreisai.shambhavi.enterprises@gmail.com
+                                            gypsumngypsum4u@gmail.com
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ function Login() {
                                 <div className="form-footer mt-4 text-center">
                                     <p>
                                         Need help? Call us at <br />
-                                        <div className="small fw-semibold pt-3">+91 92988 03332</div>
+                                        <div className="small fw-semibold pt-3">+91 92466 09090</div>
                                         {/* or email
                                         <div className="small fw-semibold">
                                             sreisai.shambhavi.enterprises@gmail.com

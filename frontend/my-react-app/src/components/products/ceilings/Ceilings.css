@@ -37,13 +37,15 @@
   align-items: center;
 }
 
-#ceiling .hero-container-new {
+@media (min-width:768px) {
+  #ceiling .hero-container-new {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 80px;
   align-items: center;
   position: relative;
   z-index: 2;
+}
 }
 
 #ceiling .hero-content-new {
@@ -131,7 +133,7 @@
   background: linear-gradient(135deg, var(--classic-gold), var(--classic-walnut));
   color: white;
   border: none;
-  padding: 20px 48px;
+  padding: 19px 30px;
   border-radius: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -175,7 +177,7 @@
 #ceiling .image-overlay-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.2), transparent 40%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent 40%);
   pointer-events: none;
 }
 
@@ -200,13 +202,20 @@
   position: absolute;
   inset: 0;
   background-image: radial-gradient(circle at 20% 80%, rgba(197, 165, 114, 0.08) 0%, transparent 50%),
-                    radial-gradient(circle at 80% 20%, rgba(139, 115, 85, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 80% 20%, rgba(139, 115, 85, 0.06) 0%, transparent 50%);
   pointer-events: none;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 /* Kitchen Showcase - Only within #ceiling */
@@ -521,15 +530,67 @@
 }
 
 /* Animation Classes & Keyframes */
-#ceiling .animate-fade-in-up { animation: fadeInUp 0.8s ease forwards; }
-#ceiling .animate-slide-in-left { animation: slideInLeft 0.8s ease forwards; }
-#ceiling .animate-slide-in-right { animation: slideInRight 0.8s ease forwards; }
-#ceiling .animate-fade-in { animation: fadeIn 0.8s ease forwards; }
+#ceiling .animate-fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
 
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+#ceiling .animate-slide-in-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+#ceiling .animate-slide-in-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+#ceiling .animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 /* FAST & LIGHT HERO ANIMATIONS */
 #ceiling .fast-fade {
@@ -547,16 +608,28 @@
 }
 
 @keyframes quickFadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes quickFloatIn {
-  to { opacity: 1; transform: translateX(0); }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes quickPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
 }
 
 #ceiling .hero-image-new:hover {
@@ -568,13 +641,12 @@
 #ceiling .elegant-underline {
   width: 360px;
   height: 3px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(197, 165, 114, 0.4) 20%, 
-    var(--classic-gold) 50%, 
-    rgba(197, 165, 114, 0.4) 80%, 
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(197, 165, 114, 0.4) 20%,
+      var(--classic-gold) 50%,
+      rgba(197, 165, 114, 0.4) 80%,
+      transparent 100%);
   border-radius: 2px;
   margin: auto;
   box-shadow: 0 2px 8px rgba(197, 165, 114, 0.2);
@@ -585,8 +657,15 @@
 }
 
 @keyframes underlineReveal {
-  0% { opacity: 0; transform: scaleX(0); }
-  100% { opacity: 1; transform: scaleX(1); }
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 /* Typography */
@@ -596,43 +675,40 @@
 
 /* FIX: CRITICAL RESPONSIVE FIXES for mobile scroll issues */
 @media (max-width: 1200px) {
-  #ceiling .kitchen-title { 
-    font-size: 2.2rem; 
+  #ceiling .kitchen-title {
+    font-size: 2.2rem;
   }
+
   #ceiling .island-kitchen,
   #ceiling .lshape-kitchen,
   #ceiling .ushape-kitchen,
   #ceiling .parallel-kitchen,
   #ceiling .galley-kitchen,
-  #ceiling .peninsula-kitchen { 
-    gap: 60px; 
+  #ceiling .peninsula-kitchen {
+    gap: 60px;
     /* FIX: Prevent overflow on medium screens */
     grid-template-columns: 1fr 1fr;
   }
-  #ceiling .kitchen-content { 
-    padding: 30px; 
+
+  #ceiling .kitchen-content {
+    padding: 30px;
   }
-  #ceiling .main-gallery { 
-    height: 350px; 
+
+  #ceiling .main-gallery {
+    height: 350px;
   }
 }
 
 @media (max-width: 992px) {
-  #ceiling .hero-container-new { 
-    grid-template-columns: 1fr; 
-    text-align: center; 
-    gap: 60px; 
+
+  #ceiling .hero-stats-new {
+    justify-content: center;
   }
-  #ceiling .hero-content-new { 
-    max-width: 700px; 
-    margin: 0 auto; 
+
+  #ceiling .hero-title-new {
+    font-size: 3rem;
   }
-  #ceiling .hero-stats-new { 
-    justify-content: center; 
-  }
-  #ceiling .hero-title-new { 
-    font-size: 3rem; 
-  }
+
   /* FIX: Stack kitchen layouts on tablet */
   #ceiling .island-kitchen,
   #ceiling .lshape-kitchen,
@@ -640,90 +716,131 @@
   #ceiling .parallel-kitchen,
   #ceiling .galley-kitchen,
   #ceiling .peninsula-kitchen {
-    grid-template-columns: 1fr !important; /* Force single column */
+    grid-template-columns: 1fr !important;
+    /* Force single column */
     gap: 40px;
     text-align: center;
   }
-  #ceiling .kitchen-content { 
-    padding: 20px 0; 
-    order: 2; /* Make content come after image on mobile */
+
+  #ceiling .kitchen-content {
+    padding: 20px 0;
+    order: 2;
+    /* Make content come after image on mobile */
   }
-  #ceiling .kitchen-gallery { 
-    order: 1; /* Make image come first on mobile */
+
+  #ceiling .kitchen-gallery {
+    order: 1;
+    /* Make image come first on mobile */
   }
+
   #ceiling .kitchen-features {
     grid-template-columns: 1fr;
     text-align: left;
   }
-  #ceiling .main-gallery { 
-    height: 300px; 
+
+  #ceiling .main-gallery {
+    height: 300px;
   }
-  #ceiling .hero-image-new { 
-    height: 500px; 
+
+  #ceiling .hero-image-new {
+    height: 500px;
   }
 }
 
+@media (min-width:450px) and (max-width:768px) {
+  #ceiling .hero-container-new {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 60px;
+  }
+
+  #ceiling .hero-content-new {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+}
+
 @media (max-width: 768px) {
-  #ceiling .hero-title-new { 
-    font-size: 2.4rem; 
+
+  #ceiling .hero-title-new {
+    font-size: 2.4rem;
   }
-  #ceiling .hero-subtitle-new { 
-    font-size: 1.5rem; 
+
+  #ceiling .hero-subtitle-new {
+    font-size: 1.5rem;
   }
-  #ceiling .showcase-header h2 { 
-    font-size: 2rem; 
+
+  #ceiling .showcase-header h2 {
+    font-size: 2rem;
   }
-  #ceiling .kitchen-title { 
-    font-size: 1.8rem; 
+
+  #ceiling .kitchen-title {
+    font-size: 1.8rem;
   }
+
   #ceiling .kitchen-showcase {
-    gap: 80px; /* Reduce gap on mobile */
+    gap: 80px;
+    /* Reduce gap on mobile */
   }
-  #ceiling .main-gallery { 
-    height: 250px; 
+
+  #ceiling .main-gallery {
+    height: 250px;
   }
-  #ceiling .thumbnail-grid { 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
+
+  #ceiling .thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
-  #ceiling .thumbnail-grid img { 
-    height: 80px; 
+
+  #ceiling .thumbnail-grid img {
+    height: 80px;
   }
+
   #ceiling .hero-description-new {
     font-size: 0.95rem;
   }
+
   #ceiling .kitchen-description {
     font-size: 0.95rem;
   }
 }
 
 @media (max-width: 576px) {
-  #ceiling .hero-title-new { 
-    font-size: 2rem; 
+  #ceiling .hero-title-new {
+    font-size: 2rem;
   }
-  #ceiling .hero-image-new { 
-    height: 400px; 
+
+  #ceiling .hero-image-new {
+    height: 400px;
   }
+
   #ceiling .showcase-section {
-    padding: 80px 0;
+    padding: 0px 0;
   }
+
   #ceiling .kitchen-showcase {
     gap: 60px;
   }
-  #ceiling .main-gallery { 
-    height: 200px; 
+
+  #ceiling .main-gallery {
+    height: 200px;
   }
-  #ceiling .thumbnail-grid { 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 8px; 
+
+  #ceiling .thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
-  #ceiling .thumbnail-grid img { 
-    height: 70px; 
+
+  #ceiling .thumbnail-grid img {
+    height: 70px;
   }
+
   #ceiling .kitchen-badge {
     padding: 10px 20px;
     font-size: 11px;
   }
+
   #ceiling .kitchen-cta {
     padding: 14px 30px;
     font-size: 14px;
@@ -731,24 +848,31 @@
 }
 
 @media (max-width: 480px) {
-  #ceiling .hero-title-new { 
-    font-size: 1.8rem; 
+  #ceiling .hero-title-new {
+    font-size: 1.8rem;
   }
-  #ceiling .kitchen-title { 
-    font-size: 1.6rem; 
+
+  #ceiling .kitchen-title {
+    font-size: 1.6rem;
   }
-  #ceiling .hero-image-new { 
-    height: 350px; 
+
+  #ceiling .hero-image-new {
+    height: 350px;
   }
+
   #ceiling .thumbnail-grid {
-    grid-template-columns: repeat(3, 1fr); /* 2 columns on very small screens */
+    grid-template-columns: repeat(3, 1fr);
+    /* 2 columns on very small screens */
   }
+
   #ceiling .thumbnail-grid img {
     height: 60px;
   }
+
   #ceiling .kitchen-content {
     padding: 15px 0;
   }
+
   #ceiling .kitchen-features {
     gap: 15px;
   }

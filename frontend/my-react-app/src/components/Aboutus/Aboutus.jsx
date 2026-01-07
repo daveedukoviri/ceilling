@@ -129,7 +129,7 @@ function Aboutus() {
                 <div className="A-container">
                     <div className="A-hero-content pt-4 mt-lg-5">
                         <div className="A-hero-subtitle" data-reveal>
-                            <span className="A-gold-accent">Excellence in Construction Materials Since 2008</span>
+                            <span className="A-gold-accent">Excellence in Premium Materials Since 2008</span>
                         </div>
 
                         <h1 className="A-hero-title" data-reveal data-delay="200">
@@ -208,7 +208,7 @@ function Aboutus() {
                                 },
                                 {
                                     title: 'Quality Assurance',
-                                    desc: 'Every product we supply comes with proper certifications and quality checks, ensuring you get the best materials for your construction and interior projects.'
+                                    desc: 'Every product we supply comes with proper certifications and quality checks, ensuring you get the best materials for your residential and interior projects.'
                                 },
                                 {
                                     title: 'Complete Solutions',
@@ -243,7 +243,7 @@ function Aboutus() {
                             Complete Interior Solutions
                         </h2>
                         <p className="A-section-desc" data-reveal data-delay="200">
-                            Everything you need for construction and interior projects
+                            Complete Roofing and Interior Material Solutions
                         </p>
                     </div>
 
@@ -306,7 +306,7 @@ function Aboutus() {
                             </h2>
 
                             <p className="A-who-desc" data-reveal data-delay="200">
-                                Through our brands Paints, Gypsum ‘N’ Gypsum, we deliver high-quality construction materials with precision, reliability, and a commitment to exceeding customer expectations.
+                                Through our brands Paints, Gypsum ‘N’ Gypsum, we deliver high-quality  materials with precision, reliability, and a commitment to exceeding customer expectations.
                             </p>
 
 
@@ -363,7 +363,7 @@ function Aboutus() {
                                     <div className="A-small-image A-small-image-2" data-reveal data-delay="150">
                                         <img
                                             src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                            alt="Construction Materials"
+                                            alt="Premium Materials"
                                             loading="lazy"
                                         />
                                         <div className="A-image-overlay-shape"></div>
@@ -404,7 +404,7 @@ function Aboutus() {
                     <div className="A-process-timeline">
                         {[
                             { number: '01', title: 'Consultation & Quotation', desc: 'Understanding your requirements and providing detailed quotations' },
-                            { number: '02', title: 'Material Supply', desc: 'Timely delivery of premium quality construction materials' },
+                            { number: '02', title: 'Material Supply', desc: 'Timely delivery of premium quality  materials' },
                             { number: '03', title: 'Professional Installation', desc: 'Expert installation by trained technicians and installers' },
                             { number: '04', title: 'Quality Assurance', desc: 'Final inspection and handover with quality guarantee' }
                         ].map((step, index) => (
@@ -431,7 +431,7 @@ function Aboutus() {
                 <div className="A-container">
                     <div className="A-cta-content" data-reveal>
                         <h1 className="A-cta-title" data-reveal data-delay="0">
-                            Ready to Start Your<br />Construction Project?
+                            Ready to Start Your<br />Dream Project?
                         </h1>
                         <p className="A-cta-desc" data-reveal data-delay="100">
                             Contact us for free consultation, quotations, or to visit our showroom. Get premium materials and professional installation services.

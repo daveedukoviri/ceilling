@@ -732,6 +732,15 @@
         max-width: 300px;
         justify-content: center;
     }
+
+    #Products .product-card {
+    opacity: 1;              /* visible */
+    transform: translateY(20px); /* initial animation offset */
+  }
+
+  #Products .product-card.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+  }
 }
 
 @media (max-width: 576px) {

@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/img/banner_logo.webp';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 
 function Header() {
+
+  const Navigate = useNavigate();
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState({
     whatWeDo: false,
@@ -35,6 +38,10 @@ function Header() {
 
   const handleMobileLinkClick = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const GotoContact = () => {
+    Navigate('/contacts');
   };
 
   return (
@@ -122,6 +129,7 @@ function Header() {
                     <li><Link to="/ceilings" onClick={handleMobileLinkClick}>Ceiling Systems</Link></li>
                     <li><Link to="/paints" onClick={handleMobileLinkClick}>Paints & Coatings</Link></li>
                     <li><Link to="/walls" onClick={handleMobileLinkClick}>Wall Solutions</Link></li>
+                     <li><Link to="/roof">Roofing Solutions</Link></li>
                   </ul>
                 </div>
               </li>
@@ -215,7 +223,7 @@ function Header() {
             </a>
           </li>
         </ul>
-        <a href="#" className="estimateBtn" data-bs-toggle="modal" data-bs-target="#freeestimate">
+        <a onClick={GotoContact}  className="estimateBtn" data-bs-toggle="modal" >
           <span> Estimate</span>
         </a>
       </div>

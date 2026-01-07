@@ -178,7 +178,7 @@ const Walls = () => {
 
                     {/* Right Image – Quick float in */}
                     <div className="hero-image-wrapper fast-float">
-                        <div className="hero-image-container-new">
+                        <div className="hero-image-container-new mt-5">
                             <img
                                 src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
                                 alt="Elegant wall paneling and coverings"
