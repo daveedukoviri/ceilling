@@ -110,7 +110,7 @@ export default function Upload() {
         setStatus({ text: "Uploading to server...", type: "info" });
 
         try {
-            const response = await fetch("https://ceilling.vercel.app/api/upload", {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/upload`, {
                 method: "POST",
                 body: formData,
             });
