@@ -10,7 +10,6 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 // Import routes
@@ -21,6 +20,7 @@ const uploadRoutes = require('./routes/uploadRoutes')
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Middleware
 const allowedOrigins = [
   // 'http://localhost:5173',           // Vite dev server
