@@ -3,6 +3,16 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
+const fs = require('fs');
+
+const uploadDir = path.join(__dirname, 'uploads');
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+
 // Import routes
 const contactRoutes = require('./routes/contactRoutes');
 const authRoutes = require('./routes/authRoutes');
