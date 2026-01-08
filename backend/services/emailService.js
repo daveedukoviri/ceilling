@@ -49,7 +49,10 @@ class EmailService {
       'siteVisit': 'Site Visit'
     };
 
-    const formattedServices = data.services.map(service => servicesMap[service] || service);
+   const formattedServices = Array.isArray(data.services)
+  ? data.services.map(service => servicesMap[service] || service)
+  : [];
+
 
     return `
       <!DOCTYPE html>
@@ -128,7 +131,10 @@ class EmailService {
             </div>` : ''}
             <div class="section">
               <div class="section-title">Customer Requirements</div>
-              <div class="message-box">${data.message.replace(/\n/g, '<br>')}</div>
+             <div class="message-box">
+  ${(data.message || 'No additional message provided').replace(/\n/g, '<br>')}
+</div>
+
             </div>
             <div class="actions">
               <div class="action-title">Next Steps</div>
