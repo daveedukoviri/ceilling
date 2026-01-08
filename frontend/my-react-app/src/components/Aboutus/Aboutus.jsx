@@ -294,6 +294,84 @@ function Aboutus() {
                 </div>
             </section>
 
+            {/* CUSTOMER INTERACTION GALLERY SECTION */}
+            <section className="A-section A-gallery-section">
+                <div className="A-container">
+                    <div className="A-section-header A-center">
+                        <span className="A-section-label" data-reveal>Client Relationships</span>
+                        <h2 className="A-section-title" data-reveal data-delay="100">
+                            Building Trust<br />Through Personal Interaction
+                        </h2>
+                        <p className="A-section-desc" data-reveal data-delay="200">
+                           We engages directly with customers to understand their needs and deliver tailored solutions
+                        </p>
+                    </div>
+
+                    <div className="A-gallery-grid">
+                        {[
+                            {
+                                src: "about/A1.webp",
+                                alt: "Owner discussing project requirements with client",
+                                category: "Consultation",
+                                title: "Project Requirement Discussion"
+                            },
+                            {
+                                src: "about/A2.webp",
+                                alt: "Team meeting with customers at showroom",
+                                category: "Showroom Visit",
+                                title: "Product Demonstration"
+                            },
+                            {
+                                src: "about/A3.webp",
+                                alt: "Site visit and technical discussion",
+                                category: "Site Assessment",
+                                title: "On-site Technical Consultation"
+                            },
+                            {
+                                src: "about/A4.webp",
+                                alt: "Finalizing contract details with client",
+                                category: "Agreement",
+                                title: "Contract Finalization"
+                            },
+                            {
+                                src: "about/A5.webp",
+                                alt: "Post-installation customer satisfaction meeting",
+                                category: "Follow-up",
+                                title: "Project Completion Review"
+                            }
+                        ].map((image, index) => (
+                            <div
+                                key={index}
+                                className="A-gallery-item"
+                                data-reveal
+                                data-delay={index * 100}
+                            >
+                                <div className="A-gallery-image-container">
+                                    <img
+                                        src={image.src}
+                                        alt={image.alt}
+                                        loading="lazy"
+                                        className="A-gallery-image"
+                                    />
+                                    <div className="A-gallery-overlay">
+                                        <div className="A-gallery-content">
+                                            <span className="A-gallery-category">{image.category}</span>
+                                            <h4 className="A-gallery-title">{image.title}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="A-gallery-footer" data-reveal data-delay="600">
+                        <p className="A-gallery-footer-text">
+                            Every project begins with understanding the customer's vision and ends with their complete satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* WHO WE ARE SECTION */}
             <section className="A-section A-who-section">
                 <div className="A-container">
@@ -467,7 +545,7 @@ function Aboutus() {
                                 <div>
                                     <h5>Head Office</h5>
                                     <span>
-                                       Gypsum 'N' Gypsum Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram – 533125
+                                        Gypsum 'N' Gypsum Plot No: 21P, Industrial Area, NH-16, Near TVS Trade, Dowleswaram – 533125
                                     </span>
                                 </div>
 
