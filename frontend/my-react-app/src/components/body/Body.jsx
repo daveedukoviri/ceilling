@@ -355,6 +355,7 @@ const Body = () => {
       }
     }
   };
+  const API_URL = 'https://ceilling.onrender.com/api';
 
   // NEW: Form validation function
   const validateForm = () => {

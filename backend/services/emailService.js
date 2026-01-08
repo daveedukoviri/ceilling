@@ -1,7 +1,7 @@
 const { Resend } = require('resend');
 require('dotenv').config();
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(re_g5fe9wxu_PJkHBRfTJxLDkBib1qy2Lv4b);
 
 class EmailService {
   static async sendContactForm(data) {
@@ -11,7 +11,7 @@ class EmailService {
       // Company (admin) email
       await resend.emails.send({
         from: 'GNG Group Quotations <onboarding@resend.dev>',
-        to: [process.env.COMPANY_EMAIL],
+        to: 'daveedukoviri@gmail.com',
         subject: `New Quotation Request from ${data.name} - Ref: ${referenceNumber}`,
         html: this.generateCompanyEmailTemplate(data, referenceNumber),
       });
@@ -19,7 +19,7 @@ class EmailService {
       // Customer auto-reply email
       await resend.emails.send({
         from: 'GNG Group <onboarding@resend.dev>',
-        to: [data.email],
+        to: 'koviridaveedu@gmail.com',
         subject: 'Quotation Request Received - GNG Group',
         html: this.generateCustomerEmailTemplate(data, referenceNumber),
       });
