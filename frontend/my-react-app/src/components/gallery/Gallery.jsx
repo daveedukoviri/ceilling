@@ -176,12 +176,12 @@ function Gallery() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/upload');
+      const response = await fetch('https://ceilling.onrender.com/api/upload');
       const data = await response.json();
 
       if (data.success && data.images.length > 0) {
         const newImages = data.images.map(img => ({
-          src: `http://localhost:5000${img.url}`, // Full URL
+          src: `https://ceilling.onrender.com${img.url}`, // Full URL
           isUploaded: true
         }));
         setUploadedImages(prev => [...prev, ...newImages]);
