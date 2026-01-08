@@ -71,7 +71,7 @@ function Footter() {
                                         <div className="flex-grow-1 d-flex flex-column flex-wrap">
                                             <div className="d-inline-block">Branch Offices:</div>
                                             <span className="d-inline-block">V L Puram</span>
-                                            <span className="d-inline-block">Ramachandrapuram</span>
+                                            <span className="d-inline-block">Ramachandrarao Peta</span>
                                             {/* <span className="d-inline-block">Ramachandrarao Peta, Rajahmundry 533105</span> */}
                                         </div>
                                     </li>

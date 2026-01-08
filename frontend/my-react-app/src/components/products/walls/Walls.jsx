@@ -329,7 +329,7 @@ const Walls = () => {
                         </div>
 
                         {/* 3. Tiles & Stone Cladding  ts*/}
-                        <div className="kitchen-type ushape-kitchen" id="tiles">
+                        <div className="kitchen-type ushape-kitchen d-none" id="tiles">
                             <div className="kitchen-content">
                                 <span className="kitchen-badge">Durable</span>
                                 <h2 className="kitchen-title">Tiles & Stone Cladding</h2>
