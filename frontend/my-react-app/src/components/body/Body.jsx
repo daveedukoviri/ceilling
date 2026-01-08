@@ -374,6 +374,7 @@ const Body = () => {
     return errors;
   };
 
+  
   // UPDATED: handleSubmit function with API integration
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -484,6 +485,27 @@ const Body = () => {
 
   return (
     <div className="body-content" id='body'>
+
+     {/* NEW: Status Alert Component */}
+            {submitStatus && (
+                <div className={`alert ${submitStatus.type === 'success' ? 'alert-success' : 'alert-danger'} alert-dismissible fade show m-3`} role="alert" style={{
+                    position: 'fixed',
+                    top: '20px',
+                    right: '20px',
+                    zIndex: 1000,
+                    maxWidth: '400px'
+                }}>
+                    {submitStatus.message}
+                    {submitStatus.referenceId && (
+                        <div className="mt-2">
+                            <small>Reference ID: <strong>{submitStatus.referenceId}</strong></small>
+                        </div>
+                    )}
+                    <button type="button" className="btn-close" onClick={() => setSubmitStatus(null)}></button>
+                </div>
+            )}
+
+
       {/* 1. HERO CAROUSEL SECTION */}
       <section className="hero-carousel" id="home"
         onMouseEnter={() => setIsCarouselPaused(true)}
