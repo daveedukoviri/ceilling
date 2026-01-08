@@ -1,7 +1,7 @@
 const { Resend } = require('resend');
 require('dotenv').config();
 
-const resend = new Resend(re_g5fe9wxu_PJkHBRfTJxLDkBib1qy2Lv4b);
+const resend = new Resend('re_g5fe9wxu_PJkHBRfTJxLDkBib1qy2Lv4b');
 
 class EmailService {
   static async sendContactForm(data) {
