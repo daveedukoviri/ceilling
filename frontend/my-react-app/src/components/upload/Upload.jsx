@@ -110,7 +110,7 @@ export default function Upload() {
         setStatus({ text: "Uploading to server...", type: "info" });
 
         try {
-            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/upload`, {
+            const response = await fetch("https://ceilling.onrender.com/api/upload", {
                 method: "POST",
                 body: formData,
             });
@@ -329,7 +329,7 @@ export default function Upload() {
                                 const size = `${(entry.size / 1024).toFixed(1)} KB`;
 
                                 const imageSrc = entry.serverUrl
-                                    ? `http://localhost:5000${entry.serverUrl}`
+                                    ? `https://ceilling.onrender.com${entry.serverUrl}`
                                     : entry.previewUrl;
 
                                 return (
