@@ -30,7 +30,7 @@ function Contact() {
         },
         {
             question: 'Are you authorized dealers for the brands you sell?',
-            answer: 'Yes, we are authorized dealers for all major Premium material brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, and Armstrong. All products come with genuine manufacturer warranties and quality certificates. We maintain direct relationships with manufacturers to ensure authentic products and best prices.'
+            answer: 'Yes, we are authorized dealers for all major Premium material brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, and Armstrong. All products come with genuine manufacturer warranties and quality certificates. We maintain direct relationships with manufacturers to ensure authentic products and best prices.'
         },
         {
             question: 'Do you provide installation services along with material supply?',

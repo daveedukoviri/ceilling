@@ -165,7 +165,7 @@ const Body = () => {
     },
     {
       question: 'Are you authorized dealers for the brands you represent?',
-      answer: 'Yes, we are authorized dealers for premium brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, Everest boards, Hilux, VOX, Diamond Ceilings, and other leading brands in the ceiling and paint industry.'
+      answer: 'Yes, we are authorized dealers for premium brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, Everest boards, Hilux, Diamond Ceilings, and other leading brands in the ceiling and paint industry.'
     },
     {
       question: 'Do you provide installation services along with materials?',
@@ -173,7 +173,7 @@ const Body = () => {
     },
     {
       question: 'What areas do you serve in Andhra Pradesh?',
-      answer: 'We are based in Rajahmundry, East Godavari district and serve the entire Andhra Pradesh region. Our head office is at RTC Complex Road, V L Puram, Rajahmundry with a branch at Ramachandrarao Peta.'
+      answer: 'We are based in Rajahmundry, East Godavari district and serve the entire Andhra Pradesh region. Our head office is at Dowlaiswaram and branch Offices are at  V L Puram, Ramachandrarao Peta.'
     },
     {
       question: 'Can you provide customized solutions for commercial projects?',
@@ -575,7 +575,7 @@ const Body = () => {
               <p>
                 End-to-End Interior Solutions – from different types of ceilings to waterproofing paints, roofing sheets,
                 dry walls, and tile adhesives – complete solutions backed by trained professionals and authorized partnerships
-                with leading brands: JSW Kalinga, Asian Paints SmartCare, Shera, Apollo, Polywood, and TATA PPGL Sheets.
+                with leading brands: JSW Kalinga, SmartCare, Shera, Apollo, Polywood, and TATA PPGL Sheets.
               </p>
               <div className="about-features">
                 {aboutFeatures.map((feature, index) => (

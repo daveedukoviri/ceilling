@@ -204,7 +204,7 @@ function Aboutus() {
                             {[
                                 {
                                     title: 'Premium Brand Partnerships',
-                                    desc: 'Authorized dealer for leading brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Asian Paints, Armstrong, Jindal, Everest, and other premium manufacturers.'
+                                    desc: 'Authorized dealer for leading brands including Saint-Gobain Gyproc, USG Boral, JSW Paints, Armstrong, Jindal, Everest, and other premium manufacturers.'
                                 },
                                 {
                                     title: 'Quality Assurance',
@@ -268,7 +268,7 @@ function Aboutus() {
                                     <i className="fas fa-th-large"></i>
                                 ),
                                 title: 'Wall Solutions',
-                                desc: 'Wall coverings, laminates, false wall systems, tiles, marble/granite stone cladding, and partition systems.'
+                                desc: 'Wall coverings, false wall systems, Dry Wall and partition systems.'
                             },
                             {
                                 icon: (
@@ -317,7 +317,7 @@ function Aboutus() {
                                     </div>
                                     <div className="A-feature-content">
                                         <h4>Manufacturing & Supply</h4>
-                                        <p>Direct manufacturers of GI channels PPGL Roofing sheets and channels, and authorized suppliers of premium ceiling systems, paints, and building materials.</p>
+                                        <p>Direct manufacturers of GI channels PPGL Roofing sheets and channels, and authorized suppliers of premium ceiling systems, paints, and Roofing materials.</p>
                                     </div>
                                 </div>
 

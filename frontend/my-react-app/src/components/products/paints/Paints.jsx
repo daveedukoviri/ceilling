@@ -139,7 +139,7 @@ const Paints = () => {
                         </p>
 
                         <p className="hero-description-new fast-fade">
-                             Gypsum ‘N’ Gypsum brings you the finest paint solutions that combine beauty, durability, and protection. As authorized dealers for leading brands like Asian Paints, JSW, and other premium manufacturers, we offer a complete range of interior, exterior, and specialty paints for every need.
+                             Gypsum ‘N’ Gypsum brings you the finest paint solutions that combine beauty, durability, and protection. As authorized dealers for leading brands like JSW, and other premium manufacturers, we offer a complete range of interior, exterior, and specialty paints for every need.
                         </p>
                         <p className="hero-description-new fast-fade">
                             From weather-resistant exterior emulsions to elegant interior finishes, from waterproofing solutions to decorative textures — we provide expert consultation, quality products, and professional application services to transform your spaces.

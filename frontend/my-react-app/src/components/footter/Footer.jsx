@@ -42,7 +42,7 @@ function Footter() {
                                     <li><a href="/paints">Paints & Coatings</a></li>
                                     <li><a href="/walls">Wall Solutions</a></li>
                                     <li><a href="/roofs">Roofing Materials</a></li>
-                                    <li><a href="/walls">Waterproofing</a></li>
+                                    {/* <li><a href="/walls">Waterproofing</a></li> */}
                                 </ul>
                             </div>
                         </div>
