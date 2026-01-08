@@ -1,7 +1,15 @@
 const { Resend } = require('resend');
 require('dotenv').config();
 
-const resend = new Resend('re_g5fe9wxu_PJkHBRfTJxLDkBib1qy2Lv4b');
+const resend = new Resend('re_2v7YyE9S_NGTzbRvNr8D7QKPcNq5A4YWH');
+
+
+resend.emails.send({
+  from: 'onboarding@resend.dev',
+  to: 'gypsumcare@gmail.com',
+  subject: 'Hello World',
+  html: '<p>Congrats...</p>'
+});
 
 class EmailService {
   static async sendContactForm(data) {
