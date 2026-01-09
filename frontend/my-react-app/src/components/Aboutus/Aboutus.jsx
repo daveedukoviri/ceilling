@@ -118,7 +118,9 @@ function Aboutus() {
     }, []);
 
     return (
+
         <div id='About'>
+
             {/* Custom Cursor - Hidden on mobile, shown on tablet+ */}
             <div className="A-custom-cursor" ref={cursorRef}></div>
 
@@ -554,7 +556,9 @@ function Aboutus() {
                     </div>
                 </div>
             </section>
+
         </div>
+        
     );
 }
 

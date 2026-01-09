@@ -89,8 +89,7 @@ function Header() {
         </section>
 
         {/* Mobile Menu Overlay */}
-        <div
-          className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+        <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={toggleMobileMenu}
         ></div>
 
