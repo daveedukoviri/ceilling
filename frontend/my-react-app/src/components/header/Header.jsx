@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/img/banner_logo.webp';
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
 
@@ -116,7 +116,7 @@ function Header() {
                 <Link to="/" onClick={handleMobileLinkClick}>HOME</Link>
               </li>
               <li>
-                <Link to="/company" onClick={handleMobileLinkClick}>COMPANY</Link>
+                <Link to="/company" onClick={handleMobileLinkClick}>About Us</Link>
               </li>
 
               <li className="mobile-submenu-item">
@@ -129,7 +129,7 @@ function Header() {
                     <li><Link to="/ceilings" onClick={handleMobileLinkClick}>Ceiling Systems</Link></li>
                     <li><Link to="/paints" onClick={handleMobileLinkClick}>Paints & Coatings</Link></li>
                     <li><Link to="/walls" onClick={handleMobileLinkClick}>Wall Solutions</Link></li>
-                     <li><Link to="/roof">Roofing Solutions</Link></li>
+                    <li><Link to="/roof">Roofing Solutions</Link></li>
                   </ul>
                 </div>
               </li>
@@ -151,7 +151,7 @@ function Header() {
             </div>
             <div className="mobile-social-links">
               <a
-                href="https://wa.me/9246660909"
+                href="https://wa.me/9246660909?text=Hello%2C%20I%20would%20like%20to%20get%20more%20information%20about%20gypsum%20products."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn w-50 p-2 rounded-3"
@@ -190,7 +190,7 @@ function Header() {
           </li>
           <li>
             <a
-              href="https://api.whatsapp.com/send?phone=91 92466 0909&text=Hi%20D%27LIFE,%20I%20would%20like%20to%20discuss%20about%20a%20home%20interior%20project%20of%20mine,%20and%20know%20more%20about%20your%20interior%20design%20options%20and%20services%20available."
+              href="https://wa.me/9246660909?text=Hello%2C%20I%20would%20like%20to%20get%20more%20information%20about%20gypsum%20products."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -223,7 +223,7 @@ function Header() {
             </a>
           </li>
         </ul>
-        <a onClick={GotoContact}  className="estimateBtn" data-bs-toggle="modal" >
+        <a onClick={GotoContact} className="estimateBtn" data-bs-toggle="modal" >
           <span> Estimate</span>
         </a>
       </div>
@@ -231,7 +231,7 @@ function Header() {
       {/* Fixed Bottom Mobile Navigation - NOW WITH HOME IN THE MIDDLE */}
       <div className="fixedBottom">
         <ul>
-          
+
           {/* NEW: HOME in the middle */}
           <li className="nav-home-outline">
             <Link to="/">
