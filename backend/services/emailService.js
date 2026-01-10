@@ -1,7 +1,7 @@
 const { Resend } = require("resend");
 
 // ⚠️ TEMPORARY: API key directly (OK for testing only)
-const resend = new Resend("re_2v7YyE9S_NGTzbRvNr8D7QKPcNq5A4YWH");
+const resend = new Resend("re_FHypy6Ue_6WUDDYZuMyK5GrkwXC44yV8o");
 
 class EmailService {
   static async sendContactForm(data) {
@@ -11,7 +11,7 @@ class EmailService {
     
       await resend.emails.send({
         from: "GNG Group <onboarding@resend.dev>",
-        to: ["gypsumcare@gmail.com"], // MUST be Resend signup email in sandbox
+        to: ["gypsumngypsum4u@gmail.com"], // MUST be Resend signup email in sandbox
         subject: `New Quotation Request - ${referenceNumber}`,
         html: this.generateCompanyEmailTemplate(data, referenceNumber),
       });
