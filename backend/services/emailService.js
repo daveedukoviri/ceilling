@@ -10,7 +10,7 @@ class EmailService {
 
     
       await resend.emails.send({
-        from: "GNG Group <onboarding@resend.dev>",
+        from: "Gypsum 'N' Gypsum <onboarding@resend.dev>",
         to: ["gypsumngypsum4u@gmail.com"], // MUST be Resend signup email in sandbox
         subject: `New Quotation Request - ${referenceNumber}`,
         html: this.generateCompanyEmailTemplate(data, referenceNumber),

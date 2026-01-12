@@ -24,7 +24,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 // Middleware
 const allowedOrigins = [
   // 'http://localhost:5173',           // Vite dev server
-  'https://saishambhavi.netlify.app', // Production frontend
+  'https://gypsumngypsum.com/', // Production frontend
   
 ];
 
