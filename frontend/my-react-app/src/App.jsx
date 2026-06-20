@@ -11,7 +11,7 @@ const Aboutus = lazy(() => import('./components/Aboutus/Aboutus'));
 const Contact = lazy(() => import('./components/contact/Contact'));
 const Upload = lazy(() => import('./components/upload/Upload'));
 const Login = lazy(() => import('./components/login/Login'));
-const Ceilings = lazy(() => import('./components/products/ceilings/Ceilings'));
+const Ceilings = lazy(() => import('./components/products/vechicle/vechicle'));
 const Paints = lazy(() => import('./components/products/paints/Paints'));
 const Walls = lazy(() => import('./components/products/walls/Walls'));
 const Products = lazy(() => import('./components/products/products/products'));

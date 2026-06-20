@@ -795,7 +795,7 @@ const Body = () => {
                 <div className="contact-info">
                   <h4>Call Us</h4>
                   <p className='small'>Speak directly with our product consultants</p>
-                  <a href="tel:+91924660909" className="contact-link">
+                  <a href="tel:+91 9908022000" className="contact-link">
                     <i className="fas fa-phone me-2"></i>
                     +91 92466 0909
                   </a>

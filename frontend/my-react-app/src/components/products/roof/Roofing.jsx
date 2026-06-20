@@ -1,5 +1,5 @@
 import React, { useEffect, } from 'react';
-import '../ceilings/Ceilings.css'; // You might want to rename or keep as Ceilings.css if using same styles
+import '../vechicle/Ceilings.css'; // You might want to rename or keep as Ceilings.css if using same styles
 import { Link, useNavigate } from 'react-router-dom';
 
 
