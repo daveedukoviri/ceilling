@@ -625,7 +625,7 @@ function Contact() {
 
                                 <p>
                                     <i className="fas fa-phone me-2 text-gold"></i>
-                                    +91 92466 0909
+                                    +91 9908022000
                                 </p>
 
                                 <p>
